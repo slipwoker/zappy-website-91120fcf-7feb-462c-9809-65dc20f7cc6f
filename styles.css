@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&display=swap');
+
 
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
@@ -8688,6 +8690,45 @@ body.accessibility-widget-visible ._access-menu {
   body.accessibility-widget-visible ._access-menu {
     display: none !important;
   }
+}
+
+.navbar .nav-brand-title {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.2;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  white-space: nowrap;
+}
+
+.navbar .nav-brand-star {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 4px rgba(216,155,43,0.7));
+  display: inline-block;
+}
+
+.footer-brand-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.footer-brand-name {
+  font-family: 'Frank Ruhl Libre', serif !important;
+  font-weight: 900 !important;
+}
+
+.footer-brand-star {
+  color: var(--accent-color) !important;
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px rgba(216,155,43,0.8));
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
