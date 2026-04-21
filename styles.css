@@ -8730,6 +8730,58 @@ body.accessibility-widget-visible ._access-menu {
   font-size: 1.2rem;
   filter: drop-shadow(0 0 5px rgba(216,155,43,0.8));
 }
+
+.candles-dedication-cta-section .candle-dedication-form {
+  width: 100%;
+  max-width: 560px;
+  margin: 24px auto 0;
+}
+
+.candles-dedication-cta-section .candle-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.candles-dedication-cta-section .candle-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+.candles-dedication-cta-section .candle-form-label {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+
+.candles-dedication-cta-section .candle-form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 4px;
+  background: rgba(255,244,220,0.12);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-family: inherit;
+  direction: rtl;
+  text-align: right;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.candles-dedication-cta-section .candle-form-input::placeholder {
+  color: rgba(247,241,231,0.45);
+}
+
+.candles-dedication-cta-section .candle-form-input:focus {
+  outline: none;
+  border-color: #f0c040;
+  box-shadow: 0 0 8px rgba(216,155,43,0.4);
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
