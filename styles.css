@@ -8786,6 +8786,27 @@ body.accessibility-widget-visible ._access-menu {
 .nav-brand-title {
   color: var(--primary-color) !important;
 }
+
+.navbar-tzadik-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+  border-top: 1px solid rgba(214,194,163,0.18);
+  background: rgba(32,24,22,0.55);
+}
+
+.navbar-tzadik-title .magen-david {
+  font-size: 1.3em;
+  margin: 0 0.4em;
+  color: var(--accent);
+  display: inline-block;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
