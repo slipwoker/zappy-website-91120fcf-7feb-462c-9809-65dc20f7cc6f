@@ -8782,6 +8782,10 @@ body.accessibility-widget-visible ._access-menu {
   border-color: #f0c040;
   box-shadow: 0 0 8px rgba(216,155,43,0.4);
 }
+
+.nav-brand-title {
+  color: var(--primary-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
