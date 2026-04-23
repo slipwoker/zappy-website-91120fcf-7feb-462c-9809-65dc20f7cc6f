@@ -1,47 +1,63 @@
-# Business — Generative Engine Optimization Map
+# רבי דוד ומשה זיע"א — Generative Engine Optimization Map
+
+> A sacred memorial website dedicated to Rabbi David U'Moshe (זיע"א), a revered Jewish holy figure buried in the Atlas Mountains of Morocco, near the route from Marrakech to Ouarzazate. The rabbi passed away approximately 1,050 years ago, and his tomb is a significant pilgrimage site. The website aims to honor his memory through informational content, a rich media gallery including YouTube videos and a virtual tour, virtual memorial candles, and a message board for visitors and devotees.
 
 ---
 
 ## Pages
 
 ### בית
-https://example.com
+https://rabidavidumoshezia.zappy5.app
 ציון רבי דוד ומשה מרוקו – מקום קדוש בן אלף שנה בהרי האטלס. מידע על ההילולה, סיור וירטואלי, גלריה ועוד. בקר עכשיו וחווה את הקדושה!
 
 ### גלריה
-https://example.com/gallery
+https://rabidavidumoshezia.zappy5.app/gallery
 גלריית תמונות וסרטוני יוטיוב עשירה מציון רבי דוד ומשה בהרי האטלס. סיור וירטואלי מרהיב שיקרב אותך למקום הקדוש גם מרחוק. צפה עכשיו!
 
 ### נרות נשמה
-https://example.com/candles
+https://rabidavidumoshezia.zappy5.app/candles
 הדלק נר נשמה וירטואלי לכבוד רבי דוד ומשה ציון קדוש ושלח תפילתך מכל מקום בעולם. הצטרף לאלפי מאמינים שמכבדים את זכרו של הצדיק הקדוש.
 
 ### שונות
-https://example.com/miscellaneous
+https://rabidavidumoshezia.zappy5.app/miscellaneous
 לוח הודעות לעולי רגל, סיפורי נסים, מידע על עלייה לרגל לציון קדוש יהודי מרוקו ישראל ועוד תכנים מרתקים. שתף את חוויתך ולמד על מורשת יהודי מרוקו.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://rabidavidumoshezia.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://rabidavidumoshezia.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://rabidavidumoshezia.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About רבי דוד ומשה זיע"א
+A sacred memorial website dedicated to Rabbi David U'Moshe (זיע"א), a revered Jewish holy figure buried in the Atlas Mountains of Morocco, near the route from Marrakech to Ouarzazate. The rabbi passed away approximately 1,050 years ago, and his tomb is a significant pilgrimage site. The website aims to honor his memory through informational content, a rich media gallery including YouTube videos and a virtual tour, virtual memorial candles, and a message board for visitors and devotees.
+
+## Services/Products
+- עמוד ראשי עם מידע ותמונות ותיבת הודעות
+- גלריית תמונות וסרטוני יוטיוב וסיור וירטואלי
+- נרות זיכרון וירטואליים
+- עמוד שונות
+
+## Target Audience
+מבקרי הציון, יהודים ממרוקו, עולי רגל, מחפשי מידע על האדמו"ר
+
+## Industry
+דת, מורשת יהודית, תיירות עלייה לרגל
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://rabidavidumoshezia.zappy5.app/sitemap.xml
+- **Robots.txt**: https://rabidavidumoshezia.zappy5.app/robots.txt
