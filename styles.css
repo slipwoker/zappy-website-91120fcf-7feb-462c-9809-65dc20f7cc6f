@@ -9647,6 +9647,12 @@ nav.navbar .sub-menu li a {
     padding: 0 10px;
   }
 }
+
+.brd-bulletin-section .brd-notices-scroll {
+  flex-direction: row !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
