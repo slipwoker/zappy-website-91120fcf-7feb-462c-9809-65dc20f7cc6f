@@ -9460,6 +9460,193 @@ nav.navbar .sub-menu li a {
     font-size: 0.9rem;
   }
 }
+
+/* AI-generated section */
+/* ── Ticker Bar Section ────────────────────────────────────────────── */
+.ticker-bar-section {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--primary, #7A1F2B);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+}
+
+/* ── Wrapper: label + scrolling track ─────────────────────────────── */
+.ticker-bar-wrapper {
+  display: flex;
+  align-items: stretch;
+  height: 42px;
+  overflow: hidden;
+}
+
+/* ── Label badge on the right (RTL start) ─────────────────────────── */
+.ticker-bar-label {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 18px;
+  background: linear-gradient(135deg, #c9a227 0%, #a07c18 100%);
+  color: #1a0a00;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* Angled right-edge cut (RTL: left side of label) */
+.ticker-bar-label::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 42px solid transparent;
+  border-right: 13px solid #a07c18;
+  pointer-events: none;
+}
+
+.ticker-bar-label-icon {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.ticker-bar-label-text {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ── Scrolling track container ─────────────────────────────────────── */
+.ticker-bar-track-container {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Fade-out edges for polish */
+.ticker-bar-track-container::before,
+.ticker-bar-track-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ticker-bar-track-container::before {
+  right: 0;
+  background: linear-gradient(to left, var(--primary, #7A1F2B) 0%, transparent 100%);
+}
+
+.ticker-bar-track-container::after {
+  left: 0;
+  background: linear-gradient(to right, var(--primary, #7A1F2B) 0%, transparent 100%);
+}
+
+/* ── The moving strip ──────────────────────────────────────────────── */
+.ticker-bar-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  /* RTL ticker scrolls from right → left (negative X) */
+  animation: tickerScroll 42s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover for accessibility / readability */
+.ticker-bar-track-container:hover .ticker-bar-track {
+  animation-play-state: paused;
+}
+
+/* ── Individual ticker items ───────────────────────────────────────── */
+.ticker-bar-item {
+  display: inline-block;
+  color: #f0d060;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  padding: 0 6px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Separator dots ────────────────────────────────────────────────── */
+.ticker-bar-separator {
+  display: inline-block;
+  color: rgba(212, 175, 55, 0.6);
+  font-size: 10px;
+  padding: 0 18px;
+  vertical-align: middle;
+}
+
+/* ── Keyframe: scroll from left edge to right edge (RTL = negative X) */
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Reduced-motion accessibility ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-bar-track {
+    animation: none;
+  }
+}
+
+/* ── Mobile: slightly smaller text ────────────────────────────────── */
+@media (max-width: 600px) {
+  .ticker-bar-wrapper {
+    height: 38px;
+  }
+
+  .ticker-bar-label {
+    padding: 0 12px;
+  }
+
+  .ticker-bar-label-text {
+    font-size: 11px;
+  }
+
+  .ticker-bar-item {
+    font-size: 13px;
+  }
+
+  .ticker-bar-separator {
+    padding: 0 12px;
+  }
+
+  .ticker-bar-track {
+    animation-duration: 32s;
+  }
+}
+
+@media (max-width: 380px) {
+  .ticker-bar-label-icon {
+    display: none;
+  }
+
+  .ticker-bar-label {
+    padding: 0 10px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
