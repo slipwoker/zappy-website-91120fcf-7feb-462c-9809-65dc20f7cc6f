@@ -8996,6 +8996,477 @@ nav.navbar .sub-menu li a {
 .navbar.scrolled .search-toggle {
   color: #FFFFFF !important;
 }
+
+/* AI-generated section */
+/* ============================================================
+   BULLETIN BOARD — Moroccan-Jewish Style
+   Colors: dark bg #201816, gold #C9A84C, crimson #7A1F2B
+   Surface cards: #F1DFC2
+   ============================================================ */
+
+/* ---- Section wrapper ---- */
+.brd-bulletin-section {
+  direction: rtl;
+  font-family: system-ui, sans-serif;
+  background-color: #201816;
+  padding: 48px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align panel to the right (RTL = right side visually = start) */
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- Zellige decorative borders (top & bottom) ---- */
+.brd-zellige-border {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 10px 24px;
+  margin-right: 0;
+  margin-left: auto; /* push to right in RTL context */
+}
+
+.brd-zellige-bottom {
+  margin-top: 6px;
+}
+
+.brd-zellige-diamond {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #C9A84C;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(201, 168, 76, 0.5);
+}
+
+.brd-zellige-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A84C 30%, #C9A84C 70%, transparent);
+  min-width: 20px;
+}
+
+/* ---- Main Panel ---- */
+.brd-panel {
+  width: 50%;
+  max-width: 600px;
+  margin-right: 0; /* RTL: sticks to the right edge */
+  margin-left: auto;
+  background: #201816;
+  border: 2px solid #C9A84C;
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 1px rgba(201, 168, 76, 0.15),
+    0 4px 32px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(201, 168, 76, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moroccan arch top decoration */
+.brd-panel::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #7A1F2B 15%,
+    #C9A84C 35%,
+    #e8c96a 50%,
+    #C9A84C 65%,
+    #7A1F2B 85%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* ---- Panel Header ---- */
+.brd-panel-header {
+  background: linear-gradient(180deg, #2e1a14 0%, #1a100c 100%);
+  padding: 22px 28px 18px;
+  text-align: center;
+  border-bottom: 2px solid #C9A84C;
+  position: relative;
+}
+
+.brd-header-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.brd-ornament-star {
+  color: #C9A84C;
+  font-size: 14px;
+  line-height: 1;
+  text-shadow: 0 0 8px rgba(201, 168, 76, 0.6);
+}
+
+.brd-ornament-line {
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+}
+
+.brd-panel-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #C9A84C;
+  margin: 6px 0 4px;
+  letter-spacing: 0.04em;
+  text-shadow:
+    0 0 12px rgba(201, 168, 76, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.brd-title-icon {
+  font-size: 1.4rem;
+}
+
+.brd-header-subtitle {
+  font-size: 0.85rem;
+  color: rgba(201, 168, 76, 0.7);
+  letter-spacing: 0.06em;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* ---- Scrollable container ---- */
+.brd-notices-scroll {
+  max-height: 480px;
+  overflow-y: auto;
+  padding: 20px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #C9A84C #2e1a14;
+}
+
+.brd-notices-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.brd-notices-scroll::-webkit-scrollbar-track {
+  background: #2e1a14;
+  border-radius: 3px;
+}
+
+.brd-notices-scroll::-webkit-scrollbar-thumb {
+  background: #C9A84C;
+  border-radius: 3px;
+}
+
+.brd-notices-scroll::-webkit-scrollbar-thumb:hover {
+  background: #e8c96a;
+}
+
+/* ---- Notice Card ---- */
+.brd-notice-card {
+  background: #F1DFC2;
+  border: 1.5px solid #C9A84C;
+  border-radius: 12px;
+  padding: 20px 20px 16px;
+  position: relative;
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.brd-notice-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 24px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(201, 168, 76, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Moroccan corner ornaments */
+.brd-notice-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #7A1F2B;
+  border-style: solid;
+  border-width: 0;
+}
+
+.brd-corner-tl {
+  top: 6px;
+  right: 6px; /* RTL: top-right */
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-top-right-radius: 3px;
+}
+
+.brd-corner-tr {
+  top: 6px;
+  left: 6px; /* RTL: top-left */
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-top-left-radius: 3px;
+}
+
+.brd-corner-bl {
+  bottom: 6px;
+  right: 6px; /* RTL: bottom-right */
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  border-bottom-right-radius: 3px;
+}
+
+.brd-corner-br {
+  bottom: 6px;
+  left: 6px; /* RTL: bottom-left */
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-bottom-left-radius: 3px;
+}
+
+/* Star of David badge */
+.brd-notice-badge {
+  position: absolute;
+  top: -1px;
+  right: 50%;
+  transform: translateX(50%);
+  background: #7A1F2B;
+  color: #C9A84C;
+  font-size: 13px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #C9A84C;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+/* ---- Notice Body ---- */
+.brd-notice-body {
+  padding-top: 14px;
+}
+
+.brd-notice-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #2a1208;
+  margin: 0;
+  font-weight: 400;
+  border-right: 3px solid #7A1F2B;
+  padding-right: 12px;
+}
+
+/* ---- Notice Footer ---- */
+.brd-notice-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(122, 31, 43, 0.25);
+}
+
+.brd-notice-date {
+  font-size: 0.82rem;
+  color: #5a3010;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.02em;
+}
+
+.brd-date-icon {
+  font-size: 0.9rem;
+}
+
+/* ---- Share Buttons ---- */
+.brd-share-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.brd-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: system-ui, sans-serif;
+}
+
+.brd-share-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.brd-share-btn:focus-visible {
+  outline: 3px solid #C9A84C;
+  outline-offset: 2px;
+}
+
+.brd-share-btn:active {
+  transform: translateY(0);
+}
+
+/* Facebook button */
+.brd-share-fb {
+  background: #1877F2;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(24, 119, 242, 0.35);
+}
+
+/* WhatsApp button */
+.brd-share-wa {
+  background: #25D366;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.35);
+}
+
+.brd-share-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* ---- Panel Footer Ornament ---- */
+.brd-panel-footer-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px 18px;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.brd-star-sm {
+  color: #C9A84C;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.brd-star-lg {
+  color: #C9A84C;
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(201, 168, 76, 0.5);
+}
+
+.brd-line-short {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.5), transparent);
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile
+   ============================================================ */
+@media (max-width: 900px) {
+  .brd-panel {
+    width: 70%;
+    max-width: 100%;
+  }
+
+  .brd-zellige-border {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .brd-bulletin-section {
+    padding: 32px 0 28px 0;
+    align-items: stretch; /* full width on mobile */
+  }
+
+  .brd-panel {
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .brd-zellige-border {
+    width: 100%;
+    padding: 8px 16px;
+  }
+
+  .brd-panel-header {
+    padding: 18px 20px 14px;
+  }
+
+  .brd-panel-title {
+    font-size: 1.4rem;
+  }
+
+  .brd-notices-scroll {
+    padding: 16px 14px 8px;
+    gap: 14px;
+    max-height: 420px;
+  }
+
+  .brd-notice-card {
+    padding: 18px 16px 14px;
+  }
+
+  .brd-notice-footer {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .brd-share-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .brd-share-btn {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .brd-panel-title {
+    font-size: 1.2rem;
+  }
+
+  .brd-notice-text {
+    font-size: 0.9rem;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
