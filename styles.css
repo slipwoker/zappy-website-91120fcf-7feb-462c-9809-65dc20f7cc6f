@@ -8816,6 +8816,186 @@ body.accessibility-widget-visible ._access-menu {
 }
 /* /Zappy custom logo size */
 
+
+.navbar .nav-menu a {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  letter-spacing: 0.04em !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.55) !important;
+}
+
+.navbar .nav-menu > li > a {
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-menu > .nav-item > a {
+  color: #FFFFFF !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #FFFFFF !important;
+}
+
+.navbar a:not(.nav-cta-btn) {
+  color: #FFFFFF !important;
+}
+
+.navbar .navbar-brand a {
+  color: #FFFFFF !important;
+}
+
+.navbar .dropdown-menu li a {
+  color: #FFFFFF !important;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: #FFFFFF !important;
+}
+
+.navbar .sub-menu a {
+  color: #FFFFFF !important;
+}
+
+.navbar .sub-menu li a {
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-menu .sub-menu a {
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-menu .sub-menu li a {
+  color: #FFFFFF !important;
+}
+
+.navbar .zappy-products-dropdown .sub-menu a {
+  color: #FFFFFF !important;
+}
+
+nav.navbar .sub-menu li a {
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-search-box .nav-search-input {
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-search-input::placeholder {
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-search-result-item a {
+  color: #FFFFFF !important;
+}
+
+.navbar .cart-link.nav-cart {
+  color: #FFFFFF !important;
+}
+
+.navbar .login-link.nav-login {
+  color: #FFFFFF !important;
+}
+
+.navbar .cart-link.nav-cart svg {
+  color: #FFFFFF !important;
+}
+
+.navbar .login-link.nav-login svg {
+  color: #FFFFFF !important;
+}
+
+.navbar .nav-search-toggle svg {
+  color: #FFFFFF !important;
+}
+
+.navbar .search-toggle svg {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled ~ .zappy-catalog-menu .catalog-menu-item {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled ~ .zappy-catalog-menu .catalog-menu-all {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled ~ #zappy-catalog-menu .catalog-menu-item {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled ~ #zappy-catalog-menu .catalog-menu-all {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .nav-menu > li > a {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .nav-menu > .nav-item > a {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled a:not(.nav-cta-btn) {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .navbar-brand {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .navbar-brand a {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .dropdown-toggle {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .mobile-hamburger-btn {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .mobile-close-btn {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .phone-header-btn {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .mobile-toggle {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .mobile-toggle svg {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .nav-search-btn {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .cart-link.nav-cart {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .login-link.nav-login {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .nav-search-toggle {
+  color: #FFFFFF !important;
+}
+
+.navbar.scrolled .search-toggle {
+  color: #FFFFFF !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
