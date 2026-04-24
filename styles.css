@@ -9652,6 +9652,7 @@ nav.navbar .sub-menu li a {
   flex-direction: row !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
+  display: flex;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
