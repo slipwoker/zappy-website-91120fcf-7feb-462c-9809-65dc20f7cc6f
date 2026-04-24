@@ -8997,22 +8997,15 @@ nav.navbar .sub-menu li a {
   color: #FFFFFF !important;
 }
 
-/* AI-generated section */
-/* ============================================================
-   BULLETIN BOARD — Moroccan-Jewish Style
-   Colors: dark bg #201816, gold #C9A84C, crimson #7A1F2B
-   Surface cards: #F1DFC2
-   ============================================================ */
-
-/* ---- Section wrapper ---- */
 .brd-bulletin-section {
   direction: rtl;
   font-family: system-ui, sans-serif;
   background-color: #201816;
-  padding: 48px 0 40px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* align panel to the right (RTL = right side visually = start) */
+  padding: 48px 40px 40px 40px;
+  display: block;
+  flex-direction: unset;
+  align-items: unset;
+  /* align panel to the right (RTL = right side visually = start) */
   min-height: 200px;
   position: relative;
   overflow: hidden;
