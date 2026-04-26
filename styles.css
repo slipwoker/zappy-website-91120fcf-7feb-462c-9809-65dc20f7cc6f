@@ -9671,6 +9671,21 @@ nav.navbar .sub-menu li a {
   max-height: none !important;
   min-height: 90px !important;
 }
+
+.navbar .logo-link img.logo {
+  width: auto !important;
+  height: 120px !important;
+  max-width: 300px !important;
+  max-height: 120px !important;
+}
+
+.navbar, .nav-container {
+  min-height: 130px !important;
+}
+
+.nav-right-group {
+  align-items: center !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
