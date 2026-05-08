@@ -5645,7 +5645,6 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   z-index: 1;
 }
 
-/* ── Content wrapper ── */
 .candles-intro-section .candles-intro-content-wrapper {
   position: relative;
   z-index: 10;
@@ -5653,15 +5652,14 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 160px 5% 120px;
-  max-width: 1200px;
+  padding: 160px 6% 120px;
+  max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* ── Text content block ── */
 .candles-intro-section .candles-intro-content {
-  max-width: 560px;
+  max-width: 820px;
   text-align: right;
 }
 
