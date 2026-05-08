@@ -9567,6 +9567,88 @@ nav.navbar .sub-menu li a {
 .candles-candle-gallery-section .candle-date {
   font-size: 0.45rem !important;
 }
+
+.candles-dedication-cta-section,
+.candles-intro-section,
+.candles-candle-gallery-section,
+.candles-devotion-section {
+  font-size: 18px;
+}
+
+.candles-dedication-cta-section .candles-dedication-cta-heading {
+  font-size: 2.2rem !important;
+}
+
+.candles-dedication-cta-section .candles-dedication-cta-text {
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+}
+
+.candles-dedication-cta-section .candle-form-label {
+  font-size: 1rem !important;
+}
+
+.candles-dedication-cta-section .candle-form-input {
+  font-size: 1rem !important;
+}
+
+.candles-dedication-cta-section .candles-dedication-cta-btn {
+  font-size: 1.05rem !important;
+}
+
+.candles-intro-section .candles-intro-h1 {
+  font-size: 3rem !important;
+}
+
+.candles-intro-section .candles-intro-lead {
+  font-size: 1.15rem !important;
+  line-height: 1.9 !important;
+}
+
+.candles-intro-section .candles-intro-h3 {
+  font-size: 1.3rem !important;
+}
+
+.candles-candle-gallery-section .candles-title {
+  font-size: 2.2rem !important;
+}
+
+.candles-candle-gallery-section .candles-intro {
+  font-size: 1.1rem !important;
+  line-height: 1.85 !important;
+}
+
+.candles-candle-gallery-section .candle-name {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+}
+
+.candles-candle-gallery-section .candle-dedication {
+  font-size: 0.97rem !important;
+  line-height: 1.75 !important;
+}
+
+.candles-candle-gallery-section .candle-date {
+  font-size: 0.9rem !important;
+}
+
+.candles-devotion-section .candles-devotion-h2 {
+  font-size: 2rem !important;
+}
+
+.candles-devotion-section .candles-devotion-h3 {
+  font-size: 1.35rem !important;
+}
+
+.candles-devotion-section .candles-devotion-p {
+  font-size: 1.1rem !important;
+  line-height: 1.9 !important;
+}
+
+.candles-devotion-section .candles-devotion-p-sub {
+  font-size: 1.05rem !important;
+  line-height: 1.85 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
