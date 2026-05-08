@@ -5862,18 +5862,17 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .candles-candle-gallery-section .candles-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 32px;
+  gap: 16px;
   direction: rtl;
   align-items: start;
 }
 
-/* CANDLE CARD */
 .candles-candle-gallery-section .candle-card {
   background: linear-gradient(180deg, #f5e6c6 0%, #edd8ad 100%);
   border: 1px solid var(--border-light);
   border-radius: 2px;
   box-shadow: 0 8px 20px rgba(58,32,24,0.18);
-  padding: 28px 24px 24px;
+  padding: 14px 12px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5903,13 +5902,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .candles-candle-gallery-section .candle-card--tall {
-  padding-top: 36px;
-  padding-bottom: 32px;
+  padding-top: 18px;
+  padding-bottom: 16px;
 }
 
 .candles-candle-gallery-section .candle-card--short {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .candles-candle-gallery-section .candle-card--center {
@@ -5922,12 +5921,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   box-shadow: 0 0 32px rgba(240,181,45,0.5), 0 16px 36px rgba(58,32,24,0.28);
 }
 
-/* FLAME AREA */
 .candles-candle-gallery-section .candle-flame-wrap {
   position: relative;
-  width: 60px;
-  height: 90px;
-  margin-bottom: 16px;
+  width: 30px;
+  height: 45px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5938,8 +5936,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   top: 4px;
   left: 50%;
   transform: translateX(-50%);
-  width: 44px;
-  height: 52px;
+  width: 22px;
+  height: 26px;
   border-radius: 50%;
   background: radial-gradient(ellipse at 50% 60%, rgba(240,165,0,0.45) 0%, rgba(216,155,43,0.2) 50%, transparent 80%);
   filter: blur(8px);
@@ -5948,32 +5946,31 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .candles-candle-gallery-section .candle-glow--large {
-  width: 56px;
-  height: 66px;
+  width: 28px;
+  height: 33px;
   background: radial-gradient(ellipse at 50% 60%, rgba(240,165,0,0.55) 0%, rgba(216,155,43,0.25) 50%, transparent 80%);
   filter: blur(12px);
 }
 
 .candles-candle-gallery-section .candle-flame-svg {
-  width: 60px;
-  height: 90px;
+  width: 30px;
+  height: 45px;
   position: relative;
   z-index: 1;
   filter: drop-shadow(0 0 6px rgba(240,165,0,0.6));
 }
 
 .candles-candle-gallery-section .candle-flame-svg--large {
-  width: 70px;
-  height: 104px;
+  width: 35px;
+  height: 52px;
   filter: drop-shadow(0 0 10px rgba(240,165,0,0.75));
 }
 
-/* CARD BODY */
 .candles-candle-gallery-section .candle-body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
 }
 
@@ -9558,6 +9555,18 @@ nav.navbar .sub-menu li a {
 
 
 
+
+.candles-candle-gallery-section .candle-name {
+  font-size: 0.56rem !important;
+}
+
+.candles-candle-gallery-section .candle-dedication {
+  font-size: 0.5rem !important;
+}
+
+.candles-candle-gallery-section .candle-date {
+  font-size: 0.45rem !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
