@@ -6,21 +6,27 @@
 
 ## Pages
 
-### בית
+### רבי דוד ומשה ציון קדוש — רבי דוד ומשה זיע&quot;א
 https://rabbidavidoumoshe.com
 ציון רבי דוד ומשה מרוקו – מקום קדוש בן אלף שנה בהרי האטלס. מידע על ההילולה, סיור וירטואלי, גלריה ועוד. בקר עכשיו וחווה את הקדושה!
 
-### גלריה
+### תמונות וסרטים מהציון הקדוש — רבי דוד ומשה זיע&quot;א
 https://rabbidavidoumoshe.com/gallery
 גלריית תמונות וסרטוני יוטיוב עשירה מציון רבי דוד ומשה בהרי האטלס. סיור וירטואלי מרהיב שיקרב אותך למקום הקדוש גם מרחוק. צפה עכשיו!
 
-### נרות נשמה
+### הדלק נר נשמה לעילוי הנשמה — רבי דוד ומשה זיע&quot;א
 https://rabbidavidoumoshe.com/candles
 הדלק נר נשמה וירטואלי לכבוד רבי דוד ומשה ציון קדוש ושלח תפילתך מכל מקום בעולם. הצטרף לאלפי מאמינים שמכבדים את זכרו של הצדיק הקדוש.
 
-### שונות
+### מידע, סיפורים ולוח הודעות עולי רגל — רבי דוד ומשה זיע&quot;א
 https://rabbidavidoumoshe.com/miscellaneous
 לוח הודעות לעולי רגל, סיפורי נסים, מידע על עלייה לרגל לציון קדוש יהודי מרוקו ישראל ועוד תכנים מרתקים. שתף את חוויתך ולמד על מורשת יהודי מרוקו.
+
+### Page
+https://rabbidavidoumoshe.com/menu-group-1778523771414
+
+### Page
+https://rabbidavidoumoshe.com/menu-group-1778523830665
 
 ## Legal & Policy
 
@@ -50,11 +56,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
