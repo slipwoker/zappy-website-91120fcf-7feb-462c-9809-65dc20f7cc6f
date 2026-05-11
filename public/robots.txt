@@ -50,4 +50,4 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://hatzaddikrabidavidumoshezya.zappy5.app/sitemap.xml
+Sitemap: https://rabbidavidoumoshe.com/sitemap.xml
