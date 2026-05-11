@@ -10213,6 +10213,16 @@ body::before {
     font-size: 1.3rem;
   }
 }
+
+.navbar #navMenu > li.menu-group-item:nth-child(4) > .menu-group-title {
+  font-weight: 700 !important;
+  color: var(--accent) !important;
+  border: 2px solid var(--accent) !important;
+  border-radius: 6px !important;
+  padding: 6px 14px !important;
+  background: rgba(216, 155, 43, 0.12) !important;
+  letter-spacing: 0.03em !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
