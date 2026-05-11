@@ -7,33 +7,33 @@
 ## Pages
 
 ### בית
-https://example.com
+https://hatzaddikrabidavidumoshezya.zappy5.app
 ציון רבי דוד ומשה מרוקו – מקום קדוש בן אלף שנה בהרי האטלס. מידע על ההילולה, סיור וירטואלי, גלריה ועוד. בקר עכשיו וחווה את הקדושה!
 
 ### גלריה
-https://example.com/gallery
+https://hatzaddikrabidavidumoshezya.zappy5.app/gallery
 גלריית תמונות וסרטוני יוטיוב עשירה מציון רבי דוד ומשה בהרי האטלס. סיור וירטואלי מרהיב שיקרב אותך למקום הקדוש גם מרחוק. צפה עכשיו!
 
 ### נרות נשמה
-https://example.com/candles
+https://hatzaddikrabidavidumoshezya.zappy5.app/candles
 הדלק נר נשמה וירטואלי לכבוד רבי דוד ומשה ציון קדוש ושלח תפילתך מכל מקום בעולם. הצטרף לאלפי מאמינים שמכבדים את זכרו של הצדיק הקדוש.
 
 ### שונות
-https://example.com/miscellaneous
+https://hatzaddikrabidavidumoshezya.zappy5.app/miscellaneous
 לוח הודעות לעולי רגל, סיפורי נסים, מידע על עלייה לרגל לציון קדוש יהודי מרוקו ישראל ועוד תכנים מרתקים. שתף את חוויתך ולמד על מורשת יהודי מרוקו.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://hatzaddikrabidavidumoshezya.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://hatzaddikrabidavidumoshezya.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://hatzaddikrabidavidumoshezya.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -45,8 +45,8 @@ Information about WCAG compliance and accessibility features.
 - Phone (tel): tel:+972506841740
 
 ### Contact form
-- URL: https://example.com/miscellaneous
-- Endpoint: https://example.com/api/email/contact-form
+- URL: https://hatzaddikrabidavidumoshezya.zappy5.app/miscellaneous
+- Endpoint: https://hatzaddikrabidavidumoshezya.zappy5.app/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -79,6 +79,6 @@ A sacred memorial website dedicated to Rabbi David U'Moshe (זיע"א), a revere
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://example.com/sitemap.xml
-- Robots: https://example.com/robots.txt
-- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Sitemap (XML): https://hatzaddikrabidavidumoshezya.zappy5.app/sitemap.xml
+- Robots: https://hatzaddikrabidavidumoshezya.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://hatzaddikrabidavidumoshezya.zappy5.app/llms-full.txt

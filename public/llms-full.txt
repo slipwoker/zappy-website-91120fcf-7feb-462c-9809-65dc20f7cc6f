@@ -2,13 +2,13 @@
 
 A sacred memorial website dedicated to Rabbi David U'Moshe (זיע"א), a revered Jewish holy figure buried in the Atlas Mountains of Morocco, near the route from Marrakech to Ouarzazate. The rabbi passed away approximately 1,050 years ago, and his tomb is a significant pilgrimage site. The website aims to honor his memory through informational content, a rich media gallery including YouTube videos and a virtual tour, virtual memorial candles, and a message board for visitors and devotees.
 
-Source: https://example.com
+Source: https://hatzaddikrabidavidumoshezya.zappy5.app
 
 ---
 
 ## רבי דוד ומשה ציון קדוש — רבי דוד ומשה זיע&quot;א
 
-URL: https://example.com
+URL: https://hatzaddikrabidavidumoshezya.zappy5.app
 Description: ציון רבי דוד ומשה מרוקו – מקום קדוש בן אלף שנה בהרי האטלס. מידע על ההילולה, סיור וירטואלי, גלריה ועוד. בקר עכשיו וחווה את הקדושה!
 
 - גלריה
@@ -738,7 +738,7 @@ YouTube
 
 ## תמונות וסרטים מהציון הקדוש — רבי דוד ומשה זיע&quot;א
 
-URL: https://example.com/gallery
+URL: https://hatzaddikrabidavidumoshezya.zappy5.app/gallery
 Description: גלריית תמונות וסרטוני יוטיוב עשירה מציון רבי דוד ומשה בהרי האטלס. סיור וירטואלי מרהיב שיקרב אותך למקום הקדוש גם מרחוק. צפה עכשיו!
 
 תמונות וסרטים מהציון הקדוש — הצדיק רבי דוד ומשה זיע"א
@@ -1178,7 +1178,7 @@ Description: גלריית תמונות וסרטוני יוטיוב עשירה מ
 
 ## הדלק נר נשמה לעילוי הנשמה — רבי דוד ומשה זיע&quot;א
 
-URL: https://example.com/candles
+URL: https://hatzaddikrabidavidumoshezya.zappy5.app/candles
 Description: הדלק נר נשמה וירטואלי לכבוד רבי דוד ומשה ציון קדוש ושלח תפילתך מכל מקום בעולם. הצטרף לאלפי מאמינים שמכבדים את זכרו של הצדיק הקדוש.
 
 הדלק נר נשמה לעילוי הנשמה — הצדיק רבי דוד ומשה זיע"א
@@ -1554,7 +1554,7 @@ Sending...
 
 ## מידע, סיפורים ולוח הודעות עולי רגל — רבי דוד ומשה זיע&quot;א
 
-URL: https://example.com/miscellaneous
+URL: https://hatzaddikrabidavidumoshezya.zappy5.app/miscellaneous
 Description: לוח הודעות לעולי רגל, סיפורי נסים, מידע על עלייה לרגל לציון קדוש יהודי מרוקו ישראל ועוד תכנים מרתקים. שתף את חוויתך ולמד על מורשת יהודי מרוקו.
 
 מידע, סיפורים ולוח הודעות עולי רגל — הצדיק רבי דוד ומשה זיע"א                                                                               - גלריה
@@ -1662,7 +1662,7 @@ rabbidavidoumoshe@gmail.com          +972506841740
 
 ## מדיניות פרטיות
 
-URL: https://example.com/privacy
+URL: https://hatzaddikrabidavidumoshezya.zappy5.app/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -1851,7 +1851,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://example.com/accessibility
+URL: https://hatzaddikrabidavidumoshezya.zappy5.app/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -2049,7 +2049,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://example.com/terms
+URL: https://hatzaddikrabidavidumoshezya.zappy5.app/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
