@@ -9989,6 +9989,230 @@ body::before {
   }
 }
 
+
+/* Added Component Styles */
+/* ===== Section: שמה ישראל ליד לוח מודעות ===== */
+.shai-israel-board-section {
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  background: #f5f0ef;
+  padding: 70px 20px;
+}
+
+.shai-israel-board-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ===== Image Column (Left side in RTL = order 2) ===== */
+.shai-israel-image-col {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2; /* left side in RTL layout */
+}
+
+.shai-israel-photo {
+  width: 100%;
+  max-width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(122, 31, 43, 0.18);
+  border: 4px solid #fff;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shai-israel-photo:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(122, 31, 43, 0.28);
+}
+
+/* ===== Board Column (Right side in RTL = order 1) ===== */
+.shai-israel-board-col {
+  flex: 1 1 0;
+  order: 1; /* right side in RTL layout */
+}
+
+/* ===== Bulletin Board ===== */
+.shai-israel-board {
+  background: #c8a96e;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.04) 0px,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.04) 0px,
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  border-radius: 16px;
+  padding: 32px 32px 28px 32px;
+  box-shadow:
+    0 4px 0 #8b6914,
+    0 8px 24px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  border: 6px solid #8b6914;
+  position: relative;
+}
+
+/* Board screws / decorative corners */
+.shai-israel-board::before,
+.shai-israel-board::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 40% 35%, #e0c97a, #6b4e0a);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  top: 14px;
+}
+.shai-israel-board::before {
+  right: 18px;
+}
+.shai-israel-board::after {
+  left: 18px;
+}
+
+/* ===== Board Header ===== */
+.shai-israel-board-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px dashed rgba(255,255,255,0.5);
+}
+
+.shai-israel-board-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.shai-israel-board-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3b2000;
+  margin: 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  letter-spacing: 0.01em;
+}
+
+/* ===== Notices List ===== */
+.shai-israel-notices-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.shai-israel-notice-item {
+  background: #fff8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.12), 0 1px 0 rgba(255,255,255,0.8) inset;
+  border-right: 4px solid var(--primary, #7A1F2B);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.shai-israel-notice-item:hover {
+  transform: translateY(-2px) rotate(-0.3deg);
+  box-shadow: 4px 6px 14px rgba(0,0,0,0.18), 0 1px 0 rgba(255,255,255,0.8) inset;
+}
+
+.shai-notice-pinned {
+  border-right-color: #c0392b;
+  background: #fff5f5;
+}
+
+.shai-notice-pin {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+}
+
+.shai-notice-content {
+  flex: 1;
+}
+
+.shai-notice-headline {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary, #7A1F2B);
+  margin-bottom: 4px;
+}
+
+.shai-notice-text {
+  font-size: 0.88rem;
+  color: #3a3a3a;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .shai-israel-board-container {
+    gap: 32px;
+  }
+  .shai-israel-image-col {
+    flex: 0 0 260px;
+  }
+  .shai-israel-photo {
+    max-width: 260px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 680px) {
+  .shai-israel-board-section {
+    padding: 48px 16px;
+  }
+  .shai-israel-board-container {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .shai-israel-image-col {
+    flex: 0 0 auto;
+    order: 1; /* image on top on mobile */
+    width: 100%;
+  }
+  .shai-israel-board-col {
+    order: 2;
+    width: 100%;
+  }
+  .shai-israel-photo {
+    max-width: 100%;
+    width: 100%;
+    height: 260px;
+  }
+  .shai-israel-board {
+    padding: 24px 20px 20px 20px;
+  }
+  .shai-israel-board-title {
+    font-size: 1.3rem;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
