@@ -8375,8 +8375,7 @@ nav.navbar .sub-menu li a:hover { color: #D89B2B !important; background-color: r
   padding: 8px !important;
   text-decoration: none !important;
   z-index: 10000 !important;
-  border-radius: 4px !important;
-}
+  border-radius: 4px !important; transform: none; }
 
 /* Enhanced focus indicators */
 *:focus {
@@ -10212,26 +10211,6 @@ body::before {
   .shai-israel-board-title {
     font-size: 1.3rem;
   }
-}
-
-.navbar #navMenu > li.menu-group-item:nth-child(4) > .menu-group-title {
-  font-weight: 700 !important;
-  color: var(--accent) !important;
-  border: 2px solid var(--accent) !important;
-  border-radius: 6px !important;
-  padding: 6px 14px !important;
-  background: rgba(216, 155, 43, 0.12) !important;
-  letter-spacing: 0.03em !important;
-}
-
-.navbar #navMenu > li.menu-group-item:nth-child(4) > .menu-group-title {
-  font-weight: 700 !important;
-  color: var(--nav-text) !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0.5rem 1rem !important;
-  background: transparent !important;
-  letter-spacing: normal !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
