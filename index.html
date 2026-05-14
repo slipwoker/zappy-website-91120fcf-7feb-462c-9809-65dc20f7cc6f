@@ -249,8 +249,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
+            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -264,13 +264,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover,
+            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &gt; .sub-menu {
+            li:has(.menu-group-title):hover &amp;amp;amp;gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -279,7 +279,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover &amp;amp;amp;gt; .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -332,9 +332,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &gt; .sub-menu,
-            nav li:hover &gt; .sub-menu,
-            .navbar li:hover &gt; .sub-menu {
+            .nav-menu li:hover &amp;amp;amp;gt; .sub-menu,
+            nav li:hover &amp;amp;amp;gt; .sub-menu,
+            .navbar li:hover &amp;amp;amp;gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -372,8 +372,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
+            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -387,8 +387,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover,
+            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -430,18 +430,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &gt; .sub-menu,
-              nav li:hover &gt; .sub-menu,
-              .navbar li:hover &gt; .sub-menu {
+              .nav-menu li:hover &amp;amp;amp;gt; .sub-menu,
+              nav li:hover &amp;amp;amp;gt; .sub-menu,
+              .navbar li:hover &amp;amp;amp;gt; .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &gt; .sub-menu.mobile-expanded,
-              nav li &gt; .sub-menu.mobile-expanded,
-              .navbar li &gt; .sub-menu.mobile-expanded {
+              .nav-menu li &amp;amp;amp;gt; .sub-menu.mobile-expanded,
+              nav li &amp;amp;amp;gt; .sub-menu.mobile-expanded,
+              .navbar li &amp;amp;amp;gt; .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -470,39 +470,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &gt; a,
-              nav li:has(.sub-menu) &gt; a,
-              .navbar li:has(.sub-menu) &gt; a,
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a,
+              nav li:has(.sub-menu) &amp;amp;amp;gt; a,
+              .navbar li:has(.sub-menu) &amp;amp;amp;gt; a,
+              .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
+              #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
+              #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
-              nav li:has(.sub-menu) &gt; .sub-menu,
-              .navbar li:has(.sub-menu) &gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu,
+              nav li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu,
+              .navbar li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"],
+              nav li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
+              nav li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"],
+              #navMenu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
+              #navMenu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -557,10 +557,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &gt; 768) {
+                if (window.innerWidth &amp;amp;amp;gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;amp;amp;gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;amp;amp;gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -583,7 +583,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope &amp;amp;amp;gt; a') || li.querySelector(':scope &amp;amp;amp;gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -643,7 +643,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;amp;amp;amp;&amp;amp;amp;amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -715,7 +715,7 @@
     <span style="font-size: 16px;">🚧</span>
   </span>
 </div>
-<nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="+972506841740" aria-label="Call"> <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link" style="display:flex;align-items:center;gap:10px;text-decoration:none;"> <img src="/assets/logo-remove_background-1777198266148-moy2qd.png?v=1777198266148" alt="רבי דוד ומשה זיע&amp;quot;א" class="logo"></img> </a> </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/gallery">גלריה</a></li><li><a href="/candles">נרות נשמה</a></li><li><a href="/miscellaneous">שונות</a></li><li class="menu-group-item"><span class="menu-group-title">צור קשר ומידע</span></li></ul></div> </div> </nav>
+<nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="+972506841740" aria-label="Call"> <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link" style="display:flex;align-items:center;gap:10px;text-decoration:none;"> <img src="/assets/logo-remove_background-1777198266148-moy2qd.png?v=1777198266148" alt="רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א" class="logo"></img> </a> </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/gallery">גלריה</a></li><li><a href="/candles">נרות נשמה</a></li><li><a href="/miscellaneous">שונות</a></li><li class="menu-group-item"><span class="menu-group-title">צור קשר ומידע</span></li></ul></div> </div> </nav>
 <script>
 
 // Navbar Mobile Menu Toggle and Contrast Fix
@@ -752,12 +752,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;amp;amp;amp;&amp;amp;amp;amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;&amp; bgImage !== 'none') {
+      if (bgImage &amp;amp;amp;amp;&amp;amp;amp;amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -770,7 +770,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;&amp; rgb.length &gt;= 3) {
+    if (rgb &amp;amp;amp;amp;&amp;amp;amp;amp; rgb.length &amp;amp;amp;gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -906,7 +906,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &lt;= 768;
+      const isMobileViewport = window.innerWidth &amp;amp;amp;lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -1097,7 +1097,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &gt; 0 
+        const phoneNumber = phoneLinks.length &amp;amp;amp;gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '+972506841740';
         
@@ -1143,10 +1143,10 @@
       </div>
     </div>
   </div>
-<section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="zappy-section-0" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/general-hero-upload-1777213035741.webp" data-zappy-bg-overlay-color="#140a06" data-zappy-bg-overlay-opacity="3" data-zappy-bg-video-type="" data-zappy-bg-video-url="" style="position: relative; overflow: hidden; background-image: linear-gradient(rgba(20, 10, 6, 0.03), rgba(20, 10, 6, 0.03)), url(&amp;quot;assets/general-hero-upload-1777213035741.webp&amp;quot;); background-size: cover; background-position: center; background-repeat: no-repeat; --zappy-bg-overlay: rgba(20, 10, 6, 0.03); --zappy-bg-image: url(&amp;quot;assets/general-hero-upload-1777213035741.webp&amp;quot;)">
+<section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="zappy-section-0" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/general-hero-upload-1777213035741.webp" data-zappy-bg-overlay-color="#140a06" data-zappy-bg-overlay-opacity="3" data-zappy-bg-video-type="" data-zappy-bg-video-url="" style="position: relative; overflow: hidden; background-image: linear-gradient(rgba(20, 10, 6, 0.03), rgba(20, 10, 6, 0.03)), url(&amp;amp;amp;amp;quot;assets/general-hero-upload-1777213035741.webp&amp;amp;amp;amp;quot;); background-size: cover; background-position: center; background-repeat: no-repeat; --zappy-bg-overlay: rgba(20, 10, 6, 0.03); --zappy-bg-image: url(&amp;amp;amp;amp;quot;assets/general-hero-upload-1777213035741.webp&amp;amp;amp;amp;quot;)">
   <!-- Background Image Layer -->
   <div class="index-hero-bg" style="display: none" data-zappy-original-bg="hidden">
-    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Panoramic dawn landscape of the Atlas Mountains in Morocco near Marrakech, showing a sacred Jewish tomb shrine (tzion) nestled among dramatic ochre and terracotta mountain ridges. The scene is bathed in warm golden-hour light with deep violet-blue shadows in the valleys. Ancient stone walls and a whitewashed domed tomb structure visible in the middle distance. Sparse argan trees and desert scrub in the foreground. The atmosphere is solemn, majestic, and spiritual — evoking a sacred pilgrimage site. Cinematic, editorial photography quality." width="1200" height="700" src="/assets/site-index-hero-image-1.webp" alt="ציון רבי דוד ומשה זיע&amp;quot;א בהרי האטלס, מרוקו" data-hero-background="true" data-element-type="image" data-element-id="img-1776768228672-iszwryr6c"></img>
+    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Panoramic dawn landscape of the Atlas Mountains in Morocco near Marrakech, showing a sacred Jewish tomb shrine (tzion) nestled among dramatic ochre and terracotta mountain ridges. The scene is bathed in warm golden-hour light with deep violet-blue shadows in the valleys. Ancient stone walls and a whitewashed domed tomb structure visible in the middle distance. Sparse argan trees and desert scrub in the foreground. The atmosphere is solemn, majestic, and spiritual — evoking a sacred pilgrimage site. Cinematic, editorial photography quality." width="1200" height="700" src="/assets/site-index-hero-image-1.webp" alt="ציון רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א בהרי האטלס, מרוקו" data-hero-background="true" data-element-type="image" data-element-id="img-1776768228672-iszwryr6c"></img>
   </div>
 
   <!-- Manuscript Texture Overlay -->
@@ -1159,7 +1159,7 @@
   <div class="index-hero-content-wrap">
     <div class="index-hero-content">
       <h1 class="index-hero-h1" >הצדיק הצדיק רבי דוד ומשה זיע"א </h1>
-      <h3 class="index-hero-h3" >הציון הקדוש בהרי האטלס&amp;nbsp;</h3>
+      <h3 class="index-hero-h3" >הציון הקדוש בהרי האטלס&amp;amp;amp;amp;nbsp;</h3>
       <p class="index-hero-p">לפני למעלה מאלף שנה נסתלק הצדיק הצדיק רבי דוד ומשה זיע"א , וציונו הקדוש בהרי האטלס שבמרוקו נותר עד היום מקום עלייה לרגל ומקור ברכה לאלפי יהודים מכל רחבי העולם. בואו לכבד את זכרו ולהתחבר למורשת הקדושה.</p>
       
     </div>
@@ -1873,7 +1873,7 @@
 
 
 
-<footer class="site-footer" dir="rtl"> <div class="footer-pattern-band"></div> <div class="footer-inner"> <div class="footer-grid"> <!-- Column 1: Company Info --> <div class="footer-col footer-col--brand"> <div class="footer-logo-wrap"> <img src="/assets/business-logo.webp" alt="רבי דוד ומשה זיע&amp;quot;א" class="logo"></img> </div>         <h2 class="footer-brand-name"><span class="footer-brand-star">✡</span> הצדיק רבי דוד ומשה זיע"א  <span class="footer-brand-star">✡</span></h2> <p class="footer-brand-desc">אתר עלייה לרגל ומורשת יהודית מרוקאית — מדריך רוחני לציון הקדושים בהרי האטלס, לשימור זיכרון הקהילה ולחיזוק הקשר בין הדורות.</p> <div class="footer-ornament"><span></span><i class="fas fa-star-of-david"></i><span></span></div> </div> <!-- Column 2: Quick Links --> <div class="footer-col footer-col--links"> <h3 class="footer-heading">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/gallery"><i class="fas fa-images footer-nav-icon"></i>גלריה</a></li> <li><a href="/candles"><i class="fas fa-fire footer-nav-icon"></i>נרות נשמה</a></li> <li><a href="/miscellaneous"><i class="fas fa-scroll footer-nav-icon"></i>שונות</a></li> </ul> </div> <!-- Column 3: Contact --> <div class="footer-col footer-col--contact"> <h3 class="footer-heading">צור קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text"><a href="mailto:rabbidavidoumoshe@gmail.com">rabbidavidoumoshe@gmail.com</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text"><a href="tel:+972506841740">+972506841740</a></span> </li> <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">[business_address]</span></a></li> </ul> </div> <!-- Column 4: Social --> <div class="footer-col footer-col--social"> <h3 class="footer-heading">עקבו אחרינו</h3> <div class="footer-social"> <a href="https://facebook.com/groups/rabbidavidoumoshe" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a> <a href="https://wa.me/972506841740" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> </div> <div class="footer-quote"> <p>"וְצַדִּיקִים יִרְאוּ וְיִשְׂמָחוּ"</p> </div> </div> </div> </div> <div class="footer-pattern-band footer-pattern-band--bottom"></div> <!-- Bottom Bar --> <div class="footer-bottom"> <div class="footer-bottom-inner"> <p class="footer-copyright">© 2026 הצדיק רבי דוד ומשה זיע"א . כל הזכויות שמורות.</p> <div class="footer-legal"> <a href="/privacy">מדיניות פרטיות</a> <span class="footer-legal-sep">·</span> <a href="/terms">תנאי שימוש</a> <span class="footer-legal-sep">·</span> <a href="/accessibility">נגישות</a> <span class="footer-legal-sep">·</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
+<footer class="site-footer" dir="rtl"> <div class="footer-pattern-band"></div> <div class="footer-inner"> <div class="footer-grid"> <!-- Column 1: Company Info --> <div class="footer-col footer-col--brand"> <div class="footer-logo-wrap"> <img src="/assets/business-logo.webp" alt="רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א" class="logo"></img> </div>         <h2 class="footer-brand-name"><span class="footer-brand-star">✡</span> הצדיק רבי דוד ומשה זיע"א  <span class="footer-brand-star">✡</span></h2> <p class="footer-brand-desc">אתר עלייה לרגל ומורשת יהודית מרוקאית — מדריך רוחני לציון הקדושים בהרי האטלס, לשימור זיכרון הקהילה ולחיזוק הקשר בין הדורות.</p> <div class="footer-ornament"><span></span><i class="fas fa-star-of-david"></i><span></span></div> </div> <!-- Column 2: Quick Links --> <div class="footer-col footer-col--links"> <h3 class="footer-heading">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/gallery"><i class="fas fa-images footer-nav-icon"></i>גלריה</a></li> <li><a href="/candles"><i class="fas fa-fire footer-nav-icon"></i>נרות נשמה</a></li> <li><a href="/miscellaneous"><i class="fas fa-scroll footer-nav-icon"></i>שונות</a></li> </ul> </div> <!-- Column 3: Contact --> <div class="footer-col footer-col--contact"> <h3 class="footer-heading">צור קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text"><a href="mailto:rabbidavidoumoshe@gmail.com">rabbidavidoumoshe@gmail.com</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text"><a href="tel:+972506841740">+972506841740</a></span> </li> <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">[business_address]</span></a></li> </ul> </div> <!-- Column 4: Social --> <div class="footer-col footer-col--social"> <h3 class="footer-heading">עקבו אחרינו</h3> <div class="footer-social"> <a href="https://facebook.com/groups/rabbidavidoumoshe" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a> <a href="https://wa.me/972506841740" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> </div> <div class="footer-quote"> <p>"וְצַדִּיקִים יִרְאוּ וְיִשְׂמָחוּ"</p> </div> </div> </div> </div> <div class="footer-pattern-band footer-pattern-band--bottom"></div> <!-- Bottom Bar --> <div class="footer-bottom"> <div class="footer-bottom-inner"> <p class="footer-copyright">© 2026 הצדיק רבי דוד ומשה זיע"א . כל הזכויות שמורות.</p> <div class="footer-legal"> <a href="/privacy">מדיניות פרטיות</a> <span class="footer-legal-sep">·</span> <a href="/terms">תנאי שימוש</a> <span class="footer-legal-sep">·</span> <a href="/accessibility">נגישות</a> <span class="footer-legal-sep">·</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
   
   <a href="https://wa.me/972506841740" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
