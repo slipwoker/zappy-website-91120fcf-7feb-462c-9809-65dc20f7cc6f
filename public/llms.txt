@@ -25,9 +25,6 @@ https://rabbidavidoumoshe.com/miscellaneous
 ### Page
 https://rabbidavidoumoshe.com/menu-group-1778523771414
 
-### Page
-https://rabbidavidoumoshe.com/menu-group-1778523830665
-
 ## Legal & Policy
 
 ### Privacy Policy
@@ -56,11 +53,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
+  - `name` (text, required)
+  - `email` (email, required)
   - `phone` (tel)
   - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
