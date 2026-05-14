@@ -249,8 +249,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -264,13 +264,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &amp;amp;amp;gt; .sub-menu {
+            li:has(.menu-group-title):hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -279,7 +279,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &amp;amp;amp;gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -332,9 +332,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &amp;amp;amp;gt; .sub-menu,
-            nav li:hover &amp;amp;amp;gt; .sub-menu,
-            .navbar li:hover &amp;amp;amp;gt; .sub-menu {
+            .nav-menu li:hover &gt; .sub-menu,
+            nav li:hover &gt; .sub-menu,
+            .navbar li:hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -372,8 +372,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -387,8 +387,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -430,18 +430,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &amp;amp;amp;gt; .sub-menu,
-              nav li:hover &amp;amp;amp;gt; .sub-menu,
-              .navbar li:hover &amp;amp;amp;gt; .sub-menu {
+              .nav-menu li:hover &gt; .sub-menu,
+              nav li:hover &gt; .sub-menu,
+              .navbar li:hover &gt; .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &amp;amp;amp;gt; .sub-menu.mobile-expanded,
-              nav li &amp;amp;amp;gt; .sub-menu.mobile-expanded,
-              .navbar li &amp;amp;amp;gt; .sub-menu.mobile-expanded {
+              .nav-menu li &gt; .sub-menu.mobile-expanded,
+              nav li &gt; .sub-menu.mobile-expanded,
+              .navbar li &gt; .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -470,39 +470,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a,
-              nav li:has(.sub-menu) &amp;amp;amp;gt; a,
-              .navbar li:has(.sub-menu) &amp;amp;amp;gt; a,
-              .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-              #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) &gt; a,
+              nav li:has(.sub-menu) &gt; a,
+              .navbar li:has(.sub-menu) &gt; a,
+              .nav-menu &gt; li &gt; .menu-group-title,
+              #navMenu &gt; li &gt; .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-              #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+              .nav-menu &gt; li &gt; .menu-group-title,
+              #navMenu &gt; li &gt; .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu,
-              nav li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu,
-              .navbar li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
+              nav li:has(.sub-menu) &gt; .sub-menu,
+              .navbar li:has(.sub-menu) &gt; .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
+              nav li:has(.sub-menu) &gt; a [class*="chevron"],
+              nav li:has(.sub-menu) &gt; a [class*="arrow"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -557,10 +557,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &amp;amp;amp;gt; 768) {
+                if (window.innerWidth &gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;amp;amp;gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;amp;amp;gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -583,7 +583,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &amp;amp;amp;gt; a') || li.querySelector(':scope &amp;amp;amp;gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -643,7 +643,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;amp;amp;amp;&amp;amp;amp;amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -715,7 +715,7 @@
     <span style="font-size: 16px;">🚧</span>
   </span>
 </div>
-<nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="+972506841740" aria-label="Call"> <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link" style="display:flex;align-items:center;gap:10px;text-decoration:none;"> <img src="/assets/logo-remove_background-1777198266148-moy2qd.png?v=1777198266148" alt="רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א" class="logo"></img> </a> </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/gallery">גלריה</a></li><li><a href="/candles">נרות נשמה</a></li><li><a href="/miscellaneous">שונות</a></li><li class="menu-group-item"><span class="menu-group-title">צור קשר ומידע</span></li></ul></div> </div> </nav>
+<nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="+972506841740" aria-label="Call"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link" style="display:flex;align-items:center;gap:10px;text-decoration:none;"> <img src="/assets/logo-remove_background-1777198266148-moy2qd.png?v=1777198266148" alt="רבי דוד ומשה זיע&quot;א" class="logo"> </a> </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/gallery">גלריה</a></li><li><a href="/candles">נרות נשמה</a></li><li><a href="/miscellaneous">שונות</a></li><li class="menu-group-item"><span class="menu-group-title">צור קשר ומידע</span></li></ul></div> </div> </nav>
 <script>
 
 // Navbar Mobile Menu Toggle and Contrast Fix
@@ -752,12 +752,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;amp;amp;&amp;amp;amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;amp;amp;&amp;amp;amp;amp; bgImage !== 'none') {
+      if (bgImage &amp;&amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -770,7 +770,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;amp;amp;&amp;amp;amp;amp; rgb.length &amp;amp;amp;gt;= 3) {
+    if (rgb &amp;&amp; rgb.length &gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -906,7 +906,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;amp;amp;lt;= 768;
+      const isMobileViewport = window.innerWidth &lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -1097,7 +1097,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;amp;amp;gt; 0 
+        const phoneNumber = phoneLinks.length &gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '+972506841740';
         
@@ -1143,10 +1143,10 @@
       </div>
     </div>
   </div>
-<section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="zappy-section-0" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/general-hero-upload-1777213035741.webp" data-zappy-bg-overlay-color="#140a06" data-zappy-bg-overlay-opacity="3" data-zappy-bg-video-type="" data-zappy-bg-video-url="" style="position: relative; overflow: hidden; background-image: linear-gradient(rgba(20, 10, 6, 0.03), rgba(20, 10, 6, 0.03)), url(&amp;amp;amp;amp;quot;assets/general-hero-upload-1777213035741.webp&amp;amp;amp;amp;quot;); background-size: cover; background-position: center; background-repeat: no-repeat; --zappy-bg-overlay: rgba(20, 10, 6, 0.03); --zappy-bg-image: url(&amp;amp;amp;amp;quot;assets/general-hero-upload-1777213035741.webp&amp;amp;amp;amp;quot;)">
+<section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="zappy-section-0" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/general-hero-upload-1777213035741.webp" data-zappy-bg-overlay-color="#140a06" data-zappy-bg-overlay-opacity="3" data-zappy-bg-video-type="" data-zappy-bg-video-url="" style="position: relative; overflow: hidden; background-image: linear-gradient(rgba(20, 10, 6, 0.03), rgba(20, 10, 6, 0.03)), url(&quot;assets/general-hero-upload-1777213035741.webp&quot;); background-size: cover; background-position: center; background-repeat: no-repeat; --zappy-bg-overlay: rgba(20, 10, 6, 0.03); --zappy-bg-image: url(&quot;assets/general-hero-upload-1777213035741.webp&quot;)">
   <!-- Background Image Layer -->
   <div class="index-hero-bg" style="display: none" data-zappy-original-bg="hidden">
-    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Panoramic dawn landscape of the Atlas Mountains in Morocco near Marrakech, showing a sacred Jewish tomb shrine (tzion) nestled among dramatic ochre and terracotta mountain ridges. The scene is bathed in warm golden-hour light with deep violet-blue shadows in the valleys. Ancient stone walls and a whitewashed domed tomb structure visible in the middle distance. Sparse argan trees and desert scrub in the foreground. The atmosphere is solemn, majestic, and spiritual — evoking a sacred pilgrimage site. Cinematic, editorial photography quality." width="1200" height="700" src="/assets/site-index-hero-image-1.webp" alt="ציון רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א בהרי האטלס, מרוקו" data-hero-background="true" data-element-type="image" data-element-id="img-1776768228672-iszwryr6c"></img>
+    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Panoramic dawn landscape of the Atlas Mountains in Morocco near Marrakech, showing a sacred Jewish tomb shrine (tzion) nestled among dramatic ochre and terracotta mountain ridges. The scene is bathed in warm golden-hour light with deep violet-blue shadows in the valleys. Ancient stone walls and a whitewashed domed tomb structure visible in the middle distance. Sparse argan trees and desert scrub in the foreground. The atmosphere is solemn, majestic, and spiritual — evoking a sacred pilgrimage site. Cinematic, editorial photography quality." width="1200" height="700" src="/assets/site-index-hero-image-1.webp" alt="ציון רבי דוד ומשה זיע&quot;א בהרי האטלס, מרוקו" data-hero-background="true" data-element-type="image" data-element-id="img-1776768228672-iszwryr6c">
   </div>
 
   <!-- Manuscript Texture Overlay -->
@@ -1159,7 +1159,7 @@
   <div class="index-hero-content-wrap">
     <div class="index-hero-content">
       <h1 class="index-hero-h1" >הצדיק הצדיק רבי דוד ומשה זיע"א </h1>
-      <h3 class="index-hero-h3" >הציון הקדוש בהרי האטלס&amp;amp;amp;amp;nbsp;</h3>
+      <h3 class="index-hero-h3" >הציון הקדוש בהרי האטלס&nbsp;</h3>
       <p class="index-hero-p">לפני למעלה מאלף שנה נסתלק הצדיק הצדיק רבי דוד ומשה זיע"א , וציונו הקדוש בהרי האטלס שבמרוקו נותר עד היום מקום עלייה לרגל ומקור ברכה לאלפי יהודים מכל רחבי העולם. בואו לכבד את זכרו ולהתחבר למורשת הקדושה.</p>
       
     </div>
@@ -1167,63 +1167,16 @@
 
   <!-- Bottom Mountain Silhouette Divider -->
   <div class="index-hero-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewbox="0 0 1440 110" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Saffron/gold mountain layer -->
-      <path d="M0,110 L0,72 Q60,58 120,68 Q180,78 240,55 Q300,32 360,50 Q420,68 480,44 Q540,20 600,38 Q660,56 720,40 Q780,24 840,46 Q900,68 960,52 Q1020,36 1080,54 Q1140,72 1200,58 Q1320,40 1440,62 L1440,110 Z" fill="#f5f0ef" opacity="0.55"></path>
+      <path d="M0,110 L0,72 Q60,58 120,68 Q180,78 240,55 Q300,32 360,50 Q420,68 480,44 Q540,20 600,38 Q660,56 720,40 Q780,24 840,46 Q900,68 960,52 Q1020,36 1080,54 Q1140,72 1200,58 Q1320,40 1440,62 L1440,110 Z" fill="#201816" opacity="0.55"></path>
       <!-- Parchment/light mountain layer -->
-      <path d="M0,110 L0,82 Q80,70 160,80 Q240,90 320,68 Q400,46 480,64 Q560,82 640,60 Q720,38 800,58 Q880,78 960,65 Q1040,52 1120,70 Q1200,88 1280,72 Q1360,56 1440,76 L1440,110 Z" fill="#f5f0ef"></path>
+      <path d="M0,110 L0,82 Q80,70 160,80 Q240,90 320,68 Q400,46 480,64 Q560,82 640,60 Q720,38 800,58 Q880,78 960,65 Q1040,52 1120,70 Q1200,88 1280,72 Q1360,56 1440,76 L1440,110 Z" fill="#201816"></path>
     </svg>
   </div>
 </section>
 
-<section class="shai-israel-board-section" data-zappy-component="true" id="ai-section-1778521651663-dwfdk1u">
-  <div class="shai-israel-board-container">
-    <!-- תמונה משמאל -->
-    <div class="shai-israel-image-col">
-      <img src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27300%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23FF0083;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%23FF008320;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E" alt="שמה ישראל ליד לוח המודעות" class="shai-israel-photo" data-placeholder="section-israel-person" data-context="Israeli woman standing next to a bulletin board in an office or community center, professional and friendly appearance"></img>
-    </div>
 
-    <!-- לוח מודעות מימין -->
-    <div class="shai-israel-board-col">
-      <div class="shai-israel-board" role="region" aria-label="לוח מודעות">
-        <div class="shai-israel-board-header">
-          <span class="shai-israel-board-icon" aria-hidden="true">📌</span>
-          <h2 class="shai-israel-board-title">לוח מודעות</h2>
-        </div>
-        <ul class="shai-israel-notices-list">
-          <li class="shai-israel-notice-item shai-notice-pinned">
-            <span class="shai-notice-pin" aria-hidden="true">📌</span>
-            <div class="shai-notice-content">
-              <strong class="shai-notice-headline">מודעה חשובה</strong>
-              <p class="shai-notice-text">פרטי המודעה יופיעו כאן. ניתן לעדכן את התוכן בהתאם לצורך.</p>
-            </div>
-          </li>
-          <li class="shai-israel-notice-item">
-            <span class="shai-notice-pin" aria-hidden="true">📌</span>
-            <div class="shai-notice-content">
-              <strong class="shai-notice-headline">עדכון חדש</strong>
-              <p class="shai-notice-text">מידע נוסף ועדכונים שוטפים יופיעו כאן לנוחיותכם.</p>
-            </div>
-          </li>
-          <li class="shai-israel-notice-item">
-            <span class="shai-notice-pin" aria-hidden="true">📌</span>
-            <div class="shai-notice-content">
-              <strong class="shai-notice-headline">הודעה לציבור</strong>
-              <p class="shai-notice-text">הודעות ועדכונים לציבור יפורסמו כאן באופן שוטף.</p>
-            </div>
-          </li>
-          <li class="shai-israel-notice-item">
-            <span class="shai-notice-pin" aria-hidden="true">📌</span>
-            <div class="shai-notice-content">
-              <strong class="shai-notice-headline">אירוע קרוב</strong>
-              <p class="shai-notice-text">פרטי האירועים הקרובים יוצגו כאן. הישארו מעודכנים!</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
@@ -1284,19 +1237,19 @@
           </time>
           <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 1">
             <a href="https://facebook.com/groups/rabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק">
-              <svg class="brd-share-icon" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
               </svg>
               <span>פייסבוק</span>
             </a>
             <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ">
-              <svg class="brd-share-icon" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
               </svg>
               <span>וואטסאפ</span>
             </a>
             <a href="https://youtube.com/@RabbiDavidMoshe" class="brd-share-btn brd-share-yt" target="_blank" rel="noopener noreferrer" aria-label="צפה ביוטיוב" data-element-id="element-ai-1777033561693-yt9k2m" data-element-type="social-link">
-              <svg class="brd-share-icon" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
               </svg>
               <span>יוטיוב</span>
@@ -1327,13 +1280,13 @@
           </time>
           <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 2">
             <a href="https://facebook.com/groups/rabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק">
-              <svg class="brd-share-icon" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
               </svg>
               <span>פייסבוק</span>
             </a>
             <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ">
-              <svg class="brd-share-icon" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
               </svg>
               <span>וואטסאפ</span>
@@ -1364,13 +1317,13 @@
           </time>
           <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 3">
             <a href="https://facebook.com/groups/rabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק">
-              <svg class="brd-share-icon" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
               </svg>
               <span>פייסבוק</span>
             </a>
             <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ">
-              <svg class="brd-share-icon" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
               </svg>
               <span>וואטסאפ</span>
@@ -1432,7 +1385,7 @@
     <!-- END (left) column: imagery -->
     <figure class="index-story-image-col" aria-label="תמונות ציון רבי דוד ומשה">
       <div class="index-story-main-image-wrap">
-        <div data-zappy-zoom-wrapper="true" data-element-id="img-1777212711650-9jga9rj8k" data-element-type="image" data-zappy-zoom-wrapper-width="480px" data-zappy-zoom-wrapper-height="653px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 480px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 653px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="index-story-image-1" data-context="A tall, atmospheric documentary photograph of the holy shrine of Rabbi David U-Moshe in the Atlas Mountains of Morocco. Stone walls with whitewash and blue accents, draped with colorful Jewish Moroccan fabrics and candles. Pilgrims lighting candles at the tomb entrance. Warm golden afternoon light, devotional mood, sacred pilgrimage site in a dramatic mountain landscape." width="540" height="720" src="/assets/site-index-story-image-1-1777213100863-ptlsth.webp?v=1777213102684" alt="ציון רבי דוד ומשה בהרי האטלס, מרוקו" class="index-story-main-img" data-element-type="image" data-element-id="img-1777212711650-9jga9rj8k" style="object-position: 50% 50% !important; margin: 0px !important; left: -41.5231% !important; top: 0% !important; width: 183.046% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.9" data-zappy-original-width="480" data-zappy-original-height="653" data-zappy-object-position="50% 50%"></img></div>
+        <div data-zappy-zoom-wrapper="true" data-element-id="img-1777212711650-9jga9rj8k" data-element-type="image" data-zappy-zoom-wrapper-width="480px" data-zappy-zoom-wrapper-height="653px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 480px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 653px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="index-story-image-1" data-context="A tall, atmospheric documentary photograph of the holy shrine of Rabbi David U-Moshe in the Atlas Mountains of Morocco. Stone walls with whitewash and blue accents, draped with colorful Jewish Moroccan fabrics and candles. Pilgrims lighting candles at the tomb entrance. Warm golden afternoon light, devotional mood, sacred pilgrimage site in a dramatic mountain landscape." width="540" height="720" src="/assets/site-index-story-image-1-1777213100863-ptlsth.webp?v=1777213102684" alt="ציון רבי דוד ומשה בהרי האטלס, מרוקו" class="index-story-main-img" data-element-type="image" data-element-id="img-1777212711650-9jga9rj8k" style="object-position: 50% 50% !important; margin: 0px !important; left: -41.5231% !important; top: 0% !important; width: 183.046% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.9" data-zappy-original-width="480" data-zappy-original-height="653" data-zappy-object-position="50% 50%"></div>
         <!-- Faded route-sketch tile, peeking from bottom-end corner -->
         <div class="index-story-map-tile-wrap" aria-hidden="true">
           
@@ -1445,9 +1398,9 @@
   <div class="index-story-divider-wrapper" aria-hidden="true">
     <!-- Zellige pattern band -->
     <div class="index-story-zellige-band">
-      <svg data-no-icon-edit="true" aria-hidden="true" class="index-story-zellige-svg" viewbox="0 0 1200 28" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+      <svg data-no-icon-edit="true" aria-hidden="true" class="index-story-zellige-svg" viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="zellige-pat" x="0" y="0" width="28" height="28" patternunits="userSpaceOnUse">
+          <pattern id="zellige-pat" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
             <!-- Zellige tile: two triangles forming a diamond cross -->
             <rect width="28" height="28" fill="none"></rect>
             <polygon points="14,0 28,14 14,28 0,14" fill="none" stroke="#D89B2B" stroke-width="1"></polygon>
@@ -1462,7 +1415,7 @@
       </svg>
     </div>
     <!-- Dissolve wave into cream -->
-    <svg data-no-icon-edit="true" aria-hidden="true" class="index-story-wave-svg" viewbox="0 0 1200 48" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" class="index-story-wave-svg" viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,48 L0,18 Q100,8 200,20 T400,14 Q500,8 600,18 T800,12 Q900,6 1000,18 T1200,14 L1200,48 Z" fill="#f2dfb8"></path>
     </svg>
   </div>
@@ -1492,7 +1445,7 @@
 
     <!-- Panoramic Image Band -->
     <figure class="showcase-panorama">
-      <img data-placeholder="index-showcase-image-1" data-context="Wide panoramic aerial view of the Atlas Mountains in Morocco near Marrakech, showing the sacred pilgrimage route leading to Rabbi David U-Moshe tomb, dramatic mountain landscape with ochre and terracotta tones, golden hour light, sacred Jewish heritage site, cinematic full-bleed photography" width="1200" height="400" src="/assets/site-index-showcase-image-1.webp" alt="נוף פנורמי של הרי האטלס במרוקו — מסלול העלייה לרגל לציון רבי דוד ומשה זיע״א" data-element-type="image" data-element-id="img-1777212711650-ro25ud6sg" ></img>
+      <img data-placeholder="index-showcase-image-1" data-context="Wide panoramic aerial view of the Atlas Mountains in Morocco near Marrakech, showing the sacred pilgrimage route leading to Rabbi David U-Moshe tomb, dramatic mountain landscape with ochre and terracotta tones, golden hour light, sacred Jewish heritage site, cinematic full-bleed photography" width="1200" height="400" src="/assets/site-index-showcase-image-1.webp" alt="נוף פנורמי של הרי האטלס במרוקו — מסלול העלייה לרגל לציון רבי דוד ומשה זיע״א" data-element-type="image" data-element-id="img-1777212711650-ro25ud6sg" >
       <figcaption class="showcase-panorama-caption">הרי האטלס — מסלול העלייה לרגל לציון הקדוש</figcaption>
     </figure>
 
@@ -1502,7 +1455,7 @@
       <!-- Tile 1: Larger Photo Tile (START / RIGHT) -->
       <article class="showcase-tile showcase-tile--large" data-grid-item-index="0">
         <div class="showcase-tile-media">
-          <img data-placeholder="index-showcase-image-2" data-context="Close-up sacred Jewish pilgrimage site in Morocco, the tomb shrine of Rabbi David U-Moshe in the Atlas Mountains, candles lit around the tomb, worshippers in traditional dress praying, warm candlelight, devotional atmosphere, parchment and stone textures" width="600" height="480" src="/assets/site-index-showcase-image-2.webp" alt="ציון רבי דוד ומשה זיע״א — עולי רגל מתפללים ליד הקבר הקדוש" data-element-type="image" data-element-id="img-1777212711650-xz63o5j37" ></img>
+          <img data-placeholder="index-showcase-image-2" data-context="Close-up sacred Jewish pilgrimage site in Morocco, the tomb shrine of Rabbi David U-Moshe in the Atlas Mountains, candles lit around the tomb, worshippers in traditional dress praying, warm candlelight, devotional atmosphere, parchment and stone textures" width="600" height="480" src="/assets/site-index-showcase-image-2.webp" alt="ציון רבי דוד ומשה זיע״א — עולי רגל מתפללים ליד הקבר הקדוש" data-element-type="image" data-element-id="img-1777212711650-xz63o5j37" >
         </div>
         <div class="showcase-tile-content">
           <div class="showcase-tile-tag">תצלומי הציון</div>
@@ -1518,7 +1471,7 @@
       <!-- Tile 2: YouTube Video Still (Center) -->
       <article class="showcase-tile showcase-tile--video" data-grid-item-index="1">
         <div class="showcase-tile-media showcase-tile-media--video">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777212711650-33q3j5gnq" data-element-type="image" data-zappy-zoom-wrapper-width="309px" data-zappy-zoom-wrapper-height="229px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 309px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 229px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="index-showcase-image-3" data-context="Jewish pilgrimage gathering Hiloula celebration at Rabbi David U-Moshe tomb Morocco Atlas Mountains, crowd of worshippers singing and dancing, traditional Moroccan Jewish clothing, colorful festive atmosphere, documentary photography style, warm evening light" width="600" height="340" src="/assets/site-index-showcase-image-3-1777213317112-fayjmo.webp?v=1777213318975" alt="הילולת רבי דוד ומשה זיע״א — קהל עולי רגל בציון הקדוש" data-element-type="image" data-element-id="img-1777212711650-33q3j5gnq" style="object-position: 50% 50% !important; display: block; object-fit: cover; margin: 0px !important; left: -18.9425% !important; top: -2% !important; width: 137.885% !important; height: 104% !important; max-width: none !important; max-height: none !important;" data-zappy-zoom="1.04" data-zappy-original-width="309.125" data-zappy-original-height="229" data-zappy-object-position="50% 50%"></img></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777212711650-33q3j5gnq" data-element-type="image" data-zappy-zoom-wrapper-width="309px" data-zappy-zoom-wrapper-height="229px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 309px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 229px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="index-showcase-image-3" data-context="Jewish pilgrimage gathering Hiloula celebration at Rabbi David U-Moshe tomb Morocco Atlas Mountains, crowd of worshippers singing and dancing, traditional Moroccan Jewish clothing, colorful festive atmosphere, documentary photography style, warm evening light" width="600" height="340" src="/assets/site-index-showcase-image-3-1777213317112-fayjmo.webp?v=1777213318975" alt="הילולת רבי דוד ומשה זיע״א — קהל עולי רגל בציון הקדוש" data-element-type="image" data-element-id="img-1777212711650-33q3j5gnq" style="object-position: 50% 50% !important; display: block; object-fit: cover; margin: 0px !important; left: -18.9425% !important; top: -2% !important; width: 137.885% !important; height: 104% !important; max-width: none !important; max-height: none !important;" data-zappy-zoom="1.04" data-zappy-original-width="309.125" data-zappy-original-height="229" data-zappy-object-position="50% 50%"></div>
           <div class="showcase-video-play-overlay" aria-hidden="true">
             <div class="showcase-play-btn">
               <i class="fa-solid fa-play" aria-hidden="true" data-element-type="icon" data-element-id="icon-1777212711649-4up15ufh1" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
@@ -1540,7 +1493,7 @@
       <!-- Tile 3: Route / Pilgrimage Tile (END / Left) -->
       <article class="showcase-tile showcase-tile--route" data-grid-item-index="2">
         <div class="showcase-tile-media">
-          <img data-placeholder="index-showcase-image-4" data-context="Panoramic 360 virtual tour view of the sacred pilgrimage route from Marrakech to Ouarzazate through the Atlas Mountains Morocco, winding mountain road, ancient Jewish route markers, dramatic landscape with red rock formations and blue sky, map overlay aesthetic" width="600" height="340" src="/assets/site-index-showcase-image-4.webp" alt="סיור וירטואלי פנורמי — מסלול העלייה לרגל ממרקש לציון רבי דוד ומשה" data-element-type="image" data-element-id="img-1777212711650-qv7c7magb" ></img>
+          <img data-placeholder="index-showcase-image-4" data-context="Panoramic 360 virtual tour view of the sacred pilgrimage route from Marrakech to Ouarzazate through the Atlas Mountains Morocco, winding mountain road, ancient Jewish route markers, dramatic landscape with red rock formations and blue sky, map overlay aesthetic" width="600" height="340" src="/assets/site-index-showcase-image-4.webp" alt="סיור וירטואלי פנורמי — מסלול העלייה לרגל ממרקש לציון רבי דוד ומשה" data-element-type="image" data-element-id="img-1777212711650-qv7c7magb" >
           <div class="showcase-vr-badge">
             <i class="fa-solid fa-vr-cardboard" aria-hidden="true" data-element-type="icon" data-element-id="icon-1777212711649-rkhqn3ec9" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
             סיור 360°
@@ -1571,12 +1524,12 @@
 
   <!-- Bottom Divider: Torn parchment edge with atlas-blue wash -->
   <div class="showcase-divider-wrapper" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewbox="0 0 1200 90" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <lineargradient id="showcase-divider-wash" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id="showcase-divider-wash" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="rgba(53,92,125,0)"></stop>
           <stop offset="100%" stop-color="rgba(32,24,22,1)"></stop>
-        </lineargradient>
+        </linearGradient>
       </defs>
       <!-- Torn parchment edge fills the bottom -->
       <path d="M0,90 L0,45 Q30,38 60,48 T120,40 Q155,35 185,44 T245,36 Q275,42 310,34 T370,40 Q400,46 435,35 T495,42 Q525,36 555,44 T615,38 Q645,32 680,41 T740,35 Q770,42 805,33 T865,40 Q895,46 930,37 T990,43 Q1020,36 1055,44 T1115,38 Q1145,32 1170,40 L1200,38 L1200,90 Z" fill="#201816"></path>
@@ -1589,7 +1542,7 @@
 <section class="index-tributes-section" data-layout-spec="בית-tributes" dir="rtl">
   <!-- Background atmospheric image -->
   <div class="index-tributes-bg-image" aria-hidden="true">
-    <img data-placeholder="index-tributes-image-1" data-context="Atmospheric photograph of lit memorial candles (yahrtzeit candles) glowing warmly in the darkness at a Jewish holy tomb in Morocco, Atlas Mountains. Dozens of small flames flickering, casting golden light on stone walls. Devotional, sacred, intimate pilgrimage atmosphere. Warm amber and deep shadow tones." width="600" height="400" src="/assets/site-index-tributes-image-1.webp" alt="נרות זיכרון דולקים בציון הקדוש"></img>
+    <img data-placeholder="index-tributes-image-1" data-context="Atmospheric photograph of lit memorial candles (yahrtzeit candles) glowing warmly in the darkness at a Jewish holy tomb in Morocco, Atlas Mountains. Dozens of small flames flickering, casting golden light on stone walls. Devotional, sacred, intimate pilgrimage atmosphere. Warm amber and deep shadow tones." width="600" height="400" src="/assets/site-index-tributes-image-1.webp" alt="נרות זיכרון דולקים בציון הקדוש">
   </div>
 
   <div class="index-tributes-container">
@@ -1732,7 +1685,7 @@
 
   <!-- Bottom divider: gradient fade from dark umber into parchment with route line -->
   <div class="index-tributes-divider-wrapper" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewbox="0 0 1200 100" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Route line -->
       <path d="M0,52 Q120,44 240,50 T480,46 T720,50 T960,46 T1200,50" stroke="#D89B2B" stroke-width="1" fill="var(--bg-light)" opacity="0.55"></path>
       <!-- Gradient fill bottom -->
@@ -1819,7 +1772,7 @@
 <section class="index-cta-section" data-layout-spec="בית-cta" dir="rtl">
   <!-- Decorative corner fragments -->
   <div class="index-cta-corner index-cta-corner--tr" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" width="120" height="120" viewbox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M120 0 L120 120 L0 0 Z" fill="rgba(122,31,43,0.06)"></path>
       <path d="M60 0 L120 0 L120 60" stroke="var(--accent)" stroke-width="1" fill="none" opacity="0.4"></path>
       <circle cx="108" cy="12" r="3" fill="var(--accent)" opacity="0.3"></circle>
@@ -1829,7 +1782,7 @@
     </svg>
   </div>
   <div class="index-cta-corner index-cta-corner--bl" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" width="120" height="120" viewbox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 120 L0 0 L120 120 Z" fill="rgba(122,31,43,0.06)"></path>
       <path d="M60 120 L0 120 L0 60" stroke="var(--accent)" stroke-width="1" fill="none" opacity="0.4"></path>
       <circle cx="12" cy="108" r="3" fill="var(--accent)" opacity="0.3"></circle>
@@ -1873,7 +1826,7 @@
 
 
 
-<footer class="site-footer" dir="rtl"> <div class="footer-pattern-band"></div> <div class="footer-inner"> <div class="footer-grid"> <!-- Column 1: Company Info --> <div class="footer-col footer-col--brand"> <div class="footer-logo-wrap"> <img src="/assets/business-logo.webp" alt="רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א" class="logo"></img> </div>         <h2 class="footer-brand-name"><span class="footer-brand-star">✡</span> הצדיק רבי דוד ומשה זיע"א  <span class="footer-brand-star">✡</span></h2> <p class="footer-brand-desc">אתר עלייה לרגל ומורשת יהודית מרוקאית — מדריך רוחני לציון הקדושים בהרי האטלס, לשימור זיכרון הקהילה ולחיזוק הקשר בין הדורות.</p> <div class="footer-ornament"><span></span><i class="fas fa-star-of-david"></i><span></span></div> </div> <!-- Column 2: Quick Links --> <div class="footer-col footer-col--links"> <h3 class="footer-heading">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/gallery"><i class="fas fa-images footer-nav-icon"></i>גלריה</a></li> <li><a href="/candles"><i class="fas fa-fire footer-nav-icon"></i>נרות נשמה</a></li> <li><a href="/miscellaneous"><i class="fas fa-scroll footer-nav-icon"></i>שונות</a></li> </ul> </div> <!-- Column 3: Contact --> <div class="footer-col footer-col--contact"> <h3 class="footer-heading">צור קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text"><a href="mailto:rabbidavidoumoshe@gmail.com">rabbidavidoumoshe@gmail.com</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text"><a href="tel:+972506841740">+972506841740</a></span> </li> <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">[business_address]</span></a></li> </ul> </div> <!-- Column 4: Social --> <div class="footer-col footer-col--social"> <h3 class="footer-heading">עקבו אחרינו</h3> <div class="footer-social"> <a href="https://facebook.com/groups/rabbidavidoumoshe" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a> <a href="https://wa.me/972506841740" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> </div> <div class="footer-quote"> <p>"וְצַדִּיקִים יִרְאוּ וְיִשְׂמָחוּ"</p> </div> </div> </div> </div> <div class="footer-pattern-band footer-pattern-band--bottom"></div> <!-- Bottom Bar --> <div class="footer-bottom"> <div class="footer-bottom-inner"> <p class="footer-copyright">© 2026 הצדיק רבי דוד ומשה זיע"א . כל הזכויות שמורות.</p> <div class="footer-legal"> <a href="/privacy">מדיניות פרטיות</a> <span class="footer-legal-sep">·</span> <a href="/terms">תנאי שימוש</a> <span class="footer-legal-sep">·</span> <a href="/accessibility">נגישות</a> <span class="footer-legal-sep">·</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
+<footer class="site-footer" dir="rtl"> <div class="footer-pattern-band"></div> <div class="footer-inner"> <div class="footer-grid"> <!-- Column 1: Company Info --> <div class="footer-col footer-col--brand"> <div class="footer-logo-wrap"> <img src="/assets/business-logo.webp" alt="רבי דוד ומשה זיע&quot;א" class="logo"> </div>         <h2 class="footer-brand-name"><span class="footer-brand-star">✡</span> הצדיק רבי דוד ומשה זיע"א  <span class="footer-brand-star">✡</span></h2> <p class="footer-brand-desc">אתר עלייה לרגל ומורשת יהודית מרוקאית — מדריך רוחני לציון הקדושים בהרי האטלס, לשימור זיכרון הקהילה ולחיזוק הקשר בין הדורות.</p> <div class="footer-ornament"><span></span><i class="fas fa-star-of-david"></i><span></span></div> </div> <!-- Column 2: Quick Links --> <div class="footer-col footer-col--links"> <h3 class="footer-heading">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/gallery"><i class="fas fa-images footer-nav-icon"></i>גלריה</a></li> <li><a href="/candles"><i class="fas fa-fire footer-nav-icon"></i>נרות נשמה</a></li> <li><a href="/miscellaneous"><i class="fas fa-scroll footer-nav-icon"></i>שונות</a></li> </ul> </div> <!-- Column 3: Contact --> <div class="footer-col footer-col--contact"> <h3 class="footer-heading">צור קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text"><a href="mailto:rabbidavidoumoshe@gmail.com">rabbidavidoumoshe@gmail.com</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text"><a href="tel:+972506841740">+972506841740</a></span> </li> <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">[business_address]</span></a></li> </ul> </div> <!-- Column 4: Social --> <div class="footer-col footer-col--social"> <h3 class="footer-heading">עקבו אחרינו</h3> <div class="footer-social"> <a href="https://facebook.com/groups/rabbidavidoumoshe" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a> <a href="https://wa.me/972506841740" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> </div> <div class="footer-quote"> <p>"וְצַדִּיקִים יִרְאוּ וְיִשְׂמָחוּ"</p> </div> </div> </div> </div> <div class="footer-pattern-band footer-pattern-band--bottom"></div> <!-- Bottom Bar --> <div class="footer-bottom"> <div class="footer-bottom-inner"> <p class="footer-copyright">© 2026 הצדיק רבי דוד ומשה זיע"א . כל הזכויות שמורות.</p> <div class="footer-legal"> <a href="/privacy">מדיניות פרטיות</a> <span class="footer-legal-sep">·</span> <a href="/terms">תנאי שימוש</a> <span class="footer-legal-sep">·</span> <a href="/accessibility">נגישות</a> <span class="footer-legal-sep">·</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
   
   <a href="https://wa.me/972506841740" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
