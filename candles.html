@@ -272,8 +272,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -287,13 +287,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &amp;amp;amp;gt; .sub-menu {
+            li:has(.menu-group-title):hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -302,7 +302,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &amp;amp;amp;gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -355,9 +355,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &amp;amp;amp;gt; .sub-menu,
-            nav li:hover &amp;amp;amp;gt; .sub-menu,
-            .navbar li:hover &amp;amp;amp;gt; .sub-menu {
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -395,8 +395,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -410,8 +410,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover,
-            #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -453,18 +453,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &amp;amp;amp;gt; .sub-menu,
-              nav li:hover &amp;amp;amp;gt; .sub-menu,
-              .navbar li:hover &amp;amp;amp;gt; .sub-menu {
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &amp;amp;amp;gt; .sub-menu.mobile-expanded,
-              nav li &amp;amp;amp;gt; .sub-menu.mobile-expanded,
-              .navbar li &amp;amp;amp;gt; .sub-menu.mobile-expanded {
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -493,39 +493,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a,
-              nav li:has(.sub-menu) &amp;amp;amp;gt; a,
-              .navbar li:has(.sub-menu) &amp;amp;amp;gt; a,
-              .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-              #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title,
-              #navMenu &amp;amp;amp;gt; li &amp;amp;amp;gt; .menu-group-title {
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu,
-              nav li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu,
-              .navbar li:has(.sub-menu) &amp;amp;amp;gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &amp;amp;amp;gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -580,10 +580,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &amp;amp;amp;gt; 768) {
+                if (window.innerWidth > 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;amp;amp;gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;amp;amp;gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -606,7 +606,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &amp;amp;amp;gt; a') || li.querySelector(':scope &amp;amp;amp;gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -666,7 +666,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;amp;amp;amp;&amp;amp;amp;amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -724,7 +724,7 @@
 </head>
 <body>
 
-  <nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="+972506841740" aria-label="Call"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link" style="display:flex;align-items:center;gap:10px;text-decoration:none;"> <img src="/assets/logo-remove_background-1777198266148-moy2qd.png?v=1777198266148" alt="רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א" class="logo"> </a> </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/gallery">גלריה</a></li><li><a href="/candles">נרות נשמה</a></li><li><a href="/miscellaneous">שונות</a></li><li class="menu-group-item"><span class="menu-group-title">צור קשר ומידע</span></li></ul></div> </div> </nav>
+  <nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="+972506841740" aria-label="Call"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link" style="display:flex;align-items:center;gap:10px;text-decoration:none;"> <img src="/assets/logo-remove_background-1777198266148-moy2qd.png?v=1777198266148" alt="רבי דוד ומשה זיע&quot;א" class="logo"> </a> </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/gallery">גלריה</a></li><li><a href="/candles">נרות נשמה</a></li><li><a href="/miscellaneous">שונות</a></li><li class="menu-group-item"><span class="menu-group-title">צור קשר ומידע</span></li></ul></div> </div> </nav>
 <script>
 
 // Navbar Mobile Menu Toggle and Contrast Fix
@@ -761,12 +761,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;amp;amp;&amp;amp;amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;amp;amp;&amp;amp;amp;amp; bgImage !== 'none') {
+      if (bgImage && bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -779,7 +779,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;amp;amp;&amp;amp;amp;amp; rgb.length &amp;amp;amp;gt;= 3) {
+    if (rgb && rgb.length >= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -915,7 +915,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;amp;amp;lt;= 768;
+      const isMobileViewport = window.innerWidth <= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -1106,7 +1106,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;amp;amp;gt; 0 
+        const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '+972506841740';
         
@@ -1181,8 +1181,8 @@
   <div class="candles-intro-content-wrapper">
     <div class="candles-intro-content">
       <div class="candles-intro-accent-line" aria-hidden="true"></div>
-      <h1 class="candles-intro-h1" >&amp;amp;amp;amp;nbsp; הדלקת נר נשמה - זיכרון שמאיר לדורות&amp;amp;amp;amp;nbsp;&amp;amp;amp;amp;nbsp;</h1>
-      <p class="candles-intro-lead" style="text-align: center; outline: none; max-width: none;" data-zappy-text-width="full">הדלקת נר זיכרון היא מן המסורות הקדושות ביותר בעם ישראל — מעשה פשוט שנושא בחובו עומק של תפילה, אהבה, וזיכרון נצחי. כאן, לפני ציונו הקדוש של <strong>רבי דוד ומשה זיע״א</strong>, מוזמנים כל עולי הרגל ומבקשי הרחמים להדליק נר וירטואלי לעילוי נשמת הצדיק ולזכות יקיריהם, בכל מקום שהם נמצאים בעולם.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&amp;amp;amp;amp;nbsp; הדלקת נר נשמה לזכר רבי דוד ומשה זיע״א אינה רק מנהג עתיק - היא גשר של אור המחבר בין הצדיק לבין החיים. בכל נר המודלק, מתחדשת הברית שבין הצדיק לעמו: ברית של תפילה, של אמונה, ושל זיכרון שאינו מכבה. מאז לפני יותר מאלף שנה, בה שכן הקדוש בהרי האטלס, ועד ימינו - אותה שלהבת ממשיכה לדלוק בלב כל מי שנושא את שמו.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>הנר מדבר בשפה שאין לה גבולות - שפת הנפש. הוא מזכיר לנו את סבותינו שהדליקו לפנינו, את הבתים בכפרי מרוקו שבהם נישאו תפילות לשמיים, ואת אותה אמונה תמימה שעברה מדור לדור. ביום ההילולה ובכל יום, כל נר שמודלק לכבוד ציון רבי דוד ומשה מרוקו הוא עדות חיה לכוחה של המסורת לשרוד גלויות, מרחקים, ושינויי עתים.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>מרוקו, הגולה, וירושלים של מעלה - שלשלת אחת של אור<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>מצאצאי יוצאי מרוקו בישראל ובתפוצות, ועד לעולי הרגל המגיעים היום אל הציון הקדוש בהרי האטלס - כולם שותפים לאותה שלהבת. הדלקת הנר מחברת בין כל מי שנשא את זכרו של הצדיק בלבו, ומזכירה לנו כי האמונה אינה קשורה למקום - היא שוכנת בתוכנו.&amp;amp;amp;amp;nbsp;&amp;amp;amp;amp;nbsp;</p>
+      <h1 class="candles-intro-h1" >&nbsp; הדלקת נר נשמה - זיכרון שמאיר לדורות&nbsp;&nbsp;</h1>
+      <p class="candles-intro-lead" style="text-align: center; outline: none; max-width: none;" data-zappy-text-width="full">הדלקת נר זיכרון היא מן המסורות הקדושות ביותר בעם ישראל — מעשה פשוט שנושא בחובו עומק של תפילה, אהבה, וזיכרון נצחי. כאן, לפני ציונו הקדוש של <strong>רבי דוד ומשה זיע״א</strong>, מוזמנים כל עולי הרגל ומבקשי הרחמים להדליק נר וירטואלי לעילוי נשמת הצדיק ולזכות יקיריהם, בכל מקום שהם נמצאים בעולם.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp; הדלקת נר נשמה לזכר רבי דוד ומשה זיע״א אינה רק מנהג עתיק - היא גשר של אור המחבר בין הצדיק לבין החיים. בכל נר המודלק, מתחדשת הברית שבין הצדיק לעמו: ברית של תפילה, של אמונה, ושל זיכרון שאינו מכבה. מאז לפני יותר מאלף שנה, בה שכן הקדוש בהרי האטלס, ועד ימינו - אותה שלהבת ממשיכה לדלוק בלב כל מי שנושא את שמו.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>הנר מדבר בשפה שאין לה גבולות - שפת הנפש. הוא מזכיר לנו את סבותינו שהדליקו לפנינו, את הבתים בכפרי מרוקו שבהם נישאו תפילות לשמיים, ואת אותה אמונה תמימה שעברה מדור לדור. ביום ההילולה ובכל יום, כל נר שמודלק לכבוד ציון רבי דוד ומשה מרוקו הוא עדות חיה לכוחה של המסורת לשרוד גלויות, מרחקים, ושינויי עתים.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>מרוקו, הגולה, וירושלים של מעלה - שלשלת אחת של אור<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>מצאצאי יוצאי מרוקו בישראל ובתפוצות, ועד לעולי הרגל המגיעים היום אל הציון הקדוש בהרי האטלס - כולם שותפים לאותה שלהבת. הדלקת הנר מחברת בין כל מי שנשא את זכרו של הצדיק בלבו, ומזכירה לנו כי האמונה אינה קשורה למקום - היא שוכנת בתוכנו.&nbsp;&nbsp;</p>
       <h3 class="candles-intro-h3" >עצרו רגע. נשמו. תנו לאור להוביל את תפילתכם.</h3>
     </div>
   </div>
@@ -1531,7 +1531,7 @@
   </div>
 </section></main>
   
-  <footer class="site-footer" dir="rtl"> <div class="footer-pattern-band"></div> <div class="footer-inner"> <div class="footer-grid"> <!-- Column 1: Company Info --> <div class="footer-col footer-col--brand"> <div class="footer-logo-wrap"> <img src="/assets/business-logo.webp" alt="רבי דוד ומשה זיע&amp;amp;amp;amp;quot;א" class="logo"> </div>         <h2 class="footer-brand-name"><span class="footer-brand-star">✡</span> הצדיק רבי דוד ומשה זיע"א  <span class="footer-brand-star">✡</span></h2> <p class="footer-brand-desc">אתר עלייה לרגל ומורשת יהודית מרוקאית — מדריך רוחני לציון הקדושים בהרי האטלס, לשימור זיכרון הקהילה ולחיזוק הקשר בין הדורות.</p> <div class="footer-ornament"><span></span><i class="fas fa-star-of-david"></i><span></span></div> </div> <!-- Column 2: Quick Links --> <div class="footer-col footer-col--links"> <h3 class="footer-heading">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/gallery"><i class="fas fa-images footer-nav-icon"></i>גלריה</a></li> <li><a href="/candles"><i class="fas fa-fire footer-nav-icon"></i>נרות נשמה</a></li> <li><a href="/miscellaneous"><i class="fas fa-scroll footer-nav-icon"></i>שונות</a></li> </ul> </div> <!-- Column 3: Contact --> <div class="footer-col footer-col--contact"> <h3 class="footer-heading">צור קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text"><a href="mailto:rabbidavidoumoshe@gmail.com">rabbidavidoumoshe@gmail.com</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text"><a href="tel:+972506841740">+972506841740</a></span> </li> <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">8C3J5F68+X9,  Timzrite, morocco</span></a></li> </ul> </div> <!-- Column 4: Social --> <div class="footer-col footer-col--social"> <h3 class="footer-heading">עקבו אחרינו</h3> <div class="footer-social"> <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="https://instagram.com/rabbidavidoumoshe" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a href="https://wa.me/972506841740" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> <a href="https://youtube.com/@RabbiDavidMoshe" aria-label="YouTube" target="_blank" rel="noopener noreferrer" data-element-id="element-ai-1778780603727-yt9k3m" data-element-type="social-link"><i class="fab fa-youtube"></i></a> </div> <div class="footer-quote"> <p>"וְצַדִּיקִים יִרְאוּ וְיִשְׂמָחוּ"</p> </div> </div> </div> </div> <div class="footer-pattern-band footer-pattern-band--bottom"></div> <!-- Bottom Bar --> <div class="footer-bottom"> <div class="footer-bottom-inner"> <p class="footer-copyright">© 2026 הצדיק רבי דוד ומשה זיע"א . כל הזכויות שמורות.</p> <div class="footer-legal"> <a href="/privacy">מדיניות פרטיות</a> <span class="footer-legal-sep">·</span> <a href="/terms">תנאי שימוש</a> <span class="footer-legal-sep">·</span> <a href="/accessibility">נגישות</a> <span class="footer-legal-sep">·</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
+  <footer class="site-footer" dir="rtl"> <div class="footer-pattern-band"></div> <div class="footer-inner"> <div class="footer-grid"> <!-- Column 1: Company Info --> <div class="footer-col footer-col--brand"> <div class="footer-logo-wrap"> <img src="/assets/business-logo.webp" alt="רבי דוד ומשה זיע&quot;א" class="logo" data-element-type="image" data-element-id="img-1778780630729-l1ni0is87" data-zappy-footer-image="true" > </div>         <h2 class="footer-brand-name"><span class="footer-brand-star">✡</span> הצדיק רבי דוד ומשה זיע"א  <span class="footer-brand-star">✡</span></h2> <p class="footer-brand-desc">אתר עלייה לרגל ומורשת יהודית מרוקאית — מדריך רוחני לציון הקדושים בהרי האטלס, לשימור זיכרון הקהילה ולחיזוק הקשר בין הדורות.</p> <div class="footer-ornament"><span></span><i class="fas fa-star-of-david" data-element-type="icon" data-element-id="icon-1778780630727-8j1s2b49h" data-icon-type="fontawesome"></i><span></span></div> </div> <!-- Column 2: Quick Links --> <div class="footer-col footer-col--links"> <h3 class="footer-heading">ניווט מהיר</h3> <ul class="footer-nav"> <li><a href="/gallery"><i class="fas fa-images footer-nav-icon"></i>גלריה</a></li> <li><a href="/candles"><i class="fas fa-fire footer-nav-icon"></i>נרות נשמה</a></li> <li><a href="/miscellaneous"><i class="fas fa-scroll footer-nav-icon"></i>שונות</a></li> </ul> </div> <!-- Column 3: Contact --> <div class="footer-col footer-col--contact"> <h3 class="footer-heading">צור קשר</h3> <ul class="footer-contact"> <li> <span class="contact-icon"><i class="fas fa-envelope"></i></span> <span class="contact-text"><a href="mailto:rabbidavidoumoshe@gmail.com">rabbidavidoumoshe@gmail.com</a></span> </li> <li> <span class="contact-icon"><i class="fas fa-phone"></i></span> <span class="contact-text"><a href="tel:+972506841740">+972506841740</a></span> </li> <li><a href="/" style="display:flex;align-items:flex-start;gap:inherit"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> <span class="contact-text">8C3J5F68+X9,  Timzrite, morocco</span></a></li> </ul> </div> <!-- Column 4: Social --> <div class="footer-col footer-col--social"> <h3 class="footer-heading">עקבו אחרינו</h3> <div class="footer-social"> <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="https://instagram.com/rabbidavidoumoshe" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 256 256" data-icon="skill-icons:instagram" data-iconify="skill-icons:instagram" data-element-type="icon" data-element-id="icon-1778780630727-b28xw71fz" data-icon-type="iconify" data-size-adjusted="true" style="display: inline-block; vertical-align: -0.125em; color: rgb(247, 241, 231); width: 12px; height: 12px;" class="iconify iconify--skill-icons"><g fill="none"><rect width="256" height="256" fill="url(#IconifyId19e2796671072c6840)" rx="60"></rect><rect width="256" height="256" fill="url(#IconifyId19e2796671072c6841)" rx="60"></rect><path fill="#fff" d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334"></path><defs><radialGradient id="IconifyId19e2796671072c6840" cx="0" cy="0" r="1" gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)" gradientUnits="userSpaceOnUse"><stop stop-color="#fd5"></stop><stop offset=".1" stop-color="#fd5"></stop><stop offset=".5" stop-color="#ff543e"></stop><stop offset="1" stop-color="#c837ab"></stop></radialGradient><radialGradient id="IconifyId19e2796671072c6841" cx="0" cy="0" r="1" gradientTransform="rotate(78.68 -32.69 -16.937)scale(113.412 467.488)" gradientUnits="userSpaceOnUse"><stop stop-color="#3771c8"></stop><stop offset=".128" stop-color="#3771c8"></stop><stop offset="1" stop-color="#60f" stop-opacity="0"></stop></radialGradient></defs></g></svg></a> <a href="https://wa.me/972506841740" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 256 258" data-icon="logos:whatsapp-icon" data-iconify="logos:whatsapp-icon" data-element-type="icon" data-element-id="icon-1778780630727-1m8xcjqn2" data-icon-type="iconify" data-size-adjusted="true" style="width: 12px !important; height: 12px !important; display: inline-block; vertical-align: -0.125em; color: rgb(247, 241, 231);" class="iconify iconify--logos"><defs><linearGradient id="IconifyId19e2797701ea1b8ee0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38"></stop><stop offset="100%" stop-color="#60d669"></stop></linearGradient><linearGradient id="IconifyId19e2797701ea1b8ee1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9"></stop><stop offset="100%" stop-color="#fff"></stop></linearGradient></defs><path fill="url(#IconifyId19e2797701ea1b8ee0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"></path><path fill="url(#IconifyId19e2797701ea1b8ee1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"></path><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"></path></svg></a> </div> <div class="footer-quote"> <p>"וְצַדִּיקִים יִרְאוּ וְיִשְׂמָחוּ"</p> </div> </div> </div> </div> <div class="footer-pattern-band footer-pattern-band--bottom"></div> <!-- Bottom Bar --> <div class="footer-bottom"> <div class="footer-bottom-inner"> <p class="footer-copyright">© 2026 הצדיק רבי דוד ומשה זיע"א . כל הזכויות שמורות.</p> <div class="footer-legal"> <a href="/privacy">מדיניות פרטיות</a> <span class="footer-legal-sep">·</span> <a href="/terms">תנאי שימוש</a> <span class="footer-legal-sep">·</span> <a href="/accessibility">נגישות</a> <span class="footer-legal-sep">·</span> <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a> </div> </div> </div> </footer>
   
   <a href="https://wa.me/972506841740" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
