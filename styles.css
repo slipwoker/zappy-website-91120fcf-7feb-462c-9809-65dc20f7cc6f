@@ -10212,6 +10212,27 @@ body::before {
     font-size: 1.3rem;
   }
 }
+
+.index-hours-section .index-hours-header {
+  text-align: center;
+  align-items: center;
+}
+
+.index-hours-section .index-hours-heading {
+  text-align: center;
+}
+
+.index-hours-section .index-hours-subtitle {
+  text-align: center;
+}
+
+.index-hours-section .index-hours-row {
+  justify-content: center;
+}
+
+.index-hours-section .index-hours-table {
+  align-items: center;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
