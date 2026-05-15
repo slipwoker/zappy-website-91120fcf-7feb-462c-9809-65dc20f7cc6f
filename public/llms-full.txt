@@ -975,7 +975,7 @@ Description: גלריית תמונות וסרטוני יוטיוב עשירה מ
 
 
 
-
+" alt="נוף פנורמי של הרי האטלס וציון רבי דוד ומשה" class="gvt-panoramic-img" data-element-type="image" data-element-id="img-1778846786790-x0tb5kwvu" style="object-position: 50% 50% !important; object-fit: contain; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; margin-top: 20px; margin-bottom: 20px; margin-right: auto !important; margin-left: auto !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1">
 
 
 
