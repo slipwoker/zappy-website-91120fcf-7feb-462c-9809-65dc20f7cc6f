@@ -5862,7 +5862,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   direction: rtl;
-  align-items: start;
+  align-items: stretch;
 }
 
 .candles-candle-gallery-section .candle-card {
@@ -5870,7 +5870,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   border: 1px solid var(--border-light);
   border-radius: 2px;
   box-shadow: 0 8px 20px rgba(58,32,24,0.18);
-  padding: 14px 12px 12px;
+  padding: 18px 12px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5878,6 +5878,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .candles-candle-gallery-section .candle-card::before {
@@ -5905,8 +5907,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .candles-candle-gallery-section .candle-card--short {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 18px;
+  padding-bottom: 16px;
 }
 
 .candles-candle-gallery-section .candle-card--center {
