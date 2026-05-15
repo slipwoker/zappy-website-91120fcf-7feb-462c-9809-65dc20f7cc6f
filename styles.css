@@ -10233,6 +10233,26 @@ body::before {
 .index-hours-section .index-hours-table {
   align-items: center;
 }
+
+.index-hours-section .index-hours-table {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.index-hours-section .index-hours-row {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 420px !important;
+}
+
+.index-hours-section .index-hours-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
