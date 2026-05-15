@@ -10255,6 +10255,76 @@ body::before {
   flex-direction: column !important;
   align-items: center !important;
 }
+
+.miscellaneous-route-map-section .route-map-icon-strip {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 24px 20px;
+  flex-wrap: wrap;
+}
+
+.miscellaneous-route-map-section .route-icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: rgba(241, 223, 194, 0.08);
+  border: 1px solid rgba(216, 155, 43, 0.3);
+  border-radius: 12px;
+  padding: 28px 32px;
+  min-width: 140px;
+  color: var(--text-light);
+}
+
+.miscellaneous-route-map-section .route-icon-card:hover {
+  transform: translateY(-4px);
+  background: rgba(216, 155, 43, 0.12);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.miscellaneous-route-map-section .route-icon-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(216, 155, 43, 0.15);
+  border: 1.5px solid rgba(216, 155, 43, 0.45);
+  color: var(--accent);
+  transition: background 0.25s ease;
+}
+
+.miscellaneous-route-map-section .route-icon-card:hover .route-icon-bg {
+  background: rgba(216, 155, 43, 0.28);
+}
+
+.miscellaneous-route-map-section .route-icon-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+.miscellaneous-route-map-section .route-map-icon-strip {
+  gap: 16px;
+  padding: 32px 16px 16px;
+}
+
+.miscellaneous-route-map-section .route-icon-card {
+  min-width: 110px;
+  padding: 20px 18px;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
