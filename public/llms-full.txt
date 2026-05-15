@@ -16,13 +16,6 @@ Description: ציון רבי דוד ומשה מרוקו – מקום קדוש ב
 🚧
 
 
-
-
-🚧
-האתר בשלבי בנייה — חלק מהתכנים עדיין בהכנה
-🚧
-
-
 - בית
 - גלריה
 - נרות נשמה
@@ -814,13 +807,19 @@ Description: גלריית תמונות וסרטוני יוטיוב עשירה מ
 
 
 
+✦
 
-## סרטוני יוטיוב — עדות חיה מהציון הקדוש
-
-
-תיעודים נדירים מהילולת רבי דוד ומשה זיע״א בהרי האטלס — חווה את רוח המקום, ההתכנסות הגדולה ומסע הדרך אל הציון הקדוש
+✦
 
 
+## 📜 לוח מודעות
+
+
+✦
+
+✦
+
+הצדיק רבי דוד ומשה זיע"א
 
 
 
@@ -975,7 +974,7 @@ Description: גלריית תמונות וסרטוני יוטיוב עשירה מ
 
 
 
-" alt="נוף פנורמי של הרי האטלס וציון רבי דוד ומשה" class="gvt-panoramic-img" data-element-type="image" data-element-id="img-1778846786790-x0tb5kwvu" style="object-fit: cover; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1" data-zappy-original-width="600" data-zappy-original-height="367" />
+" alt="נוף פנורמי של הרי האטלס וציון רבי דוד ומשה" class="gvt-panoramic-img" data-element-type="image" data-element-id="img-1778846786790-x0tb5kwvu" style="object-fit: cover; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1" data-zappy-original-width="600" data-zappy-original-height="367">
 
 
 
