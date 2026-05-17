@@ -10325,17 +10325,6 @@ body::before {
   padding: 20px 18px;
 }
 }
-
-.brd-bulletin-section .brd-notice-card {
-  min-width: 280px;
-  flex-shrink: 0;
-  width: auto;
-}
-
-.brd-bulletin-section .brd-notice-text {
-  white-space: normal;
-  word-break: break-word;
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
