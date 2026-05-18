@@ -10699,6 +10699,40 @@ body::before {
 .candles-candle-gallery-section .candle-card .candle-date {
   color: var(--accent) !important;
 }
+
+.candles-candle-gallery-section .candle-card {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.candles-candle-gallery-section .candle-card--short {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+.candles-candle-gallery-section .candle-card--medium {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.candles-candle-gallery-section .candle-card--tall {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+}
+
+.candles-candle-gallery-section .candle-flame-wrap {
+  margin-bottom: 8px !important;
+}
+
+.candles-candle-gallery-section .candle-svg {
+  width: 36px !important;
+  height: 60px !important;
+}
+
+.candles-candle-gallery-section .candle-svg--large {
+  width: 50px !important;
+  height: 82px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
