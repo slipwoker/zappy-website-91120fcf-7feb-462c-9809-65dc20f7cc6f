@@ -5902,13 +5902,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .candles-candle-gallery-section .candle-card--tall {
-  padding-top: 10px;
-  padding-bottom: 14px;
+  padding-top: 28px;
+  padding-bottom: 24px;
 }
 
 .candles-candle-gallery-section .candle-card--short {
-  padding-top: 10px;
-  padding-bottom: 14px;
+  padding-top: 28px;
+  padding-bottom: 24px;
 }
 
 .candles-candle-gallery-section .candle-card--center {
@@ -10345,8 +10345,8 @@ body::before {
 }
 
 .candles-candle-gallery-section .candle-svg--large {
-  width: 44px !important;
-  height: 74px !important;
+  width: 52px;
+  height: 88px;
 }
 
 .candles-candle-gallery-section .candle-name {
@@ -10388,7 +10388,8 @@ body::before {
 }
 
 .candles-candle-gallery-section .candle-card--medium {
-  padding-top: 10px !important;
+  padding-top: 28px;
+  padding-bottom: 24px;
 }
 
 .candles-candle-gallery-section .candle-card--featured {
@@ -10732,6 +10733,30 @@ body::before {
 .candles-candle-gallery-section .candle-svg--large {
   width: 50px !important;
   height: 82px !important;
+}
+
+.candles-candle-gallery-section .candle-card--short,
+.candles-candle-gallery-section .candle-card--medium,
+.candles-candle-gallery-section .candle-card--tall {
+  padding-top: 28px !important;
+  padding-bottom: 24px !important;
+}
+
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(1),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(2),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(3),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(4),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(5),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(6),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(7),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(8),
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(9) {
+  margin-top: 0 !important;
+}
+
+.candles-candle-gallery-section .candle-svg--large {
+  width: 52px !important;
+  height: 88px !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
