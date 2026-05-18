@@ -6000,12 +6000,15 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .candles-candle-gallery-section .candle-date {
   font-family: 'Rubik', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.95rem !important;
   line-height: 1.5;
-  color: #7A1F2B;
+  color: var(--accent);
   margin: 0;
   text-align: center;
   letter-spacing: 0.04em;
+  display: block;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* BOTTOM RULE */
@@ -10593,6 +10596,108 @@ body::before {
 
 .candles-candle-gallery-section .candle-sub-dedication {
   display: none !important;
+}
+
+.candles-candle-gallery-section .candle-prayer,
+.candles-candle-gallery-section .candle-prayer--secondary,
+.candles-candle-gallery-section .candle-sub-dedication {
+  display: none !important;
+}
+
+.candles-candle-gallery-section .candle-date {
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: var(--accent) !important;
+  font-style: normal !important;
+}
+
+.candles-candle-gallery-section .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-name {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-sub-dedication .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-sub-dedication .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer em {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer--secondary {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-date {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-date {
+  display: block !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: var(--accent) !important;
+  font-style: normal !important;
+  margin-top: 10px !important;
+}
+
+.candles-candle-gallery-section .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-name {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-sub-dedication .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-sub-dedication .candle-dedication {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer em {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer--secondary {
+  color: var(--accent) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-date {
+  color: var(--accent) !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
