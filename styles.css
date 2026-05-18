@@ -10578,6 +10578,22 @@ body::before {
 .candles-candle-gallery-section .candles-gallery-grid {
   gap: 10px !important;
 }
+
+.candles-dedication-cta-section p.candle-preview-tncbh {
+  display: block !important;
+}
+
+.candles-candle-gallery-section .candle-date {
+  display: none !important;
+}
+
+.candles-candle-gallery-section .candle-prayer {
+  display: none !important;
+}
+
+.candles-candle-gallery-section .candle-sub-dedication {
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
