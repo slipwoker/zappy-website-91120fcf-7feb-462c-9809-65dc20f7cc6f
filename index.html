@@ -1186,33 +1186,8 @@
   </div>
 
   <div class="brd-layout-wrap">
-
-  <!-- Gold Image Frame (Left side in RTL) -->
-  <div class="brd-image-frame" aria-label="מסגרת תמונה">
-    <!-- Corner ornaments -->
-    <div class="brd-frame-corner brd-frame-tl"></div>
-    <div class="brd-frame-corner brd-frame-tr"></div>
-    <div class="brd-frame-corner brd-frame-bl"></div>
-    <div class="brd-frame-corner brd-frame-br"></div>
-    <!-- Side ornament lines -->
-    <div class="brd-frame-side brd-frame-top"></div>
-    <div class="brd-frame-side brd-frame-bottom"></div>
-    <div class="brd-frame-side brd-frame-left"></div>
-    <div class="brd-frame-side brd-frame-right"></div>
-    <!-- Inner image area -->
-    <div class="brd-frame-inner">
-      <div class="brd-frame-img-placeholder">
-        <div class="brd-frame-placeholder-icon">🖼</div>
-        <p class="brd-frame-placeholder-text">לחצו כאן להוספת תמונה</p>
-      </div>
-    </div>
-    <!-- Decorative gold star center-top -->
-    <div class="brd-frame-badge-top" aria-hidden="true">✡</div>
-    <div class="brd-frame-badge-bottom" aria-hidden="true">✦</div>
-  </div>
-
+  <!-- Panel: bulletin board — RIGHT side in RTL (comes first in DOM) -->
   <div class="brd-panel">
-    <!-- Panel Header -->
     <header class="brd-panel-header">
       <div class="brd-header-ornament" aria-hidden="true">
         <span class="brd-ornament-star">✦</span>
@@ -1230,21 +1205,16 @@
       </div>
       <div class="brd-header-subtitle">הצדיק רבי דוד ומשה זיע"א </div>
     </header>
-
-    <!-- Scrollable Notices Container -->
     <div class="brd-notices-scroll" role="feed" aria-label="רשימת הודעות">
-
-      <!-- Notice 1 -->
       <article class="brd-notice-card" aria-label="הודעה 1">
         <div class="brd-notice-corner brd-corner-tl" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-tr" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-bl" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-br" aria-hidden="true"></div>
-
         <div class="brd-notice-badge" aria-hidden="true">✡</div>
         <div class="brd-notice-body">
-          <p class="brd-notice-text" >
-            בשורה טובה לכלל המתפללים והמבקרים בציון הקדוש של הצדיק רבי דוד ומשה זיע"א  —
+          <p class="brd-notice-text">
+            בשורה טובה לכלל המתפללים והמבקרים בציון הקדוש של הצדיק רבי דוד ומשה זיע"א —
             הילולת הצדיק תיערך בראש חודש חשוון&nbsp; הקרוב. נא להירשם מראש לסעודת המצווה ולתפילות המיוחדות.
             כולם מוזמנים בברכה ובאהבה.
           </p>
@@ -1255,35 +1225,26 @@
             ט"ו בניסן תשפ"ה
           </time>
           <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 1">
-            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-type="button" data-element-id="btn-1779014480906-i6s2objer" data-native-element="true">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
-              </svg>
+            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-id="btn-1779014480906-i6s2objer">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
               <span>פייסבוק</span>
             </a>
-            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-type="button" data-element-id="btn-1779014480906-cwkiwpfii" data-native-element="true">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-              </svg>
+            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-id="btn-1779014480906-cwkiwpfii">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
               <span>וואטסאפ</span>
             </a>
-            <a href="https://youtube.com/@RabbiDavidMoshe" class="brd-share-btn brd-share-yt" target="_blank" rel="noopener noreferrer" aria-label="צפה ביוטיוב" data-element-id="element-ai-1777033561693-yt9k2m" data-element-type="social-link">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-              </svg>
+            <a href="https://youtube.com/@RabbiDavidMoshe" class="brd-share-btn brd-share-yt" target="_blank" rel="noopener noreferrer" aria-label="צפה ביוטיוב" data-element-id="element-ai-1777033561693-yt9k2m">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
               <span>יוטיוב</span>
             </a>
           </div>
         </footer>
       </article>
-
-      <!-- Notice 2 -->
       <article class="brd-notice-card" aria-label="הודעה 2">
         <div class="brd-notice-corner brd-corner-tl" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-tr" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-bl" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-br" aria-hidden="true"></div>
-
         <div class="brd-notice-badge" aria-hidden="true">✡</div>
         <div class="brd-notice-body">
           <p class="brd-notice-text">
@@ -1298,33 +1259,25 @@
             י' בניסן תשפ"ה
           </time>
           <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 2">
-            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-type="button" data-element-id="btn-1779014480906-139a8ypvb" data-native-element="true">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
-              </svg>
+            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-id="btn-1779014480906-139a8ypvb">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
               <span>פייסבוק</span>
             </a>
-            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-type="button" data-element-id="btn-1779014480906-6d46ezv84" data-native-element="true">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-              </svg>
+            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-id="btn-1779014480906-6d46ezv84">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
               <span>וואטסאפ</span>
             </a>
           </div>
         </footer>
       </article>
-
-      <!-- Notice 3 -->
       <article class="brd-notice-card" aria-label="הודעה 3">
         <div class="brd-notice-corner brd-corner-tl" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-tr" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-bl" aria-hidden="true"></div>
         <div class="brd-notice-corner brd-corner-br" aria-hidden="true"></div>
-
         <div class="brd-notice-badge" aria-hidden="true">✡</div>
         <div class="brd-notice-body">
-          <p class="brd-notice-text" style="max-width: none; text-align: center;" data-zappy-text-width="full">
-            אנו ים להודיע על השקת האתר החדש של הצדיק רביב דוד ומשה זיע"א</p>
+          <p class="brd-notice-text">אנו שמחים להודיע על השקת האתר החדש של הצדיק רבי דוד ומשה זיע"א</p>
         </div>
         <footer class="brd-notice-footer">
           <time class="brd-notice-date" datetime="2025-04-05">
@@ -1332,25 +1285,18 @@
             ה' בניסן תשפ"ה
           </time>
           <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 3">
-            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-type="button" data-element-id="btn-1779014480906-nq11ns9tu" data-native-element="true">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
-              </svg>
+            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-id="btn-1779014480906-nq11ns9tu">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
               <span>פייסבוק</span>
             </a>
-            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-type="button" data-element-id="btn-1779014480906-ylu45zcud" data-native-element="true">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-              </svg>
+            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-id="btn-1779014480906-ylu45zcud">
+              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
               <span>וואטסאפ</span>
             </a>
           </div>
         </footer>
       </article>
-
-    </div><!-- end scroll -->
-
-    <!-- Bottom ornament -->
+    </div>
     <div class="brd-panel-footer-ornament" aria-hidden="true">
       <span class="brd-ornament-star brd-star-sm">✦</span>
       <span class="brd-ornament-line brd-line-short"></span>
@@ -1360,17 +1306,26 @@
     </div>
   </div>
 
-  <!-- Zellige decorative bottom border -->
-  <div class="brd-zellige-border brd-zellige-bottom" aria-hidden="true">
-    <span class="brd-zellige-diamond"></span>
-    <span class="brd-zellige-line"></span>
-    <span class="brd-zellige-diamond"></span>
-    <span class="brd-zellige-line"></span>
-    <span class="brd-zellige-diamond"></span>
-    <span class="brd-zellige-line"></span>
-    <span class="brd-zellige-diamond"></span>
+  <!-- Gold Image Frame — LEFT side in RTL (comes second in DOM) -->
+  <div class="brd-image-frame" aria-label="מסגרת תמונה">
+    <div class="brd-frame-corner brd-frame-tl"></div>
+    <div class="brd-frame-corner brd-frame-tr"></div>
+    <div class="brd-frame-corner brd-frame-bl"></div>
+    <div class="brd-frame-corner brd-frame-br"></div>
+    <div class="brd-frame-side brd-frame-top"></div>
+    <div class="brd-frame-side brd-frame-bottom"></div>
+    <div class="brd-frame-side brd-frame-left"></div>
+    <div class="brd-frame-side brd-frame-right"></div>
+    <div class="brd-frame-inner">
+      <div class="brd-frame-img-placeholder">
+        <div class="brd-frame-placeholder-icon">🖼</div>
+        <p class="brd-frame-placeholder-text">לחצו כאן להוספת תמונה</p>
+      </div>
+    </div>
+    <div class="brd-frame-badge-top" aria-hidden="true">✡</div>
+    <div class="brd-frame-badge-bottom" aria-hidden="true">✦</div>
   </div>
-</section>
+</div></section>
 
 
 

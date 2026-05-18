@@ -11122,6 +11122,7 @@ body::before {
   flex-direction: row;
   gap: 32px;
   width: 100%;
+  align-items: stretch;
 }
 
 .brd-bulletin-section .brd-panel {
@@ -11130,7 +11131,7 @@ body::before {
 }
 
 .brd-bulletin-section .brd-image-frame {
-  flex: 0 0 420px;
+  flex: 1 1 0;
   min-width: 280px;
   position: relative;
   background: linear-gradient(160deg, #1a1008 0%, #2a1c0c 60%, #1a1008 100%);
