@@ -10497,6 +10497,13 @@ body::before {
 .candles-candle-gallery-section .candle-sub-dedication .candle-dedication {
   color: var(--primary-color) !important;
 }
+
+.candles-candle-gallery-section .candle-prayer,
+.candles-candle-gallery-section .candle-prayer--secondary,
+.candles-candle-gallery-section .candle-date,
+.candles-candle-gallery-section .candle-sub-dedication {
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
