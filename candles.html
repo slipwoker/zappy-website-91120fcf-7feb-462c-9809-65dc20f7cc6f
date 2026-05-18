@@ -684,293 +684,425 @@
             })();
           </script>
         
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .candles-candle-gallery-section {
-  position: relative;
-  overflow: visible;
   direction: rtl;
+  position: relative;
+  overflow: hidden;
   background-color: #201816;
   background-image:
-    radial-gradient(ellipse at 20% 40%, rgba(240,181,45,0.07) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 60%, rgba(122,31,43,0.12) 0%, transparent 55%),
-    linear-gradient(180deg, #2a160f 0%, #201816 60%, #1a1008 100%);
+    radial-gradient(ellipse at 20% 10%, rgba(216,155,43,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(122,31,43,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(58,20,12,0.6) 0%, transparent 80%),
+    linear-gradient(180deg, #2a160f 0%, #201816 40%, #1a1008 100%);
   color: var(--text-light);
-  padding: 80px 16px 100px;
+  padding: 80px 20px 60px;
+  font-family: 'Noto Serif', serif;
 }
 
-/* Top border strip */
-.candles-candle-gallery-section .cg-border-strip {
+/* Ambient floating particles */
+.candles-candle-gallery-section .candles-bg-particles {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 24px;
+  inset: 0;
   pointer-events: none;
-  z-index: 2;
-  color: var(--accent);
-}
-.candles-candle-gallery-section .cg-border-strip svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+  z-index: 0;
+  overflow: hidden;
 }
 
-/* Section Header */
-.candles-candle-gallery-section .cg-header {
+.candles-candle-gallery-section .candles-bg-particles span {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240,160,40,0.18) 0%, transparent 70%);
+  animation: candle-float 8s ease-in-out infinite;
+}
+
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(1) { width: 180px; height: 180px; top: 5%; right: 8%; animation-delay: 0s; }
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(2) { width: 120px; height: 120px; top: 20%; left: 12%; animation-delay: 1.5s; }
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(3) { width: 200px; height: 200px; top: 50%; right: 5%; animation-delay: 3s; }
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(4) { width: 90px; height: 90px; top: 70%; left: 20%; animation-delay: 2s; }
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(5) { width: 150px; height: 150px; top: 35%; right: 40%; animation-delay: 4s; }
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(6) { width: 80px; height: 80px; top: 85%; right: 60%; animation-delay: 0.5s; }
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(7) { width: 110px; height: 110px; top: 10%; left: 50%; animation-delay: 2.5s; }
+.candles-candle-gallery-section .candles-bg-particles span:nth-child(8) { width: 60px; height: 60px; top: 60%; left: 5%; animation-delay: 3.5s; }
+
+@keyframes candle-float {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-18px) scale(1.05); opacity: 1; }
+}
+
+/* Header */
+.candles-candle-gallery-section .candles-header {
+  position: relative;
+  z-index: 2;
   text-align: center;
   margin-bottom: 56px;
+}
+
+.candles-candle-gallery-section .candles-ornament-top,
+.candles-candle-gallery-section .candles-ornament-bottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.candles-candle-gallery-section .candles-ornament-bottom {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.candles-candle-gallery-section .candles-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  background: linear-gradient(180deg, #f7e6a3 0%, #e7c56f 42%, #c89a3d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.candles-candle-gallery-section .candles-subtitle {
+  font-family: 'Noto Serif', serif;
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+}
+
+/* Gallery Grid - Masonry-style stagger */
+.candles-candle-gallery-section .candles-gallery-grid {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+  direction: rtl;
+}
+
+/* Candle Card Base */
+.candles-candle-gallery-section .candle-card {
+  position: relative;
+  background: rgba(42, 22, 12, 0.75);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(212, 178, 122, 0.25);
+  border-radius: 2px;
+  padding: 28px 20px 24px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.candles-candle-gallery-section .candle-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(240,160,40,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.candles-candle-gallery-section .candle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(216,155,43,0.18), 0 0 20px rgba(240,160,40,0.1);
+  border-color: rgba(212, 178, 122, 0.45);
+}
+
+/* Card height variants for stagger */
+.candles-candle-gallery-section .candle-card--short {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.candles-candle-gallery-section .candle-card--medium {
+  padding-top: 32px;
+  padding-bottom: 28px;
+}
+
+.candles-candle-gallery-section .candle-card--tall {
+  padding-top: 40px;
+  padding-bottom: 36px;
+}
+
+/* Stagger vertical offset via nth-child */
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(1) { margin-top: 0; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(2) { margin-top: 40px; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(3) { margin-top: 0; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(4) { margin-top: 0; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(5) { margin-top: 32px; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(6) { margin-top: 0; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(7) { margin-top: 0; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(8) { margin-top: 28px; }
+.candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(9) { margin-top: 0; }
+
+/* Featured Card */
+.candles-candle-gallery-section .candle-card--featured {
+  border: 2px solid rgba(216,155,43,0.65);
+  background: rgba(50, 25, 10, 0.9);
+  box-shadow:
+    0 0 28px rgba(216,155,43,0.3),
+    0 0 60px rgba(216,155,43,0.12),
+    inset 0 0 30px rgba(216,155,43,0.06);
+  z-index: 3;
+}
+
+.candles-candle-gallery-section .candle-card--featured:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 40px rgba(216,155,43,0.45),
+    0 16px 40px rgba(216,155,43,0.2),
+    inset 0 0 30px rgba(216,155,43,0.08);
+}
+
+.candles-candle-gallery-section .candle-featured-badge {
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  color: var(--accent);
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 6px;
+  z-index: 2;
+}
+
+/* Ambient glow per card */
+.candles-candle-gallery-section .candle-glow-ambient {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240,160,40,0.14) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: ambient-pulse 4s ease-in-out infinite;
+}
+
+.candles-candle-gallery-section .candle-glow-ambient--gold {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(216,155,43,0.22) 0%, transparent 70%);
+  animation-duration: 3s;
+}
+
+@keyframes ambient-pulse {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.15); }
+}
+
+/* Flame wrapper */
+.candles-candle-gallery-section .candle-flame-wrap {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  color: var(--text-light);
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
-.candles-candle-gallery-section .cg-ornament {
-  color: var(--accent);
-  opacity: 0.75;
+.candles-candle-gallery-section .candle-flame-wrap--large {
+  margin-bottom: 20px;
 }
 
-.candles-candle-gallery-section .cg-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--text-light);
+.candles-candle-gallery-section .candle-svg {
+  width: 52px;
+  height: 88px;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(240,160,40,0.5));
+}
+
+.candles-candle-gallery-section .candle-svg--large {
+  width: 72px;
+  height: 118px;
+  filter: drop-shadow(0 0 14px rgba(240,160,40,0.65));
+}
+
+/* Flame flicker animation */
+.candles-candle-gallery-section .flame-group {
+  transform-origin: 50% 95%;
+  animation: flame-flicker 2.4s ease-in-out infinite;
+}
+
+@keyframes flame-flicker {
+  0%   { transform: scaleX(1)    scaleY(1)    rotate(0deg); }
+  15%  { transform: scaleX(0.94) scaleY(1.04) rotate(-1.5deg); }
+  30%  { transform: scaleX(1.05) scaleY(0.97) rotate(1deg); }
+  45%  { transform: scaleX(0.97) scaleY(1.06) rotate(-0.5deg); }
+  60%  { transform: scaleX(1.03) scaleY(0.96) rotate(1.5deg); }
+  75%  { transform: scaleX(0.96) scaleY(1.03) rotate(-1deg); }
+  90%  { transform: scaleX(1.02) scaleY(0.98) rotate(0.5deg); }
+  100% { transform: scaleX(1)    scaleY(1)    rotate(0deg); }
+}
+
+/* Stagger flicker per card */
+.candles-candle-gallery-section .candle-card:nth-child(1) .flame-group { animation-delay: 0s; animation-duration: 2.2s; }
+.candles-candle-gallery-section .candle-card:nth-child(2) .flame-group { animation-delay: 0.4s; animation-duration: 2.8s; }
+.candles-candle-gallery-section .candle-card:nth-child(3) .flame-group { animation-delay: 0.8s; animation-duration: 2.0s; }
+.candles-candle-gallery-section .candle-card:nth-child(4) .flame-group { animation-delay: 0.2s; animation-duration: 3.0s; }
+.candles-candle-gallery-section .candle-card:nth-child(5) .flame-group { animation-delay: 1.0s; animation-duration: 2.5s; }
+.candles-candle-gallery-section .candle-card:nth-child(6) .flame-group { animation-delay: 0.6s; animation-duration: 2.7s; }
+.candles-candle-gallery-section .candle-card:nth-child(7) .flame-group { animation-delay: 1.2s; animation-duration: 2.3s; }
+.candles-candle-gallery-section .candle-card:nth-child(8) .flame-group { animation-delay: 0.3s; animation-duration: 2.9s; }
+.candles-candle-gallery-section .candle-card:nth-child(9) .flame-group { animation-delay: 0.9s; animation-duration: 2.1s; }
+
+/* Card Content */
+.candles-candle-gallery-section .candle-card-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.candles-candle-gallery-section .candle-dedication {
+  font-family: 'Noto Serif', serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0 0 4px;
   letter-spacing: 0.04em;
-  margin: 0;
-  text-shadow: 0 2px 24px rgba(240,181,45,0.22);
-  background: linear-gradient(180deg, #f7e6a3 0%, #e7c56f 42%, #c89a3d 100%);
+  text-align: center;
+}
+
+.candles-candle-gallery-section .candle-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 0 0 10px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.candles-candle-gallery-section .candle-card--featured .candle-name {
+  font-size: 1.45rem;
+  background: linear-gradient(180deg, #f7e6a3 0%, #e7c56f 60%, #c89a3d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Container */
-.candles-candle-gallery-section .cg-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-/* Grid */
-.candles-candle-gallery-section .cg-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  direction: rtl;
-}
-
-/* Candle Card */
-.candles-candle-gallery-section .cg-candle-card {
-  background: rgba(42, 22, 15, 0.72);
-  border: 1px solid rgba(212,178,122,0.22);
-  border-radius: 0;
-  padding: 32px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-  box-shadow: 0 4px 10px rgba(58,32,24,0.22);
-  text-align: center;
-}
-
-.candles-candle-gallery-section .cg-candle-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(240,181,45,0.04) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.candles-candle-gallery-section .cg-candle-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 32px rgba(240,181,45,0.22), 0 8px 20px rgba(58,32,24,0.28);
-  border-color: rgba(212,178,122,0.5);
-}
-
-/* Featured card */
-.candles-candle-gallery-section .cg-candle-card--featured {
-  border-color: rgba(240,181,45,0.45);
-  background: rgba(60, 28, 12, 0.88);
-  box-shadow: 0 0 28px rgba(240,181,45,0.18), 0 8px 20px rgba(58,32,24,0.28);
-}
-.candles-candle-gallery-section .cg-candle-card--featured::before {
-  background: linear-gradient(180deg, rgba(240,181,45,0.10) 0%, transparent 55%);
-}
-
-/* Flame wrap */
-.candles-candle-gallery-section .cg-flame-wrap {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 20px;
-  z-index: 1;
-}
-
-.candles-candle-gallery-section .cg-candle-icon {
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 0 10px rgba(240,181,45,0.55));
-}
-
-.candles-candle-gallery-section .cg-flame-glow {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(240,181,45,0.55) 0%, rgba(240,120,30,0.22) 55%, transparent 80%);
-  pointer-events: none;
-  z-index: 1;
-  animation: cg-flicker 2.2s ease-in-out infinite alternate;
-}
-
-.candles-candle-gallery-section .cg-flame-glow--large {
-  width: 54px;
-  height: 54px;
-  bottom: 36px;
-  background: radial-gradient(circle, rgba(240,181,45,0.7) 0%, rgba(240,120,30,0.3) 55%, transparent 80%);
-}
-
-@keyframes cg-flicker {
-  0%   { opacity: 0.75; transform: translateX(-50%) scale(1); }
-  30%  { opacity: 0.95; transform: translateX(-50%) scale(1.08); }
-  60%  { opacity: 0.82; transform: translateX(-50%) scale(0.96); }
-  100% { opacity: 1;    transform: translateX(-50%) scale(1.04); }
-}
-
-/* Card body */
-.candles-candle-gallery-section .cg-card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.candles-candle-gallery-section .cg-label-top {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.875rem;
-  color: var(--accent);
-  letter-spacing: 0.08em;
-  margin: 0;
-  opacity: 0.9;
-  text-align: center;
-}
-
-.candles-candle-gallery-section .cg-dedication {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-light);
-  margin: 0;
-  text-align: center;
-  line-height: 1.4;
-}
-
-.candles-candle-gallery-section .cg-quote {
+.candles-candle-gallery-section .candle-prayer {
   font-family: 'Noto Serif', serif;
   font-size: 0.875rem;
-  color: rgba(247,241,231,0.78);
+  color: rgba(247,241,231,0.7);
   font-style: italic;
-  line-height: 1.65;
-  margin: 6px 0 0;
-  padding: 10px 14px;
-  border-inline-end: 2px solid rgba(212,178,122,0.35);
-  text-align: right;
-  background: rgba(240,181,45,0.04);
-}
-
-.candles-candle-gallery-section .cg-date {
-  font-family: 'Noto Serif', serif;
-  font-size: 0.8125rem;
-  color: rgba(212,178,122,0.7);
-  margin: 4px 0 0;
+  margin: 0 0 8px;
+  line-height: 1.6;
   text-align: center;
-  letter-spacing: 0.04em;
 }
 
-/* Ambient glow */
-.candles-candle-gallery-section .cg-ambient-glow {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 40%;
-  background: radial-gradient(ellipse at center, rgba(240,181,45,0.06) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
+.candles-candle-gallery-section .candle-prayer--secondary {
+  font-size: 0.8rem;
+  color: rgba(216,155,43,0.75);
+  margin-top: 4px;
 }
 
-/* Bottom divider */
-.candles-candle-gallery-section .cg-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  pointer-events: none;
-  z-index: 5;
+.candles-candle-gallery-section .candle-date {
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
+  color: rgba(216,155,43,0.65);
+  margin: 8px 0 0;
+  letter-spacing: 0.06em;
+  text-align: center;
 }
-.candles-candle-gallery-section .cg-divider-wrapper svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+
+.candles-candle-gallery-section .candle-sub-dedication {
+  position: relative;
+  z-index: 2;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(212,178,122,0.2);
+  text-align: center;
+}
+
+.candles-candle-gallery-section .candle-sub-dedication .candle-dedication {
+  color: rgba(216,155,43,0.7);
+  font-style: italic;
+}
+
+/* Footer ornament */
+.candles-candle-gallery-section .candles-footer-ornament {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
 }
 
 /* ── TABLET (2 columns) ── */
-@media (max-width: 1024px) {
-  .candles-candle-gallery-section .cg-grid {
+@media (max-width: 1024px) and (min-width: 769px) {
+  .candles-candle-gallery-section .candles-gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(1) { margin-top: 0; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(2) { margin-top: 32px; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(3) { margin-top: 0; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(4) { margin-top: 24px; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(5) { margin-top: 0; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(6) { margin-top: 20px; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(7) { margin-top: 0; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(8) { margin-top: 28px; }
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(9) { margin-top: 0; }
 }
 
-/* ── MOBILE ── */
+/* ── MOBILE (1 column) ── */
 @media (max-width: 768px) {
   .candles-candle-gallery-section {
-    padding: 60px 12px 80px;
+    padding: 60px 16px 48px;
   }
 
-  .candles-candle-gallery-section .cg-header {
-    margin-bottom: 36px;
-  }
-
-  .candles-candle-gallery-section .cg-title {
-    font-size: 1.5rem;
-  }
-
-  .candles-candle-gallery-section .cg-grid {
+  .candles-candle-gallery-section .candles-gallery-grid {
     grid-template-columns: 1fr !important;
     gap: 16px;
   }
 
-  .candles-candle-gallery-section .cg-candle-card {
-    padding: 24px 16px 20px;
+  /* Reset all stagger offsets on mobile */
+  .candles-candle-gallery-section .candles-gallery-grid .candle-card:nth-child(n) {
+    margin-top: 0 !important;
   }
 
-  .candles-candle-gallery-section .cg-flame-wrap {
-    margin-bottom: 14px;
+  .candles-candle-gallery-section .candle-card {
+    padding: 24px 18px 20px;
   }
 
-  .candles-candle-gallery-section .cg-quote {
-    font-size: 0.875rem;
-    padding: 8px 10px;
+  .candles-candle-gallery-section .candle-svg {
+    width: 44px;
+    height: 74px;
+  }
+
+  .candles-candle-gallery-section .candle-svg--large {
+    width: 58px;
+    height: 96px;
+  }
+
+  .candles-candle-gallery-section .candles-title {
+    font-size: 1.75rem;
+  }
+
+  .candles-candle-gallery-section .candles-header {
+    margin-bottom: 36px;
+  }
+
+  .candles-candle-gallery-section .candle-name {
+    font-size: 1.1rem;
+  }
+
+  .candles-candle-gallery-section .candle-card--featured .candle-name {
+    font-size: 1.2rem;
   }
 }
 </style>
@@ -1434,8 +1566,8 @@
           <line x1="76" y1="9" x2="120" y2="9" stroke="#D89B2B" stroke-width="1"></line>
         </svg>
       </div>
-      <h2 class="candles-dedication-cta-heading" style="">הדלק נר זכרון לעילוי נשמת יקיריך</h2>
-      <p class="candles-dedication-cta-text" style="">מלאו את הפרטים הבאים והנר הוירטואלי יודלק לעילוי נשמת יקיריכם, לצד ציונו הקדוש של רבי דוד ומשה זיע״א.</p>
+      <h2 class="candles-dedication-cta-heading" >הדלק נר זכרון לעילוי נשמת יקיריך</h2>
+      <p class="candles-dedication-cta-text" >מלאו את הפרטים הבאים והנר הוירטואלי יודלק לעילוי נשמת יקיריכם, לצד ציונו הקדוש של רבי דוד ומשה זיע״א.</p>
 
       <form class="candle-dedication-form" onsubmit="return false;">
         <div class="candle-form-fields">
@@ -1465,16 +1597,16 @@
   </div>
 </section><section class="candles-intro-section" data-layout-spec="נרות נשמה-intro" dir="rtl" id="candles-intro-section" style="min-height: 690.8px !important;">
   <div class="candles-intro-image-wrapper">
-    <img data-placeholder="candles-intro-image-1" data-context="Close atmospheric photograph of several traditional Jewish memorial candles (yahrzeit candles) burning in glass cups, warm glowing amber flames against a very dark near-black background, soft bokeh, intimate sacred mood, Moroccan Jewish heritage context, deep umber shadows with golden light halos around each flame, photographic quality, devotional atmosphere" width="1200" height="680" src="/assets/site-candles-intro-image-1.webp" alt="נרות זיכרון דולקים לעילוי נשמת רבי דוד ומשה זיע״א" data-element-type="image" data-element-id="img-1776935367492-l3bdul7bp" style="">
+    <img data-placeholder="candles-intro-image-1" data-context="Close atmospheric photograph of several traditional Jewish memorial candles (yahrzeit candles) burning in glass cups, warm glowing amber flames against a very dark near-black background, soft bokeh, intimate sacred mood, Moroccan Jewish heritage context, deep umber shadows with golden light halos around each flame, photographic quality, devotional atmosphere" width="1200" height="680" src="/assets/site-candles-intro-image-1.webp" alt="נרות זיכרון דולקים לעילוי נשמת רבי דוד ומשה זיע״א" data-element-type="image" data-element-id="img-1776935367492-l3bdul7bp" >
     <div class="candles-intro-scrim" aria-hidden="true"></div>
   </div>
 
   <div class="candles-intro-content-wrapper">
     <div class="candles-intro-content">
       <div class="candles-intro-accent-line" aria-hidden="true"></div>
-      <h1 class="candles-intro-h1" style="">&nbsp; הדלקת נר נשמה - זיכרון שמאיר לדורות&nbsp;&nbsp;</h1>
+      <h1 class="candles-intro-h1" >&nbsp; הדלקת נר נשמה - זיכרון שמאיר לדורות&nbsp;&nbsp;</h1>
       <p class="candles-intro-lead" style="text-align: center; max-width: none;" data-zappy-text-width="full">הדלקת נר זיכרון היא מן המסורות הקדושות ביותר בעם ישראל — מעשה פשוט שנושא בחובו עומק של תפילה, אהבה, וזיכרון נצחי. כאן, לפני ציונו הקדוש של <strong>רבי דוד ומשה זיע״א</strong>, מוזמנים כל עולי הרגל ומבקשי הרחמים להדליק נר וירטואלי לעילוי נשמת הצדיק ולזכות יקיריהם, בכל מקום שהם נמצאים בעולם.<br>&nbsp; הדלקת נר נשמה לזכר רבי דוד ומשה זיע״א אינה רק מנהג עתיק - היא גשר של אור המחבר בין הצדיק לבין החיים. בכל נר המודלק, מתחדשת הברית שבין הצדיק לעמו: ברית של תפילה, של אמונה, ושל זיכרון שאינו מכבה. מאז לפני יותר מאלף שנה, בה שכן הקדוש בהרי האטלס, ועד ימינו - אותה שלהבת ממשיכה לדלוק בלב כל מי שנושא את שמו.<br>הנר מדבר בשפה שאין לה גבולות - שפת הנפש. הוא מזכיר לנו את סבותינו שהדליקו לפנינו, את הבתים בכפרי מרוקו שבהם נישאו תפילות לשמיים, ואת אותה אמונה תמימה שעברה מדור לדור. ביום ההילולה ובכל יום, כל נר שמודלק לכבוד ציון רבי דוד ומשה מרוקו הוא עדות חיה לכוחה של המסורת לשרוד גלויות, מרחקים, ושינויי עתים.<br><br>מרוקו, הגולה, וירושלים של מעלה - שלשלת אחת של אור<br><br>מצאצאי יוצאי מרוקו בישראל ובתפוצות, ועד לעולי הרגל המגיעים היום אל הציון הקדוש בהרי האטלס - כולם שותפים לאותה שלהבת. הדלקת הנר מחברת בין כל מי שנשא את זכרו של הצדיק בלבו, ומזכירה לנו כי האמונה אינה קשורה למקום - היא שוכנת בתוכנו.&nbsp;&nbsp;</p>
-      <h3 class="candles-intro-h3" style="">עצרו רגע. נשמו. תנו לאור להוביל את תפילתכם.</h3>
+      <h3 class="candles-intro-h3" >עצרו רגע. נשמו. תנו לאור להוביל את תפילתכם.</h3>
     </div>
   </div>
 
@@ -1483,252 +1615,371 @@
       <path d="M0,90 L0,38 C30,44 55,28 80,35 C105,42 120,22 150,30 C178,37 195,18 225,26 C255,34 268,14 300,22 C330,30 345,12 375,20 C405,28 418,10 450,18 C480,26 495,8 525,16 C555,24 568,6 600,14 C630,22 645,4 675,12 C705,20 718,4 750,12 C780,20 795,2 825,10 C855,18 870,2 900,10 C930,18 945,2 975,10 C1005,18 1020,4 1050,12 C1080,20 1095,6 1125,14 C1155,22 1170,8 1200,16 L1200,90 Z" fill="#edd8ad"></path>
     </svg>
   </div>
-</section><section class="candles-candle-gallery-section" dir="rtl" data-layout-spec="נרות נשמה-candle-gallery" data-zappy-section="true" id="candles-candle-gallery-section">
-  <!-- Decorative top border strip -->
-  <div class="cg-border-strip" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 L1200,0 L1200,8 Q1150,12 1100,8 T1000,10 Q950,6 900,10 T800,8 Q750,12 700,8 T600,10 Q550,6 500,10 T400,8 Q350,12 300,8 T200,10 Q150,6 100,10 T0,8 Z" fill="rgba(212,178,122,0.22)"></path>
-      <line x1="0" y1="23" x2="1200" y2="23" stroke="rgba(212,178,122,0.18)" stroke-width="1"></line>
-    </svg>
+</section><section class="candles-candle-gallery-section" data-layout-spec="נרות נשמה-candle-gallery" dir="rtl" data-zappy-section="true" id="candles-candle-gallery-section">
+
+  <!-- Ambient background particles -->
+  <div class="candles-bg-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <!-- Section Header -->
-  <div class="cg-header">
-    <div class="cg-ornament" aria-hidden="true">
-      <svg data-no-icon-edit="true" aria-hidden="true" width="220" height="18" viewBox="0 0 220 18" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="9" x2="80" y2="9" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
-        <circle cx="90" cy="9" r="2.5" fill="currentColor" opacity="0.45"></circle>
-        <circle cx="110" cy="9" r="4" fill="currentColor" opacity="0.55"></circle>
-        <circle cx="130" cy="9" r="2.5" fill="currentColor" opacity="0.45"></circle>
-        <line x1="140" y1="9" x2="220" y2="9" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
+  <div class="candles-header">
+    <div class="candles-ornament-top" aria-hidden="true">
+      <svg data-no-icon-edit="true" aria-hidden="true" width="320" height="18" viewBox="0 0 320 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="9" x2="120" y2="9" stroke="#D89B2B" stroke-width="1" stroke-opacity="0.5"></line>
+        <path d="M140 9 L148 3 L156 9 L148 15 Z" fill="#D89B2B" fill-opacity="0.6"></path>
+        <path d="M152 9 L160 3 L168 9 L160 15 Z" fill="#D89B2B" fill-opacity="0.4"></path>
+        <path d="M164 9 L172 3 L180 9 L172 15 Z" fill="#D89B2B" fill-opacity="0.6"></path>
+        <line x1="200" y1="9" x2="320" y2="9" stroke="#D89B2B" stroke-width="1" stroke-opacity="0.5"></line>
       </svg>
     </div>
-    <h2 class="cg-title">נרות נשמה לזכר הצדיק</h2>
-    <div class="cg-ornament" aria-hidden="true">
-      <svg data-no-icon-icon="true" aria-hidden="true" width="220" height="18" viewBox="0 0 220 18" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="9" x2="80" y2="9" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
-        <circle cx="90" cy="9" r="2.5" fill="currentColor" opacity="0.45"></circle>
-        <circle cx="110" cy="9" r="4" fill="currentColor" opacity="0.55"></circle>
-        <circle cx="130" cy="9" r="2.5" fill="currentColor" opacity="0.45"></circle>
-        <line x1="140" y1="9" x2="220" y2="9" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
+    <h2 class="candles-title effect-textGradient">נרות נשמה לזכר הצדיק</h2>
+    <p class="candles-subtitle">הדליקו נר לזכר רבי דוד ומשה זיע"א</p>
+    <div class="candles-ornament-bottom" aria-hidden="true">
+      <svg data-no-icon-edit="true" aria-hidden="true" width="320" height="18" viewBox="0 0 320 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="9" x2="120" y2="9" stroke="#D89B2B" stroke-width="1" stroke-opacity="0.5"></line>
+        <path d="M140 9 L148 3 L156 9 L148 15 Z" fill="#D89B2B" fill-opacity="0.6"></path>
+        <path d="M152 9 L160 3 L168 9 L160 15 Z" fill="#D89B2B" fill-opacity="0.4"></path>
+        <path d="M164 9 L172 3 L180 9 L172 15 Z" fill="#D89B2B" fill-opacity="0.6"></path>
+        <line x1="200" y1="9" x2="320" y2="9" stroke="#D89B2B" stroke-width="1" stroke-opacity="0.5"></line>
       </svg>
     </div>
   </div>
 
-  <!-- Candles Grid -->
-  <div class="cg-container">
-    <div class="cg-grid zappy-preserve-css-grid" id="zappy-auto-grid-1778852914844-5zptjo" data-zappy-auto-grid="true" data-original-item-width="381" data-original-gap="28px" style="--zappy-grid-cols: 381.325px 381.337px 381.325px; grid-template-columns: 381.325px 381.337px 381.325px; align-items: stretch !important;" data-zappy-explicit-columns="true">
+  <!-- Candle Gallery Grid -->
+  <div class="candles-gallery-grid">
 
-      <!-- Candle 1 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="0">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#c8a96a"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          
-          <blockquote class="cg-quote">“יהי זכרו ברוך. הדלקתי נר זה בציון הקדוש בהרי האטלס, ולבי עמו לעולם.”</blockquote>
-          <p class="cg-date">כ"ג בתשרי תשפ"ד</p>
-        </div>
-      </article>
+    <!-- Card 1 -->
+    <article class="candle-card candle-card--short">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame1" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner1" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame1)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner1)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">שרה בת רחל ע"ה</p>
+        <p class="candle-prayer"><em>יהי זכרה ברוך לעולם ועד</em></p>
+        <p class="candle-date">כ"ג בתשרי תשפ"ד</p>
+      </div>
+    </article>
 
-      <!-- Candle 2 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="1">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#b07a4a"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          <p class="cg-dedication">לרפואת אמי שתחיה</p>
-          <blockquote class="cg-quote">“רבי דוד ומשה, בקש עליה רחמים ותזכה לאריכות ימים ושנים טובות.”</blockquote>
-          <p class="cg-date">ג' בחשוון תשפ"ד</p>
-        </div>
-      </article>
+    <!-- Card 2 -->
+    <article class="candle-card candle-card--tall">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame2" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner2" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame2)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner2)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">משה בן יוסף ז"ל</p>
+        <p class="candle-prayer"><em>תהא נשמתו צרורה בצרור החיים</em></p>
+        <p class="candle-date">ג' בחשוון תשפ"ד</p>
+      </div>
+      <div class="candle-sub-dedication">
+        <p class="candle-dedication">לרפואת אמי שתחיה</p>
+      </div>
+    </article>
 
-      <!-- Candle 3 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="2">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#c8a96a"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          <p class="cg-dedication">הודיה על הנס</p>
-          <blockquote class="cg-quote">“בזכות הצדיק נושענו. שלום ובריאות לכל בית ישראל.”</blockquote>
-          <p class="cg-date">י"ח בשבט תשפ"ג</p>
-        </div>
-      </article>
+    <!-- Card 3 - FEATURED CENTER -->
+    <article class="candle-card candle-card--featured candle-card--medium">
+      <div class="candle-glow-ambient candle-glow-ambient--gold" aria-hidden="true"></div>
+      <div class="candle-featured-badge" aria-hidden="true">✦</div>
+      <div class="candle-flame-wrap candle-flame-wrap--large">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg candle-svg--large" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק מרכזי">
+          <defs>
+            <radialGradient id="flame3a" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff9b0"></stop>
+              <stop offset="30%" stop-color="#ffc040"></stop>
+              <stop offset="70%" stop-color="#e05010"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner3" cx="50%" cy="65%" r="45%">
+              <stop offset="0%" stop-color="#ffffff"></stop>
+              <stop offset="60%" stop-color="#fff7a0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+            <filter id="glow3">
+              <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+              <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+            </filter>
+          </defs>
+          <g class="flame-group" filter="url(#glow3)">
+            <ellipse cx="40" cy="34" rx="18" ry="30" fill="url(#flame3a)" opacity="0.95"></ellipse>
+            <ellipse cx="40" cy="40" rx="10" ry="20" fill="url(#inner3)"></ellipse>
+            <ellipse cx="40" cy="48" rx="4" ry="8" fill="#fffde0"></ellipse>
+          </g>
+          <rect x="28" y="66" width="24" height="62" rx="3" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="28" y="66" width="24" height="8" rx="2" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="40" y1="58" x2="40" y2="68" stroke="#5a3a1a" stroke-width="2" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">לעילוי נשמת הצדיק</p>
+        <p class="candle-prayer"><em>הילולה — כ' בתמוז</em></p>
+        <p class="candle-prayer candle-prayer--secondary"><em>בזכות קדושת הצדיק רבי דוד ומשה זיע"א</em></p>
+        <p class="candle-date">הילולה — כ' בתמוז</p>
+      </div>
+    </article>
 
-      <!-- Candle 4 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="3">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#9a6840"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          <p class="cg-dedication">לזכר כל אבות המשפחה</p>
-          <blockquote class="cg-quote">“משפחת בן-דוד מקזבלנקה — מדליקים נר זה בכל שנה לזכר כל הנשמות היקרות שעלו לגנזי מרומים.”</blockquote>
-          <p class="cg-date">ל' בניסן תשפ"ד</p>
-        </div>
-      </article>
+    <!-- Card 4 -->
+    <article class="candle-card candle-card--short">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame4" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner4" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame4)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner4)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">הודיה על הנס</p>
+        <p class="candle-prayer"><em>מודים אנחנו לך על כל הניסים</em></p>
+        <p class="candle-date">י"ח בשבט תשפ"ג</p>
+      </div>
+    </article>
 
-      <!-- Candle 5 -->
-      <article class="cg-candle-card cg-candle-card--featured zappy-grid-item-no-stretch" data-grid-item-index="4">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="14" rx="9" ry="14" fill="#f0b52d" opacity="0.9"></ellipse>
-              <ellipse cx="24" cy="18" rx="5" ry="10" fill="#fff3a0" opacity="0.75"></ellipse>
-              <rect x="17" y="26" width="14" height="46" rx="2" fill="#c8a96a"></rect>
-              <rect x="19" y="28" width="5" height="42" rx="1" fill="rgba(255,255,255,0.2)"></rect>
-              <ellipse cx="24" cy="72" rx="7" ry="2.5" fill="rgba(58,32,24,0.22)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow cg-flame-glow--large" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          <p class="cg-dedication">לעילוי נשמת הצדיק</p>
-          <blockquote class="cg-quote">“לכבוד ציון רבי דוד ומשה מרוקו — אור הגנוז בהרים יאיר לנו לנצח. יהי רצון שזכותו תגן עלינו.”</blockquote>
-          <p class="cg-date">הילולה — כ' בתמוז</p>
-        </div>
-      </article>
+    <!-- Card 5 -->
+    <article class="candle-card candle-card--medium">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame5" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner5" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame5)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner5)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">לזכר כל אבות המשפחה</p>
+        <p class="candle-prayer"><em>זכותם תגן עלינו ועל כל ישראל</em></p>
+        <p class="candle-date">ל' בניסן תשפ"ד</p>
+      </div>
+    </article>
 
-      <!-- Candle 6 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="5">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#b07a4a"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לשלום בית ישראל</p>
-          <p class="cg-dedication">לשלום בית ישראל</p>
-          <blockquote class="cg-quote">“שיתגלה שלום ואחדות בין כל ישראל, ובזכות הצדיק יבוא הגאולה.”</blockquote>
-          <p class="cg-date">ה' בסיוון תשפ"ד</p>
-        </div>
-      </article>
+    <!-- Card 6 -->
+    <article class="candle-card candle-card--tall">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame6" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner6" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame6)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner6)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לשלום בית ישראל</p>
+        <p class="candle-name">לשלום בית ישראל</p>
+        <p class="candle-prayer"><em>ה' יברך את עמו בשלום</em></p>
+        <p class="candle-date">ה' בסיוון תשפ"ד</p>
+      </div>
+    </article>
 
-      <!-- Candle 7 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="6">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#c8a96a"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          <p class="cg-dedication">נר לזכר סבתי ז"ל</p>
-          <blockquote class="cg-quote">“תנוח נשמתה בגן עדן. היא אהבה את הצדיק כל ימיה.”</blockquote>
-          <p class="cg-date">י"א בכסלו תשפ"ד</p>
-        </div>
-      </article>
+    <!-- Card 7 -->
+    <article class="candle-card candle-card--medium">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame7" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner7" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame7)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner7)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">נר לזכר סבתי ז"ל</p>
+        <p class="candle-prayer"><em>תנצב"ה — תהא נשמתה צרורה בצרור החיים</em></p>
+        <p class="candle-date">י"א בכסלו תשפ"ד</p>
+      </div>
+    </article>
 
-      <!-- Candle 8 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="7">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#9a6840"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          <p class="cg-dedication">ברכה לחתן וכלה</p>
-          <blockquote class="cg-quote">“בזכות ציון קדוש יהודי מרוקו ישראל — יזכו לבנות בית נאמן בישראל, ויראו נחת מכל צאצאיהם.”</blockquote>
-          <p class="cg-date">כ"ח באדר תשפ"ד</p>
-        </div>
-      </article>
+    <!-- Card 8 -->
+    <article class="candle-card candle-card--short">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame8" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner8" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame8)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner8)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">ברכה לחתן וכלה</p>
+        <p class="candle-prayer"><em>יהי ביתם בנוי לתפארת</em></p>
+        <p class="candle-date">כ"ח באדר תשפ"ד</p>
+      </div>
+    </article>
 
-      <!-- Candle 9 -->
-      <article class="cg-candle-card zappy-grid-item-no-stretch" data-grid-item-index="8">
-        <div class="cg-flame-wrap">
-          <div class="cg-candle-icon" data-element-type="icon" data-icon-type="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" width="48" height="80" aria-hidden="true">
-              <ellipse cx="24" cy="16" rx="7" ry="12" fill="#f0b52d" opacity="0.85"></ellipse>
-              <ellipse cx="24" cy="20" rx="4" ry="8" fill="#fff3a0" opacity="0.7"></ellipse>
-              <rect x="18" y="26" width="12" height="44" rx="2" fill="#c8a96a"></rect>
-              <rect x="20" y="28" width="4" height="40" rx="1" fill="rgba(255,255,255,0.18)"></rect>
-              <ellipse cx="24" cy="70" rx="6" ry="2" fill="rgba(58,32,24,0.18)"></ellipse>
-            </svg>
-          </div>
-          <div class="cg-flame-glow" aria-hidden="true"></div>
-        </div>
-        <div class="cg-card-body">
-          <p class="cg-label-top">לעילוי נשמת</p>
-          <p class="cg-dedication">נר לעלייה לרגל</p>
-          <blockquote class="cg-quote">“עלינו לציון הקדוש ולבנו נמלא אמונה. הילולה רבי דוד ומשה — שמחה ואור לעם ישראל.”</blockquote>
-          <p class="cg-date">ר"ח אב תשפ"ד</p>
-        </div>
-      </article>
+    <!-- Card 9 -->
+    <article class="candle-card candle-card--tall">
+      <div class="candle-glow-ambient" aria-hidden="true"></div>
+      <div class="candle-flame-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" class="candle-svg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-label="נר דולק">
+          <defs>
+            <radialGradient id="flame9" cx="50%" cy="80%" r="60%">
+              <stop offset="0%" stop-color="#fff7a0"></stop>
+              <stop offset="40%" stop-color="#f0a030"></stop>
+              <stop offset="100%" stop-color="#c0400a" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="inner9" cx="50%" cy="70%" r="40%">
+              <stop offset="0%" stop-color="#fffde0"></stop>
+              <stop offset="100%" stop-color="#f5c842" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <g class="flame-group">
+            <ellipse cx="30" cy="28" rx="13" ry="22" fill="url(#flame9)" opacity="0.9"></ellipse>
+            <ellipse cx="30" cy="32" rx="7" ry="14" fill="url(#inner9)"></ellipse>
+            <ellipse cx="30" cy="38" rx="3" ry="6" fill="#fffde0" opacity="0.9"></ellipse>
+          </g>
+          <rect x="22" y="50" width="16" height="48" rx="2" fill="#f5e6c6" opacity="0.95"></rect>
+          <rect x="22" y="50" width="16" height="6" rx="1" fill="#d4b27a" opacity="0.6"></rect>
+          <line x1="30" y1="44" x2="30" y2="52" stroke="#5a3a1a" stroke-width="1.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
+      <div class="candle-card-content">
+        <p class="candle-dedication">לעילוי נשמת</p>
+        <p class="candle-name">נר לעלייה לרגל</p>
+        <p class="candle-prayer"><em>בזכות עלייתנו לציון הקדוש</em></p>
+        <p class="candle-date">ר"ח אב תשפ"ד</p>
+      </div>
+    </article>
 
-    </div>
   </div>
 
-  <!-- Decorative ambient glow layer -->
-  <div class="cg-ambient-glow" aria-hidden="true"></div>
-
-  <!-- Bottom divider -->
-  <div class="cg-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,28 Q100,18 200,26 T400,22 Q500,28 600,20 T800,24 Q900,18 1000,26 T1200,22 L1200,60 Z" fill="#f2dfb8"></path>
+  <!-- Bottom ornament -->
+  <div class="candles-footer-ornament" aria-hidden="true">
+    <svg data-no-icon-edit="true" aria-hidden="true" width="400" height="24" viewBox="0 0 400 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="12" x2="160" y2="12" stroke="#D89B2B" stroke-width="0.8" stroke-opacity="0.4"></line>
+      <circle cx="180" cy="12" r="3" fill="#D89B2B" fill-opacity="0.5"></circle>
+      <circle cx="192" cy="12" r="5" fill="#D89B2B" fill-opacity="0.7"></circle>
+      <circle cx="208" cy="12" r="5" fill="#D89B2B" fill-opacity="0.7"></circle>
+      <circle cx="220" cy="12" r="3" fill="#D89B2B" fill-opacity="0.5"></circle>
+      <line x1="240" y1="12" x2="400" y2="12" stroke="#D89B2B" stroke-width="0.8" stroke-opacity="0.4"></line>
     </svg>
   </div>
+
 </section><section class="candles-devotion-section" data-layout-spec="נרות נשמה-devotion" dir="rtl" id="candles-devotion-section">
   <!-- Manuscript grain texture overlay -->
   <div class="candles-devotion-section .grain-overlay" aria-hidden="true"></div>
