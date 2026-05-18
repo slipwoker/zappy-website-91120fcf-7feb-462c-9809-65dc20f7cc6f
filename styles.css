@@ -5783,16 +5783,14 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   }
 }
 
-/* candles-candle-gallery */
 .candles-candle-gallery-section {
   position: relative;
   background-color: #edd8ad;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='140' height='140' fill='%23edd8ad'/%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"),
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='140' height='140' fill='%23edd8ad'/%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"),
     linear-gradient(180deg, #f5e6c6 0%, #edd8ad 100%);
   color: var(--text-dark);
   direction: rtl;
-  padding: 96px 24px 120px;
+  padding: 56px 24px 72px;
   overflow: visible;
 }
 
@@ -5818,10 +5816,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   margin: 0 auto;
 }
 
-/* HEADER */
 .candles-candle-gallery-section .candles-header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .candles-candle-gallery-section .candles-title {
@@ -5961,8 +5958,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .candles-candle-gallery-section .candle-flame-svg--large {
-  width: 35px;
-  height: 52px;
+  width: 30px;
+  height: 45px;
   filter: drop-shadow(0 0 10px rgba(240,165,0,0.75));
 }
 
@@ -10757,6 +10754,20 @@ body::before {
 .candles-candle-gallery-section .candle-svg--large {
   width: 52px !important;
   height: 88px !important;
+}
+
+.candles-candle-gallery-section svg.candle-svg--large {
+  width: 30px !important;
+  height: 45px !important;
+}
+
+.candles-candle-gallery-section {
+  padding-top: 56px !important;
+  padding-bottom: 72px !important;
+}
+
+.candles-candle-gallery-section .candles-header {
+  margin-bottom: 32px !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
