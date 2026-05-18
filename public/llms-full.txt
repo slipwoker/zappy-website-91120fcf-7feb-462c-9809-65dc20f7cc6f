@@ -972,7 +972,7 @@ Description: גלריית תמונות וסרטוני יוטיוב עשירה מ
 
 
 
-" alt="נוף פנורמי של הרי האטלס וציון רבי דוד ומשה" class="gvt-panoramic-img" data-element-type="image" data-element-id="img-1778846786790-x0tb5kwvu" style="object-fit: cover; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1" data-zappy-original-width="600" data-zappy-original-height="367" />
+" alt="נוף פנורמי של הרי האטלס וציון רבי דוד ומשה" class="gvt-panoramic-img" data-element-type="image" data-element-id="img-1778846786790-x0tb5kwvu" style="object-fit: cover; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1" data-zappy-original-width="600" data-zappy-original-height="367">
 
 
 
@@ -1123,7 +1123,19 @@ Description: הדלק נר נשמה וירטואלי לכבוד רבי דוד ו
 
 
 
+
+
+
+—
+
+
+ת.נ.צ.ב.ה
+
+
+
 שלח
+
+
 
 
 
