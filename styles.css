@@ -11377,6 +11377,51 @@ body::before {
 .candles-candle-gallery-section .candle-card .candle-date {
   color: var(--primary-color) !important;
 }
+
+.candles-candle-gallery-section .candle-card .candle-label-top {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-label-bottom {
+  color: var(--primary-color) !important;
+  background: none !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name-placeholder {
+  color: rgba(122,31,43,0.6) !important;
+}
+
+.candles-candle-gallery-section .candle-sub-dedication .candle-dedication {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-dedication {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-sub-dedication .candle-dedication {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer em {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer--secondary {
+  color: var(--primary-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-date {
+  color: var(--primary-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
