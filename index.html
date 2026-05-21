@@ -660,6 +660,343 @@
               });
             })();
           </script>
+        
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.home-bulletin-section {
+  direction: rtl;
+  position: relative;
+  background-color: #f2dfb8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='140' height='140' fill='%23f2dfb8'/%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+  color: var(--text-dark);
+  padding: 0 0 0 0;
+  font-family: 'Noto Serif', serif;
+  overflow: hidden;
+}
+
+.home-bulletin-section .bulletin-top-border,
+.home-bulletin-section .bulletin-bottom-border {
+  width: 100%;
+  line-height: 0;
+  display: block;
+}
+
+.home-bulletin-section .bulletin-top-border svg,
+.home-bulletin-section .bulletin-bottom-border svg {
+  display: block;
+  width: 100%;
+  height: 24px;
+}
+
+/* Container */
+.home-bulletin-section .bulletin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 52px;
+}
+
+/* Header */
+.home-bulletin-section .bulletin-header {
+  text-align: center;
+  margin-bottom: 44px;
+  position: relative;
+}
+
+.home-bulletin-section .bulletin-ornament-line {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.home-bulletin-section .bulletin-subtitle-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.home-bulletin-section .bulletin-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #7A1F2B;
+  letter-spacing: 0.03em;
+  margin: 0;
+  text-align: center;
+}
+
+.home-bulletin-section .bulletin-site-name {
+  font-family: 'Noto Serif', serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 6px 0 0 0;
+  letter-spacing: 0.04em;
+}
+
+/* Grid */
+.home-bulletin-section .bulletin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  direction: rtl;
+}
+
+/* Card */
+.home-bulletin-section .bulletin-card {
+  position: relative;
+  background: linear-gradient(180deg, #fdf6e3 0%, #f5e6c6 100%);
+  border: 1.5px solid #d4b27a;
+  box-shadow: 0 8px 20px rgba(58,32,24,0.13), 0 2px 0 #d4b27a;
+  padding: 28px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.home-bulletin-section .bulletin-card:hover {
+  box-shadow: 0 16px 36px rgba(58,32,24,0.22), 0 2px 0 #d4b27a;
+  transform: translateY(-3px);
+}
+
+/* Corner decorations */
+.home-bulletin-section .bulletin-card-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.home-bulletin-section .bulletin-card-corner--tl {
+  top: -1px;
+  right: -1px;
+  border-top: 3px solid #D89B2B;
+  border-right: 3px solid #D89B2B;
+}
+
+.home-bulletin-section .bulletin-card-corner--tr {
+  top: -1px;
+  left: -1px;
+  border-top: 3px solid #D89B2B;
+  border-left: 3px solid #D89B2B;
+}
+
+.home-bulletin-section .bulletin-card-corner--bl {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 3px solid #D89B2B;
+  border-right: 3px solid #D89B2B;
+}
+
+.home-bulletin-section .bulletin-card-corner--br {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 3px solid #D89B2B;
+  border-left: 3px solid #D89B2B;
+}
+
+/* Card header */
+.home-bulletin-section .bulletin-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #d4b27a;
+  text-align: right;
+}
+
+.home-bulletin-section .bulletin-card-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  background: linear-gradient(135deg, #a72d16 0%, #7a180f 100%);
+  border: 1px solid #d4b27a;
+  color: #f8e8b8;
+  font-size: 15px;
+  box-shadow: 0 2px 6px rgba(143,31,18,0.22);
+  flex-shrink: 0;
+}
+
+.home-bulletin-section .bulletin-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  flex: 1;
+  text-align: right;
+}
+
+.home-bulletin-section .bulletin-card-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  direction: rtl;
+  text-align: right;
+}
+
+.home-bulletin-section .bulletin-card-category {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #7A1F2B;
+  letter-spacing: 0.03em;
+  text-align: right;
+}
+
+/* Card body */
+.home-bulletin-section .bulletin-card-body {
+  flex: 1;
+  text-align: right;
+}
+
+.home-bulletin-section .bulletin-card-body p {
+  font-family: 'Noto Serif', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #4b2718;
+  margin: 0 0 12px 0;
+  text-align: right;
+}
+
+/* Upload area */
+.home-bulletin-section .bulletin-upload-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 14px 18px;
+  border: 1.5px dashed #d4b27a;
+  background: rgba(212,178,122,0.1);
+  color: #7A1F2B;
+  font-family: 'Noto Serif', serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.home-bulletin-section .bulletin-upload-area:hover {
+  background: rgba(212,178,122,0.22);
+}
+
+.home-bulletin-section .bulletin-upload-area i {
+  font-size: 18px;
+  color: #D89B2B;
+}
+
+/* Card footer */
+.home-bulletin-section .bulletin-card-footer {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #d4b27a;
+  text-align: right;
+}
+
+.home-bulletin-section .bulletin-share-label {
+  font-family: 'Noto Serif', serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.home-bulletin-section .bulletin-share-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.home-bulletin-section .bulletin-share-btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-family: 'Noto Serif', serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.home-bulletin-section .bulletin-share-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.home-bulletin-section .bulletin-share-btn--fb {
+  background: #1877F2;
+  color: #fff;
+  border: 1px solid #1565c0;
+}
+
+.home-bulletin-section .bulletin-share-btn--wa {
+  background: #25D366;
+  color: #fff;
+  border: 1px solid #1da851;
+}
+
+.home-bulletin-section .bulletin-share-btn--yt {
+  background: #FF0000;
+  color: #fff;
+  border: 1px solid #cc0000;
+}
+
+.home-bulletin-section .bulletin-share-btn i {
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-bulletin-section .bulletin-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-bulletin-section .bulletin-container {
+    padding: 32px 16px 36px;
+  }
+
+  .home-bulletin-section .bulletin-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .home-bulletin-section .bulletin-title {
+    font-size: 26px;
+  }
+
+  .home-bulletin-section .bulletin-card {
+    padding: 20px 16px 16px;
+    min-height: auto;
+  }
+
+  .home-bulletin-section .bulletin-share-btns {
+    gap: 6px;
+  }
+
+  .home-bulletin-section .bulletin-share-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -1136,7 +1473,7 @@
       </div>
     </div>
   </div>
-<section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="zappy-section-0" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/general-hero-upload-1777213035741.webp" data-zappy-bg-overlay-color="#140a06" data-zappy-bg-overlay-opacity="3" data-zappy-bg-video-type="" data-zappy-bg-video-url="" style="position: relative; overflow: hidden; background-image: url(&quot;assets/general-hero-upload-1777213035741.webp&quot;) !important; background-size: cover !important; background-position: 50% 50% !important; background-repeat: no-repeat; --zappy-bg-overlay: rgba(20, 10, 6, 0.03); --zappy-bg-image: url(&quot;assets/general-hero-upload-1777213035741.webp&quot;); cursor: url(&quot;data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.2344 9.93125L4.87351 34.2922C4.67351 34.4922 4.52976 34.7437 4.46101 35.0203L1.60789 46.4984C1.47664 47.0312 1.63289 47.5922 2.02039 47.9797C2.40945 48.3688 2.97351 48.5219 3.50164 48.3922L14.9798 45.5406C15.2548 45.4719 15.5063 45.3297 15.7079 45.1281L40.0688 20.7672L29.2344 9.93125Z' fill='%23FF0083'/%3E%3Cpath d='M46.1937 3.80781C43.2062 0.820311 38.3468 0.820311 35.3578 3.80781L31.4421 7.72344L42.2781 18.5594L46.1937 14.6437C49.1812 11.6547 49.1812 6.79531 46.1937 3.80781Z' fill='%23FF0083'/%3E%3C/svg%3E&quot;) 2 13, pointer !important;" data-element-id="zappy-hero-bg-zappy-section-0" data-element-type="background-image" data-zappy-bg-position="50% 50%" data-zappy-bg-zoom="1">
+<section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="zappy-section-0" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/general-hero-upload-1777213035741.webp" data-zappy-bg-overlay-color="#140a06" data-zappy-bg-overlay-opacity="3" data-zappy-bg-video-type="" data-zappy-bg-video-url="" style="position: relative; overflow: hidden; background-image: url(&quot;assets/general-hero-upload-1777213035741.webp&quot;) !important; background-size: cover !important; background-position: 50% 50% !important; background-repeat: no-repeat; --zappy-bg-overlay: rgba(20, 10, 6, 0.03); --zappy-bg-image: url(&quot;assets/general-hero-upload-1777213035741.webp&quot;); " data-element-id="zappy-hero-bg-zappy-section-0" data-element-type="background-image" data-zappy-bg-position="50% 50%" data-zappy-bg-zoom="1">
   <!-- Background Image Layer -->
   <div class="index-hero-bg" style="display: none" data-zappy-original-bg="hidden">
     <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Panoramic dawn landscape of the Atlas Mountains in Morocco near Marrakech, showing a sacred Jewish tomb shrine (tzion) nestled among dramatic ochre and terracotta mountain ridges. The scene is bathed in warm golden-hour light with deep violet-blue shadows in the valleys. Ancient stone walls and a whitewashed domed tomb structure visible in the middle distance. Sparse argan trees and desert scrub in the foreground. The atmosphere is solemn, majestic, and spiritual — evoking a sacred pilgrimage site. Cinematic, editorial photography quality." width="1200" height="700" src="/assets/site-index-hero-image-1.webp" alt="ציון רבי דוד ומשה זיע&quot;א בהרי האטלס, מרוקו" data-hero-background="true" data-element-type="image" data-element-id="img-1776768228672-iszwryr6c">
@@ -1151,8 +1488,8 @@
   <!-- Hero Content Overlay -->
   <div class="index-hero-content-wrap">
     <div class="index-hero-content">
-      <h1 class="index-hero-h1" style="">הצדיק הצדיק רבי דוד ומשה זיע"א </h1>
-      <h3 class="index-hero-h3" style="">הציון הקדוש בהרי האטלס&nbsp;</h3>
+      <h1 class="index-hero-h1" >הצדיק הצדיק רבי דוד ומשה זיע"א </h1>
+      <h3 class="index-hero-h3" >הציון הקדוש בהרי האטלס&nbsp;</h3>
       <p class="index-hero-p">לפני למעלה מאלף שנה נסתלק הצדיק הצדיק רבי דוד ומשה זיע"א , וציונו הקדוש בהרי האטלס שבמרוקו נותר עד היום מקום עלייה לרגל ומקור ברכה לאלפי יהודים מכל רחבי העולם. בואו לכבד את זכרו ולהתחבר למורשת הקדושה.</p>
       
     </div>
@@ -1162,9 +1499,9 @@
   <div class="index-hero-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Saffron/gold mountain layer -->
-      <path d="M0,110 L0,72 Q60,58 120,68 Q180,78 240,55 Q300,32 360,50 Q420,68 480,44 Q540,20 600,38 Q660,56 720,40 Q780,24 840,46 Q900,68 960,52 Q1020,36 1080,54 Q1140,72 1200,58 Q1320,40 1440,62 L1440,110 Z" fill="#201816" opacity="0.55"></path>
+      <path d="M0,110 L0,72 Q60,58 120,68 Q180,78 240,55 Q300,32 360,50 Q420,68 480,44 Q540,20 600,38 Q660,56 720,40 Q780,24 840,46 Q900,68 960,52 Q1020,36 1080,54 Q1140,72 1200,58 Q1320,40 1440,62 L1440,110 Z" fill="#f2dfb8" opacity="0.55"></path>
       <!-- Parchment/light mountain layer -->
-      <path d="M0,110 L0,82 Q80,70 160,80 Q240,90 320,68 Q400,46 480,64 Q560,82 640,60 Q720,38 800,58 Q880,78 960,65 Q1040,52 1120,70 Q1200,88 1280,72 Q1360,56 1440,76 L1440,110 Z" fill="#201816"></path>
+      <path d="M0,110 L0,82 Q80,70 160,80 Q240,90 320,68 Q400,46 480,64 Q560,82 640,60 Q720,38 800,58 Q880,78 960,65 Q1040,52 1120,70 Q1200,88 1280,72 Q1360,56 1440,76 L1440,110 Z" fill="#f2dfb8"></path>
     </svg>
   </div>
 </section>
@@ -1173,159 +1510,231 @@
 
 
 
-<section class="brd-bulletin-section" dir="rtl" lang="he" aria-label="לוח מודעות" id="brd-bulletin-section">
-  <!-- Zellige decorative top border -->
-  <div class="brd-zellige-border" aria-hidden="true">
-    <span class="brd-zellige-diamond"></span>
-    <span class="brd-zellige-line"></span>
-    <span class="brd-zellige-diamond"></span>
-    <span class="brd-zellige-line"></span>
-    <span class="brd-zellige-diamond"></span>
-    <span class="brd-zellige-line"></span>
-    <span class="brd-zellige-diamond"></span>
+<section class="home-bulletin-section" data-layout-spec="Home-bulletin" dir="rtl" data-zappy-section="true" id="brd-bulletin-section">
+  <!-- Decorative top border strip -->
+  <div class="bulletin-top-border" aria-hidden="true">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="24" fill="#7A1F2B"></rect>
+      <g fill="#D89B2B" opacity="0.7">
+        <rect x="0" y="8" width="1200" height="2"></rect>
+        <rect x="0" y="14" width="1200" height="2"></rect>
+        <polygon points="20,4 26,12 20,20 14,12"></polygon>
+        <polygon points="60,4 66,12 60,20 54,12"></polygon>
+        <polygon points="100,4 106,12 100,20 94,12"></polygon>
+        <polygon points="140,4 146,12 140,20 134,12"></polygon>
+        <polygon points="180,4 186,12 180,20 174,12"></polygon>
+        <polygon points="220,4 226,12 220,20 214,12"></polygon>
+        <polygon points="260,4 266,12 260,20 254,12"></polygon>
+        <polygon points="300,4 306,12 300,20 294,12"></polygon>
+        <polygon points="340,4 346,12 340,20 334,12"></polygon>
+        <polygon points="380,4 386,12 380,20 374,12"></polygon>
+        <polygon points="420,4 426,12 420,20 414,12"></polygon>
+        <polygon points="460,4 466,12 460,20 454,12"></polygon>
+        <polygon points="500,4 506,12 500,20 494,12"></polygon>
+        <polygon points="540,4 546,12 540,20 534,12"></polygon>
+        <polygon points="580,4 586,12 580,20 574,12"></polygon>
+        <polygon points="620,4 626,12 620,20 614,12"></polygon>
+        <polygon points="660,4 666,12 660,20 654,12"></polygon>
+        <polygon points="700,4 706,12 700,20 694,12"></polygon>
+        <polygon points="740,4 746,12 740,20 734,12"></polygon>
+        <polygon points="780,4 786,12 780,20 774,12"></polygon>
+        <polygon points="820,4 826,12 820,20 814,12"></polygon>
+        <polygon points="860,4 866,12 860,20 854,12"></polygon>
+        <polygon points="900,4 906,12 900,20 894,12"></polygon>
+        <polygon points="940,4 946,12 940,20 934,12"></polygon>
+        <polygon points="980,4 986,12 980,20 974,12"></polygon>
+        <polygon points="1020,4 1026,12 1020,20 1014,12"></polygon>
+        <polygon points="1060,4 1066,12 1060,20 1054,12"></polygon>
+        <polygon points="1100,4 1106,12 1100,20 1094,12"></polygon>
+        <polygon points="1140,4 1146,12 1140,20 1134,12"></polygon>
+        <polygon points="1180,4 1186,12 1180,20 1174,12"></polygon>
+      </g>
+    </svg>
   </div>
 
-  <div class="brd-layout-wrap">
-  <!-- Panel: bulletin board — RIGHT side in RTL (comes first in DOM) -->
-  <div class="brd-panel">
-    <header class="brd-panel-header">
-      <div class="brd-header-ornament" aria-hidden="true">
-        <span class="brd-ornament-star">✦</span>
-        <span class="brd-ornament-line"></span>
-        <span class="brd-ornament-star">✦</span>
+  <div class="bulletin-container">
+    <!-- Section Header -->
+    <div class="bulletin-header">
+      <div class="bulletin-ornament-line" aria-hidden="true">
+        <svg data-no-icon-icon="true" aria-hidden="true" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" width="220">
+          <line x1="0" y1="10" x2="160" y2="10" stroke="#D89B2B" stroke-width="1"></line>
+          <circle cx="170" cy="10" r="3" fill="#D89B2B"></circle>
+          <circle cx="185" cy="10" r="5" fill="none" stroke="#D89B2B" stroke-width="1.5"></circle>
+          <circle cx="200" cy="10" r="3" fill="#D89B2B"></circle>
+          <line x1="210" y1="10" x2="400" y2="10" stroke="#D89B2B" stroke-width="1"></line>
+        </svg>
       </div>
-      <h2 class="brd-panel-title">
-        <span class="brd-title-icon" aria-hidden="true">📜</span>
-        לוח מודעות
-      </h2>
-      <div class="brd-header-ornament" aria-hidden="true">
-        <span class="brd-ornament-star">✦</span>
-        <span class="brd-ornament-line"></span>
-        <span class="brd-ornament-star">✦</span>
+      <h2 class="bulletin-title">📜<br>לוח מודעות</h2>
+      <div class="bulletin-subtitle-bar" aria-hidden="true">
+        <svg data-no-icon-icon="true" aria-hidden="true" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" width="220">
+          <line x1="0" y1="10" x2="160" y2="10" stroke="#D89B2B" stroke-width="1"></line>
+          <circle cx="170" cy="10" r="3" fill="#D89B2B"></circle>
+          <circle cx="185" cy="10" r="5" fill="none" stroke="#D89B2B" stroke-width="1.5"></circle>
+          <circle cx="200" cy="10" r="3" fill="#D89B2B"></circle>
+          <line x1="210" y1="10" x2="400" y2="10" stroke="#D89B2B" stroke-width="1"></line>
+        </svg>
       </div>
-      <div class="brd-header-subtitle">הצדיק רבי דוד ומשה זיע"א </div>
-    </header>
-    <div class="brd-notices-scroll" role="feed" aria-label="רשימת הודעות">
-      <article class="brd-notice-card" aria-label="הודעה 1">
-        <div class="brd-notice-corner brd-corner-tl" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-tr" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-bl" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-br" aria-hidden="true"></div>
-        <div class="brd-notice-badge" aria-hidden="true">✡</div>
-        <div class="brd-notice-body">
-          <p class="brd-notice-text">
-            בשורה טובה לכלל המתפללים והמבקרים בציון הקדוש של הצדיק רבי דוד ומשה זיע"א —
-            הילולת הצדיק תיערך בראש חודש חשוון&nbsp; הקרוב. נא להירשם מראש לסעודת המצווה ולתפילות המיוחדות.
-            כולם מוזמנים בברכה ובאהבה.
-          </p>
+      <p class="bulletin-site-name">הצדיק רבי דוד ומשה זיע"א</p>
+    </div>
+
+    <!-- Bulletin Cards Grid -->
+    <div class="bulletin-grid">
+
+      <!-- Card 1: הילולה -->
+      <article class="bulletin-card">
+        <div class="bulletin-card-corner bulletin-card-corner--tl" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--tr" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--bl" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--br" aria-hidden="true"></div>
+        <header class="bulletin-card-header">
+          <span class="bulletin-card-badge">
+            <i class="fas fa-star-of-david" aria-hidden="true"></i>
+          </span>
+          <div class="bulletin-card-meta">
+            <span class="bulletin-card-date">ר"ח חשוון תשפ"ה</span>
+            <span class="bulletin-card-category">הילולה</span>
+          </div>
+        </header>
+        <div class="bulletin-card-body">
+          <p>בשורה טובה לכלל המתפללים והמבקרים בציון הקדוש של הצדיק רבי דוד ומשה זיע"א —
+            הילולת הצדיק תיערך בראש חודש חשוון  הקרוב. נא להירשם מראש לסעודת המצווה ולתפילות המיוחדות.
+            כולם מוזמנים בברכה ובאהבה.</p>
         </div>
-        <footer class="brd-notice-footer">
-          <time class="brd-notice-date" datetime="2025-04-15">
-            <span class="brd-date-icon" aria-hidden="true">🕯</span>
-            ט"ו בניסן תשפ"ה
-          </time>
-          <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 1">
-            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-id="btn-1779014480906-i6s2objer" data-element-type="button">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+        <footer class="bulletin-card-footer">
+          <div class="bulletin-share-label">שתפו:</div>
+          <div class="bulletin-share-btns">
+            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" target="_blank" rel="noopener" class="bulletin-share-btn bulletin-share-btn--fb" aria-label="שתף בפייסבוק">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
               <span>פייסבוק</span>
             </a>
-            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-id="btn-1779014480906-cwkiwpfii" data-element-type="button">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+            <a href="https://wa.me/972506841740" target="_blank" rel="noopener" class="bulletin-share-btn bulletin-share-btn--wa" aria-label="שתף בוואטסאפ">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
               <span>וואטסאפ</span>
             </a>
-            <a href="https://youtube.com/@RabbiDavidMoshe" class="brd-share-btn brd-share-yt" target="_blank" rel="noopener noreferrer" aria-label="צפה ביוטיוב" data-element-id="element-ai-1777033561693-yt9k2m" data-element-type="button">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+            <a href="https://youtube.com/@RabbiDavidMoshe" target="_blank" rel="noopener" class="bulletin-share-btn bulletin-share-btn--yt" aria-label="ערוץ יוטיוב">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
               <span>יוטיוב</span>
             </a>
           </div>
         </footer>
       </article>
-      <article class="brd-notice-card" aria-label="הודעה 2">
-        <div class="brd-notice-corner brd-corner-tl" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-tr" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-bl" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-br" aria-hidden="true"></div>
-        <div class="brd-notice-badge" aria-hidden="true">✡</div>
-        <div class="brd-notice-body">
-          <p class="brd-notice-text">
-            לידיעת הציבור: שעות הפתיחה של הציון הקדוש עודכנו לקראת חג הפסח.
+
+      <!-- Card 2: שעות פתיחה -->
+      <article class="bulletin-card">
+        <div class="bulletin-card-corner bulletin-card-corner--tl" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--tr" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--bl" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--br" aria-hidden="true"></div>
+        <header class="bulletin-card-header">
+          <span class="bulletin-card-badge">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+          </span>
+          <div class="bulletin-card-meta">
+            <span class="bulletin-card-date">ניסן תשפ"ה</span>
+            <span class="bulletin-card-category">שעות פתיחה</span>
+          </div>
+        </header>
+        <div class="bulletin-card-body">
+          <p>לידיעת הציבור: שעות הפתיחה של הציון הקדוש עודכנו לקראת חג הפסח.
             הציון יהיה פתוח בימי חול המועד מהשעה 07:00 עד 20:00, ובערב חג מהשעה 07:00 עד 14:00.
-            כניסה חינם לכולם. יש להביא כיסוי ראש.
-          </p>
+            כניסה חינם לכולם. יש להביא כיסוי ראש.</p>
         </div>
-        <footer class="brd-notice-footer">
-          <time class="brd-notice-date" datetime="2025-04-10">
-            <span class="brd-date-icon" aria-hidden="true">🕯</span>
-            י' בניסן תשפ"ה
-          </time>
-          <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 2">
-            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-id="btn-1779014480906-139a8ypvb" data-element-type="button">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+        <footer class="bulletin-card-footer">
+          <div class="bulletin-share-label">שתפו:</div>
+          <div class="bulletin-share-btns">
+            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" target="_blank" rel="noopener" class="bulletin-share-btn bulletin-share-btn--fb" aria-label="שתף בפייסבוק">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
               <span>פייסבוק</span>
             </a>
-            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-id="btn-1779014480906-6d46ezv84" data-element-type="button">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+            <a href="https://wa.me/972506841740" target="_blank" rel="noopener" class="bulletin-share-btn bulletin-share-btn--wa" aria-label="שתף בוואטסאפ">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
               <span>וואטסאפ</span>
             </a>
           </div>
         </footer>
       </article>
-      <article class="brd-notice-card" aria-label="הודעה 3">
-        <div class="brd-notice-corner brd-corner-tl" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-tr" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-bl" aria-hidden="true"></div>
-        <div class="brd-notice-corner brd-corner-br" aria-hidden="true"></div>
-        <div class="brd-notice-badge" aria-hidden="true">✡</div>
-        <div class="brd-notice-body">
-          <p class="brd-notice-text">אנו שמחים להודיע על השקת האתר החדש של הצדיק רבי דוד ומשה זיע"א</p>
+
+      <!-- Card 3: אתר חדש -->
+      <article class="bulletin-card">
+        <div class="bulletin-card-corner bulletin-card-corner--tl" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--tr" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--bl" aria-hidden="true"></div>
+        <div class="bulletin-card-corner bulletin-card-corner--br" aria-hidden="true"></div>
+        <header class="bulletin-card-header">
+          <span class="bulletin-card-badge">
+            <i class="fas fa-globe" aria-hidden="true"></i>
+          </span>
+          <div class="bulletin-card-meta">
+            <span class="bulletin-card-date">תשפ"ה</span>
+            <span class="bulletin-card-category">הודעה חדשה</span>
+          </div>
+        </header>
+        <div class="bulletin-card-body">
+          <p>אנו שמחים להודיע על השקת האתר החדש של הצדיק רבי דוד ומשה זיע"א</p>
+          <div class="bulletin-upload-area">
+            <i class="fas fa-camera" aria-hidden="true"></i>
+            <span>לחצו כאן להוספת תמונה</span>
+          </div>
         </div>
-        <footer class="brd-notice-footer">
-          <time class="brd-notice-date" datetime="2025-04-05">
-            <span class="brd-date-icon" aria-hidden="true">🕯</span>
-            ה' בניסן תשפ"ה
-          </time>
-          <div class="brd-share-buttons" role="group" aria-label="שיתוף הודעה 3">
-            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" class="brd-share-btn brd-share-fb" target="_blank" rel="noopener noreferrer" aria-label="שתף בפייסבוק" data-element-id="btn-1779014480906-nq11ns9tu" data-element-type="button">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+        <footer class="bulletin-card-footer">
+          <div class="bulletin-share-label">שתפו:</div>
+          <div class="bulletin-share-btns">
+            <a href="https://facebook.com/groups/tzadikrabbidavidoumoshe" target="_blank" rel="noopener" class="bulletin-share-btn bulletin-share-btn--fb" aria-label="שתף בפייסבוק">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
               <span>פייסבוק</span>
             </a>
-            <a href="https://wa.me/972506841740" class="brd-share-btn brd-share-wa" target="_blank" rel="noopener noreferrer" aria-label="שתף בוואטסאפ" data-element-id="btn-1779014480906-ylu45zcud" data-element-type="button">
-              <svg class="brd-share-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+            <a href="https://wa.me/972506841740" target="_blank" rel="noopener" class="bulletin-share-btn bulletin-share-btn--wa" aria-label="שתף בוואטסאפ">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
               <span>וואטסאפ</span>
             </a>
           </div>
         </footer>
       </article>
-    </div>
-    <div class="brd-panel-footer-ornament" aria-hidden="true">
-      <span class="brd-ornament-star brd-star-sm">✦</span>
-      <span class="brd-ornament-line brd-line-short"></span>
-      <span class="brd-ornament-star brd-star-lg">✡</span>
-      <span class="brd-ornament-line brd-line-short"></span>
-      <span class="brd-ornament-star brd-star-sm">✦</span>
+
     </div>
   </div>
 
-  <!-- Gold Image Frame — LEFT side in RTL (comes second in DOM) -->
-  <div class="brd-image-frame" aria-label="מסגרת תמונה">
-    <div class="brd-frame-corner brd-frame-tl"></div>
-    <div class="brd-frame-corner brd-frame-tr"></div>
-    <div class="brd-frame-corner brd-frame-bl"></div>
-    <div class="brd-frame-corner brd-frame-br"></div>
-    <div class="brd-frame-side brd-frame-top"></div>
-    <div class="brd-frame-side brd-frame-bottom"></div>
-    <div class="brd-frame-side brd-frame-left"></div>
-    <div class="brd-frame-side brd-frame-right"></div>
-    <div class="brd-frame-inner">
-      <div class="brd-frame-img-placeholder">
-        <div class="brd-frame-placeholder-icon">🖼</div>
-        <p class="brd-frame-placeholder-text" style="color: rgb(247, 241, 231) !important;">לחצו כאן להוספת תמונה</p>
-      </div><div class="zappy-inserted-element" id="zappy-element-1779110520777-d0i81das1" data-element-id="zappy-element-1779110520777-d0i81das1" data-element-type="image" data-zappy-newly-inserted="true" data-zappy-media-cell="true" style="display: flex; flex-direction: column; align-items: stretch; justify-content: stretch; height: 595.703px !important; margin: 0px !important; padding: 0px !important; flex: 0 1 auto; width: 100%; overflow: hidden !important;" data-zappy-original-height="595.703125"><img src="" alt="Image" style="width: 100%; height: 100% !important; border-radius: 8px; max-width: 100%; object-fit: cover !important; margin-top: 20px; margin-right: auto !important; margin-bottom: 20px; margin-left: auto !important; object-position: 50% 50%; display: block;" data-element-type="image" data-element-id="zappy-element-1779110520777-d0i81das1" id="zappy-element-1779110520777-d0i81das1"></div>
-    </div>
-    <div class="brd-frame-badge-top" aria-hidden="true">✡</div>
-    <div class="brd-frame-badge-bottom" aria-hidden="true">✦</div>
+  <!-- Bottom decorative border -->
+  <div class="bulletin-bottom-border" aria-hidden="true">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="24" fill="#7A1F2B"></rect>
+      <g fill="#D89B2B" opacity="0.7">
+        <rect x="0" y="8" width="1200" height="2"></rect>
+        <rect x="0" y="14" width="1200" height="2"></rect>
+        <polygon points="20,4 26,12 20,20 14,12"></polygon>
+        <polygon points="60,4 66,12 60,20 54,12"></polygon>
+        <polygon points="100,4 106,12 100,20 94,12"></polygon>
+        <polygon points="140,4 146,12 140,20 134,12"></polygon>
+        <polygon points="180,4 186,12 180,20 174,12"></polygon>
+        <polygon points="220,4 226,12 220,20 214,12"></polygon>
+        <polygon points="260,4 266,12 260,20 254,12"></polygon>
+        <polygon points="300,4 306,12 300,20 294,12"></polygon>
+        <polygon points="340,4 346,12 340,20 334,12"></polygon>
+        <polygon points="380,4 386,12 380,20 374,12"></polygon>
+        <polygon points="420,4 426,12 420,20 414,12"></polygon>
+        <polygon points="460,4 466,12 460,20 454,12"></polygon>
+        <polygon points="500,4 506,12 500,20 494,12"></polygon>
+        <polygon points="540,4 546,12 540,20 534,12"></polygon>
+        <polygon points="580,4 586,12 580,20 574,12"></polygon>
+        <polygon points="620,4 626,12 620,20 614,12"></polygon>
+        <polygon points="660,4 666,12 660,20 654,12"></polygon>
+        <polygon points="700,4 706,12 700,20 694,12"></polygon>
+        <polygon points="740,4 746,12 740,20 734,12"></polygon>
+        <polygon points="780,4 786,12 780,20 774,12"></polygon>
+        <polygon points="820,4 826,12 820,20 814,12"></polygon>
+        <polygon points="860,4 866,12 860,20 854,12"></polygon>
+        <polygon points="900,4 906,12 900,20 894,12"></polygon>
+        <polygon points="940,4 946,12 940,20 934,12"></polygon>
+        <polygon points="980,4 986,12 980,20 974,12"></polygon>
+        <polygon points="1020,4 1026,12 1020,20 1014,12"></polygon>
+        <polygon points="1060,4 1066,12 1060,20 1054,12"></polygon>
+        <polygon points="1100,4 1106,12 1100,20 1094,12"></polygon>
+        <polygon points="1140,4 1146,12 1140,20 1134,12"></polygon>
+        <polygon points="1180,4 1186,12 1180,20 1174,12"></polygon>
+      </g>
+    </svg>
   </div>
-</div></section>
+</section>
 
 
 
@@ -1416,7 +1825,7 @@
 
     <!-- Panoramic Image Band -->
     <figure class="showcase-panorama">
-      <img data-placeholder="index-showcase-image-1" data-context="Wide panoramic aerial view of the Atlas Mountains in Morocco near Marrakech, showing the sacred pilgrimage route leading to Rabbi David U-Moshe tomb, dramatic mountain landscape with ochre and terracotta tones, golden hour light, sacred Jewish heritage site, cinematic full-bleed photography" width="1200" height="400" src="/assets/site-index-showcase-image-1.webp" alt="נוף פנורמי של הרי האטלס במרוקו — מסלול העלייה לרגל לציון רבי דוד ומשה זיע״א" data-element-type="image" data-element-id="img-1777212711650-ro25ud6sg" style="">
+      <img data-placeholder="index-showcase-image-1" data-context="Wide panoramic aerial view of the Atlas Mountains in Morocco near Marrakech, showing the sacred pilgrimage route leading to Rabbi David U-Moshe tomb, dramatic mountain landscape with ochre and terracotta tones, golden hour light, sacred Jewish heritage site, cinematic full-bleed photography" width="1200" height="400" src="/assets/site-index-showcase-image-1.webp" alt="נוף פנורמי של הרי האטלס במרוקו — מסלול העלייה לרגל לציון רבי דוד ומשה זיע״א" data-element-type="image" data-element-id="img-1777212711650-ro25ud6sg" >
       <figcaption class="showcase-panorama-caption">הרי האטלס — מסלול העלייה לרגל לציון הקדוש</figcaption>
     </figure>
 
@@ -1426,7 +1835,7 @@
       <!-- Tile 1: Larger Photo Tile (START / RIGHT) -->
       <article class="showcase-tile showcase-tile--large" data-grid-item-index="0">
         <div class="showcase-tile-media">
-          <img data-placeholder="index-showcase-image-2" data-context="Close-up sacred Jewish pilgrimage site in Morocco, the tomb shrine of Rabbi David U-Moshe in the Atlas Mountains, candles lit around the tomb, worshippers in traditional dress praying, warm candlelight, devotional atmosphere, parchment and stone textures" width="600" height="480" src="/assets/site-index-showcase-image-2.webp" alt="ציון רבי דוד ומשה זיע״א — עולי רגל מתפללים ליד הקבר הקדוש" data-element-type="image" data-element-id="img-1777212711650-xz63o5j37" style="">
+          <img data-placeholder="index-showcase-image-2" data-context="Close-up sacred Jewish pilgrimage site in Morocco, the tomb shrine of Rabbi David U-Moshe in the Atlas Mountains, candles lit around the tomb, worshippers in traditional dress praying, warm candlelight, devotional atmosphere, parchment and stone textures" width="600" height="480" src="/assets/site-index-showcase-image-2.webp" alt="ציון רבי דוד ומשה זיע״א — עולי רגל מתפללים ליד הקבר הקדוש" data-element-type="image" data-element-id="img-1777212711650-xz63o5j37" >
         </div>
         <div class="showcase-tile-content">
           <div class="showcase-tile-tag">תצלומי הציון</div>
@@ -1464,7 +1873,7 @@
       <!-- Tile 3: Route / Pilgrimage Tile (END / Left) -->
       <article class="showcase-tile showcase-tile--route" data-grid-item-index="2">
         <div class="showcase-tile-media">
-          <img data-placeholder="index-showcase-image-4" data-context="Panoramic 360 virtual tour view of the sacred pilgrimage route from Marrakech to Ouarzazate through the Atlas Mountains Morocco, winding mountain road, ancient Jewish route markers, dramatic landscape with red rock formations and blue sky, map overlay aesthetic" width="600" height="340" src="/assets/site-index-showcase-image-4.webp" alt="סיור וירטואלי פנורמי — מסלול העלייה לרגל ממרקש לציון רבי דוד ומשה" data-element-type="image" data-element-id="img-1777212711650-qv7c7magb" style="">
+          <img data-placeholder="index-showcase-image-4" data-context="Panoramic 360 virtual tour view of the sacred pilgrimage route from Marrakech to Ouarzazate through the Atlas Mountains Morocco, winding mountain road, ancient Jewish route markers, dramatic landscape with red rock formations and blue sky, map overlay aesthetic" width="600" height="340" src="/assets/site-index-showcase-image-4.webp" alt="סיור וירטואלי פנורמי — מסלול העלייה לרגל ממרקש לציון רבי דוד ומשה" data-element-type="image" data-element-id="img-1777212711650-qv7c7magb" >
           <div class="showcase-vr-badge">
             <i class="fa-solid fa-vr-cardboard" aria-hidden="true" data-element-type="icon" data-element-id="icon-1777212711649-rkhqn3ec9" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
             סיור 360°
