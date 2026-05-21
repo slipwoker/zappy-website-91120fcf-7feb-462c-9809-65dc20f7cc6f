@@ -5856,8 +5856,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .candles-candle-gallery-section .candles-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
   direction: rtl;
   align-items: start;
 }
