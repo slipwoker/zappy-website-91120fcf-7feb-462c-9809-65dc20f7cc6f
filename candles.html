@@ -1643,15 +1643,15 @@
               if(motherName) displayName += ' בן ' + motherName;
               if(familyName) displayName += ' ' + familyName;
             } else if(motherName || familyName) {
-              displayName = [motherName, familyName].filter(function(s){ return s.length > 0; }).join(' ');
+              if(motherName) displayName += motherName;
+              if(familyName) displayName += (displayName ? ' ' : '') + familyName;
             }
 
             // Update inline preview box
             var preview = document.getElementById('candle-preview-names');
             if(preview){ preview.textContent = displayName.length > 0 ? displayName : '—'; }
 
-            // Update the first candle card in the gallery (section 2)
-            // Use multiple selector strategies to find the first candle card
+            // Update the first candle card in the gallery
             var gallerySection = document.getElementById('candles-candle-gallery-section');
             var namePlaceholder = null;
             if(gallerySection){
@@ -1660,7 +1660,6 @@
                 namePlaceholder = cards[0].querySelector('.candle-name-placeholder');
               }
             }
-            // Fallback: any candle-name-placeholder in the gallery
             if(!namePlaceholder){
               namePlaceholder = document.querySelector('#candles-candle-gallery-section .candle-name-placeholder');
             }
