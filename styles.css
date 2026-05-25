@@ -12222,6 +12222,164 @@ body::before {
 .navbar .logo {
   margin-top: -30px;
 }
+
+.candles-candle-gallery-section .candle-label-bottom {
+  background: none !important;
+  background-clip: unset !important;
+  color: var(--accent-color) !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+}
+
+.candles-candle-gallery-section .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-name {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-date {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-sub-dedication .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-sub-dedication .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer em {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer--secondary {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-date {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-label-top {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-label-bottom {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name-placeholder {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card p {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card span {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-label-top {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-name-placeholder {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-label-bottom {
+  color: var(--accent-color) !important;
+  background: none !important;
+}
+
+.candles-candle-gallery-section .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-name {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-date {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-sub-dedication .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-sub-dedication .candle-dedication {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer em {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-prayer--secondary {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-date {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-label-top {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-label-bottom {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card .candle-name-placeholder {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card p {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-card span {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-label-top {
+  color: var(--accent-color) !important;
+}
+
+.candles-candle-gallery-section .candle-name-placeholder {
+  color: var(--accent-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
