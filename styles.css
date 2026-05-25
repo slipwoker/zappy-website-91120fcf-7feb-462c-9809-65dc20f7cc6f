@@ -747,8 +747,8 @@ select:focus {
 
 .navbar {
   background: var(--nav-bg);
-  position: fixed;
-  top: 0;
+  position: static;
+  top: unset;
   right: 0;
   left: 0;
   z-index: 1000;
@@ -12192,6 +12192,11 @@ body::before {
   right: 0 !important;
   z-index: 1000 !important;
   width: 100% !important;
+}
+
+.navbar {
+  position: static !important;
+  top: auto !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
