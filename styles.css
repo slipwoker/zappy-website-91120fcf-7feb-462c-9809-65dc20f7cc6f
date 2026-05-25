@@ -11287,6 +11287,8 @@ body::before {
 
 .home-bulletin-section .bulletin-grid {
   column-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .home-bulletin-section .bulletin-card {
