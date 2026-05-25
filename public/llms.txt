@@ -18,8 +18,8 @@ https://rabbidavidoumoshe.com/gallery
 https://rabbidavidoumoshe.com/candles
 הדלק נר נשמה וירטואלי לכבוד רבי דוד ומשה ציון קדוש ושלח תפילתך מכל מקום בעולם. הצטרף לאלפי מאמינים שמכבדים את זכרו של הצדיק הקדוש.
 
-### מידע, סיפורים ולוח הודעות עולי רגל — רבי דוד ומשה זיע&quot;א
-https://rabbidavidoumoshe.com/miscellaneous
+### מידע נוסף
+https://rabbidavidoumoshe.com/additional-information
 לוח הודעות לעולי רגל, סיפורי נסים, מידע על עלייה לרגל לציון קדוש יהודי מרוקו ישראל ועוד תכנים מרתקים. שתף את חוויתך ולמד על מורשת יהודי מרוקו.
 
 ### מידע והגעה לציון רבי דוד ומשה זיע"א
@@ -50,7 +50,7 @@ Information about WCAG compliance and accessibility features.
 - Address: 8C3J5F68+X9,  Timzrite, morocco
 
 ### Contact form
-- URL: https://rabbidavidoumoshe.com/miscellaneous
+- URL: https://rabbidavidoumoshe.com/additional-information
 - Endpoint: https://rabbidavidoumoshe.com/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
