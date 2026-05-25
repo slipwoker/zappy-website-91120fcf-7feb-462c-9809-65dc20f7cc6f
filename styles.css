@@ -12380,6 +12380,132 @@ body::before {
 .candles-candle-gallery-section .candle-name-placeholder {
   color: var(--accent-color) !important;
 }
+
+.candles-candle-gallery-section .candle-yahrzeit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.candles-candle-gallery-section .candle-glass {
+  position: relative;
+  width: 52px;
+  height: 78px;
+  background: linear-gradient(160deg,
+    rgba(255,245,210,0.18) 0%,
+    rgba(220,180,100,0.22) 30%,
+    rgba(180,130,60,0.35) 60%,
+    rgba(140,90,30,0.45) 100%);
+  border: 1.5px solid rgba(216,155,43,0.7);
+  border-radius: 4px 4px 8px 8px;
+  overflow: visible;
+  box-shadow: inset 2px 0 6px rgba(255,240,180,0.15),
+    inset -2px 0 6px rgba(100,60,10,0.25),
+    0 0 18px rgba(216,155,43,0.25),
+    0 0 6px rgba(216,155,43,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 6px;
+}
+
+.candles-candle-gallery-section .candle-glass-shine {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  width: 8px;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(255,255,240,0.45) 0%, rgba(255,255,240,0.08) 100%);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.candles-candle-gallery-section .candle-glass-liquid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: linear-gradient(180deg,
+    rgba(240,200,100,0.55) 0%,
+    rgba(200,150,50,0.65) 50%,
+    rgba(160,110,30,0.75) 100%);
+  border-radius: 0 0 7px 7px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.candles-candle-gallery-section .candle-glass .candle-flame-container {
+  position: relative;
+  z-index: 5;
+  margin-top: -2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.candles-candle-gallery-section .candle-glass .candle-flame {
+  width: 16px;
+  height: 28px;
+  background: linear-gradient(180deg, #fff8c0 0%, #f5c842 30%, #e07b20 65%, #c04010 100%);
+  border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+  position: relative;
+  animation: candleFlicker 2.4s ease-in-out infinite;
+  box-shadow: 0 0 14px 7px rgba(240,181,45,0.6),
+    0 0 28px 12px rgba(240,120,20,0.28),
+    0 0 50px 18px rgba(200,80,10,0.14);
+  transform-origin: center bottom;
+  z-index: 5;
+}
+
+.candles-candle-gallery-section .candle-glass .candle-wick {
+  width: 2px;
+  height: 10px;
+  background: linear-gradient(180deg, #6a4010 0%, #2a1a0a 100%);
+  border-radius: 1px;
+  margin-top: -1px;
+  z-index: 4;
+}
+
+.candles-candle-gallery-section .candle-glass-base {
+  width: 58px;
+  height: 7px;
+  background: linear-gradient(180deg, #b88830 0%, #8a6018 60%, #6a4810 100%);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+}
+
+.candles-candle-gallery-section .candle-yahrzeit ~ .candle-glow-bg,
+.candles-candle-gallery-section .candle-glow-bg {
+  width: 90px;
+  height: 90px;
+}
+
+.candles-candle-gallery-section .candle-body,
+.candles-candle-gallery-section .candle-drip,
+.candles-candle-gallery-section .candle-base {
+  display: none;
+}
+
+@media (max-width: 768px) {
+.candles-candle-gallery-section .candle-glass {
+  width: 42px;
+  height: 64px;
+}
+
+.candles-candle-gallery-section .candle-glass-base {
+  width: 48px;
+  height: 6px;
+}
+
+.candles-candle-gallery-section .candle-glass .candle-flame {
+  width: 13px;
+  height: 23px;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
