@@ -1624,14 +1624,41 @@
 
         <script>
         (function(){
-          function updatePreview(){
+          function buildName(){
             var firstName = (document.getElementById('candle-name') ? document.getElementById('candle-name').value.trim() : '');
             var motherName = (document.getElementById('candle-mother') ? document.getElementById('candle-mother').value.trim() : '');
             var familyName = (document.getElementById('candle-general') ? document.getElementById('candle-general').value.trim() : '');
-            var parts = [firstName, motherName, familyName].filter(function(s){ return s.length > 0; });
+            return [firstName, motherName, familyName].filter(function(s){ return s.length > 0; });
+          }
+
+          function updatePreview(){
+            var parts = buildName();
+            // Update inline preview box
             var preview = document.getElementById('candle-preview-names');
             if(preview){ preview.textContent = parts.length > 0 ? parts.join(' - ') : '—'; }
+
+            // Update the first candle card in the gallery (section 2)
+            var firstCard = document.querySelector('.candles-candle-gallery-section .candle-card:first-child');
+            if(firstCard){
+              var namePlaceholder = firstCard.querySelector('.candle-name-placeholder');
+              if(namePlaceholder){
+                if(parts.length > 0){
+                  namePlaceholder.textContent = parts.join(' - ');
+                  namePlaceholder.style.setProperty('color', 'rgba(247,241,231,0.9)', 'important');
+                  namePlaceholder.style.setProperty('-webkit-text-fill-color', 'rgba(247,241,231,0.9)', 'important');
+                  namePlaceholder.style.setProperty('letter-spacing', '0.05em', 'important');
+                  namePlaceholder.style.setProperty('font-size', '0.85rem', 'important');
+                } else {
+                  namePlaceholder.textContent = '— — —';
+                  namePlaceholder.style.setProperty('color', 'rgba(216,155,43,0.45)', 'important');
+                  namePlaceholder.style.setProperty('-webkit-text-fill-color', 'rgba(216,155,43,0.45)', 'important');
+                  namePlaceholder.style.setProperty('letter-spacing', '0.18em', 'important');
+                  namePlaceholder.style.setProperty('font-size', '1rem', 'important');
+                }
+              }
+            }
           }
+
           ['candle-name','candle-mother','candle-general'].forEach(function(id){
             var el = document.getElementById(id);
             if(el){ el.addEventListener('input', updatePreview); }
