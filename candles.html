@@ -1632,10 +1632,23 @@
           }
 
           function updateGalleryCandle(){
-            var parts = buildName();
+            var firstName = (document.getElementById('candle-name') ? document.getElementById('candle-name').value.trim() : '');
+            var motherName = (document.getElementById('candle-mother') ? document.getElementById('candle-mother').value.trim() : '');
+            var familyName = (document.getElementById('candle-general') ? document.getElementById('candle-general').value.trim() : '');
+
+            // Build display name: "שם פרטי בן שם האם שם משפחה"
+            var displayName = '';
+            if(firstName) {
+              displayName = firstName;
+              if(motherName) displayName += ' בן ' + motherName;
+              if(familyName) displayName += ' ' + familyName;
+            } else if(motherName || familyName) {
+              displayName = [motherName, familyName].filter(function(s){ return s.length > 0; }).join(' ');
+            }
+
             // Update inline preview box
             var preview = document.getElementById('candle-preview-names');
-            if(preview){ preview.textContent = parts.length > 0 ? parts.join(' - ') : '—'; }
+            if(preview){ preview.textContent = displayName.length > 0 ? displayName : '—'; }
 
             // Update the first candle card in the gallery (section 2)
             // Use multiple selector strategies to find the first candle card
@@ -1653,8 +1666,8 @@
             }
 
             if(namePlaceholder){
-              if(parts.length > 0){
-                namePlaceholder.textContent = parts.join(' - ');
+              if(displayName.length > 0){
+                namePlaceholder.textContent = displayName;
                 namePlaceholder.style.cssText += ';color:rgba(247,241,231,0.9)!important;-webkit-text-fill-color:rgba(247,241,231,0.9)!important;letter-spacing:0.05em!important;font-size:0.85rem!important;';
               } else {
                 namePlaceholder.textContent = '— — —';
