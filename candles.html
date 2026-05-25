@@ -1631,38 +1631,50 @@
             return [firstName, motherName, familyName].filter(function(s){ return s.length > 0; });
           }
 
-          function updatePreview(){
+          function updateGalleryCandle(){
             var parts = buildName();
             // Update inline preview box
             var preview = document.getElementById('candle-preview-names');
             if(preview){ preview.textContent = parts.length > 0 ? parts.join(' - ') : '—'; }
 
             // Update the first candle card in the gallery (section 2)
-            var firstCard = document.querySelector('.candles-candle-gallery-section .candle-card:first-child');
-            if(firstCard){
-              var namePlaceholder = firstCard.querySelector('.candle-name-placeholder');
-              if(namePlaceholder){
-                if(parts.length > 0){
-                  namePlaceholder.textContent = parts.join(' - ');
-                  namePlaceholder.style.setProperty('color', 'rgba(247,241,231,0.9)', 'important');
-                  namePlaceholder.style.setProperty('-webkit-text-fill-color', 'rgba(247,241,231,0.9)', 'important');
-                  namePlaceholder.style.setProperty('letter-spacing', '0.05em', 'important');
-                  namePlaceholder.style.setProperty('font-size', '0.85rem', 'important');
-                } else {
-                  namePlaceholder.textContent = '— — —';
-                  namePlaceholder.style.setProperty('color', 'rgba(216,155,43,0.45)', 'important');
-                  namePlaceholder.style.setProperty('-webkit-text-fill-color', 'rgba(216,155,43,0.45)', 'important');
-                  namePlaceholder.style.setProperty('letter-spacing', '0.18em', 'important');
-                  namePlaceholder.style.setProperty('font-size', '1rem', 'important');
-                }
+            // Use multiple selector strategies to find the first candle card
+            var gallerySection = document.getElementById('candles-candle-gallery-section');
+            var namePlaceholder = null;
+            if(gallerySection){
+              var cards = gallerySection.querySelectorAll('.candle-card');
+              if(cards && cards.length > 0){
+                namePlaceholder = cards[0].querySelector('.candle-name-placeholder');
+              }
+            }
+            // Fallback: any candle-name-placeholder in the gallery
+            if(!namePlaceholder){
+              namePlaceholder = document.querySelector('#candles-candle-gallery-section .candle-name-placeholder');
+            }
+
+            if(namePlaceholder){
+              if(parts.length > 0){
+                namePlaceholder.textContent = parts.join(' - ');
+                namePlaceholder.style.cssText += ';color:rgba(247,241,231,0.9)!important;-webkit-text-fill-color:rgba(247,241,231,0.9)!important;letter-spacing:0.05em!important;font-size:0.85rem!important;';
+              } else {
+                namePlaceholder.textContent = '— — —';
+                namePlaceholder.style.cssText += ';color:rgba(216,155,43,0.45)!important;-webkit-text-fill-color:rgba(216,155,43,0.45)!important;letter-spacing:0.18em!important;font-size:1rem!important;';
               }
             }
           }
 
-          ['candle-name','candle-mother','candle-general'].forEach(function(id){
-            var el = document.getElementById(id);
-            if(el){ el.addEventListener('input', updatePreview); }
-          });
+          function attachListeners(){
+            ['candle-name','candle-mother','candle-general'].forEach(function(id){
+              var el = document.getElementById(id);
+              if(el){ el.addEventListener('input', updateGalleryCandle); }
+            });
+          }
+
+          // Attach immediately (inputs are above in DOM) and also after DOM ready
+          attachListeners();
+          if(document.readyState === 'loading'){
+            document.addEventListener('DOMContentLoaded', attachListeners);
+          }
         })();
         </script>
 </form>
