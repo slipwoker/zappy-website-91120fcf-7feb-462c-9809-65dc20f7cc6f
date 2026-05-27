@@ -12843,6 +12843,16 @@ body::before {
   line-height: 1.95 !important;
 }
 }
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+/* Batch: Make navbar sticky/fixed so it stays visible while scrolling */
+.navbar { position: fixed !important; top: 0; right: 0; left: 0; z-index: 1000; }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
