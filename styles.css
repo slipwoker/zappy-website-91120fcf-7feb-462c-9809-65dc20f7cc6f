@@ -9911,26 +9911,6 @@ nav.navbar .sub-menu li a {
   }
 }
 
-body::before {
-  content: '🚧 האתר בשלבי בנייה — חלק מהתכנים עדיין בהכנה 🚧';
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  background: linear-gradient(135deg, #5C3A1E 0%, #7A4F2B 50%, #5C3A1E 100%);
-  color: #F7E6A3;
-  text-align: center;
-  padding: 9px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  border-bottom: 2px solid var(--accent-color);
-  position: relative;
-  z-index: 99999;
-  line-height: 1.5;
-  font-family: inherit;
-  direction: rtl;
-}
-
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX */
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V2 */
 /* Keep mobile hamburger / phone buttons vertically centered even when the
