@@ -1524,6 +1524,26 @@ window.onload = function() {
 
     var answerSel = '[class*="faq-answer"], [class*="faq-content"], [class*="faq-body"], [class*="faq-item__answer"], .accordion-content, .accordion-body';
 
+    // Pick the collapsible answer element for an item WITHOUT ever choosing a
+    // wrapper that contains the question/header toggle. Some AI-generated FAQs
+    // nest the clickable question INSIDE a .faq-content wrapper; collapsing that
+    // wrapper (max-height:0/opacity:0) would hide the question itself, leaving
+    // only the number visible and nothing to click to expand. Skipping any
+    // candidate that contains the toggle keeps the header visible and collapses
+    // only the real answer body.
+    function pickAnswer(item, question) {
+      var matches = item.querySelectorAll(answerSel);
+      for (var i = 0; i < matches.length; i++) {
+        var el = matches[i];
+        if (el === question) continue;
+        if (question && el.contains(question)) continue;
+        return el;
+      }
+      // No safe collapsible found (only wrappers that hold the toggle): leave
+      // the content expanded rather than hiding the question.
+      return null;
+    }
+
     function initFaqToggle() {
       var items = document.querySelectorAll('[class*="faq-item"], .accordion-item');
       if (!items.length) return;
@@ -1551,7 +1571,7 @@ window.onload = function() {
                 sib.classList.remove('active');
                 var sibQ = sib.querySelector('[class*="faq-question"], [class*="faq-header"], [class*="faq-item__question"], [class*="faq-item__btn"], [class*="faq-btn"], .accordion-header');
                 if (sibQ) sibQ.setAttribute('aria-expanded', 'false');
-                var sibA = sib.querySelector(answerSel);
+                var sibA = pickAnswer(sib, sibQ);
                 if (sibA) {
                   sibA.style.maxHeight = '0';
                   sibA.style.overflow = 'hidden';
@@ -1566,7 +1586,7 @@ window.onload = function() {
           var isActive = item.classList.toggle('active');
           question.setAttribute('aria-expanded', isActive ? 'true' : 'false');
 
-          var answer = item.querySelector(answerSel);
+          var answer = pickAnswer(item, question);
           if (answer) {
             if (isActive) {
               answer.style.display = '';
@@ -1611,7 +1631,8 @@ window.onload = function() {
       items.forEach(function(item) {
         if (item.classList.contains('active')) return;
         if (item.closest(answerSel)) return;
-        var answer = item.querySelector(answerSel);
+        var question = item.querySelector('[class*="faq-question"], [class*="faq-header"], [class*="faq-item__question"], [class*="faq-item__btn"], [class*="faq-btn"], .accordion-header, .accordion-toggle');
+        var answer = pickAnswer(item, question);
         if (answer) {
           answer.style.maxHeight = '0';
           answer.style.overflow = 'hidden';
@@ -4058,6 +4079,20 @@ function fixContrast(){
 
   function tuneDesktopNavWrapping() {
     if (window.innerWidth <= 768) return;
+    // The "More" overflow runtime (ZAPPY_NAV_OVERFLOW_MENU_V1) fully supersedes
+    // the legacy two-line wrapping: it collapses overflowing items into a
+    // "More" dropdown and strips zappy-desktop-wrap on every reflow. When it is
+    // active we MUST NOT re-add the wrap class here — this patch() pass runs at
+    // 1500ms, AFTER the overflow runtime's final reflow (1200ms), and nothing
+    // reflows the overflow menu again, so re-adding zappy-desktop-wrap would
+    // regress the desktop nav to the clipped/wrapped layout permanently. Defer
+    // entirely: strip any stale class and let the overflow runtime own overflow.
+    if (window.__zappyNavOverflowInit) {
+      document.querySelectorAll('.nav-menu.zappy-desktop-wrap, #navMenu.zappy-desktop-wrap').forEach(function(menu) {
+        menu.classList.remove('zappy-desktop-wrap');
+      });
+      return;
+    }
     document.querySelectorAll('.nav-container > .nav-menu, .nav-right-group > .nav-menu, .nav-container > #navMenu, .nav-right-group > #navMenu').forEach(function(menu) {
       if (!menu || !menu.querySelectorAll) return;
       menu.classList.remove('zappy-desktop-wrap');

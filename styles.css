@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&display=swap');
 
-
-
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
 
 /* Inter font (English / LTR languages) */
@@ -69,7 +67,6 @@
   font-display: swap;
   src: url('assets/fonts/Rubik-Bold.woff2') format('woff2');
 }
-
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
 
@@ -683,8 +680,6 @@ select:focus {
   text-decoration: none;
 }
 
-
-
 @media (max-width: 480px) {
   .container {
     padding: 0 16px;
@@ -1249,7 +1244,6 @@ select:focus {
     padding: 14px 36px;
   }
 }
-
 
 /* ============================================
    NAVBAR LAYOUT - POST-GENERATION FIXES
@@ -2153,7 +2147,6 @@ html[lang="ar"] .nav-cta-btn {
 /* Post-generation fix: Remove main element margin-top and padding-top */
 main { margin-top: 0 !important; padding-top: 0 !important; }
 
-
 /* Footer Styles */
 :root {
   --primary: #7A1F2B;
@@ -2566,7 +2559,6 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
     font-size: 1.05rem;
   }
 }
-
 
 /* Footer Contrast Guard — overrides dark-on-dark text */
 .site-footer .contact-list a,
@@ -6875,7 +6867,6 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 /* ZAPPY_POSTGEN_GUARD_RTL_ORDER:שונות-route-map — stripped 1 order declaration(s) conflicting with RTL grid */
 
-
 /* miscellaneous-heritage-notes */
 .miscellaneous-heritage-notes-section {
   position: relative;
@@ -7798,20 +7789,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   }
 }
 
-
-
 /* Global font override - exclude icon fonts and special elements */
 *:not(.fas):not(.far):not(.fab):not(.fa):not([class*="fa-"]):not(.iconify):not([class*="icon"]):not(code):not(pre):not(i[class*="fa"]) {
   font-family: 'Rubik', sans-serif !important;
 }
 
-
-
-
-
 /* Hide WhatsApp float button on desktop (mobile-only) */
-
-
 
 /* Footer contact alignment fix */
 .footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
@@ -7821,7 +7804,6 @@ html[dir="rtl"] .footer-contact li, html[dir="rtl"] .site-footer .footer-contact
 html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
 html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
 html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
-
 
 /* ============================================
    MOBILE RESPONSIVE FIXES (Auto-generated)
@@ -8418,7 +8400,6 @@ nav.navbar .sub-menu li a:hover { color: #D89B2B !important; background-color: r
   border: 0 !important;
 }
 
-
 /* Custom Accessibility Toolbar Styling - Zappy Style */
 
 /* Main button icon - ONLY target the floating button, not menu elements */
@@ -8569,7 +8550,6 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 /* Show accessibility widget when ALT+A keyboard shortcut is used (desktop only) */
 
-
 /* On mobile, ensure it stays hidden */
 @media (max-width: 768px) {
   /* Hide the accessibility button on mobile - higher specificity */
@@ -8694,8 +8674,6 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   color: var(--accent);
   display: inline-block;
 }
-
-
 
 .navbar .nav-menu a {
   font-size: 17px !important;
@@ -9551,11 +9529,6 @@ nav.navbar .sub-menu li a {
 
 
 
-
-
-
-
-
 .candles-candle-gallery-section .candle-name {
   font-size: 0.56rem !important;
 }
@@ -9970,7 +9943,6 @@ nav.navbar .sub-menu li a {
     overflow: hidden !important;
   }
 }
-
 
 /* Added Component Styles */
 /* ===== Section: שמה ישראל ליד לוח מודעות ===== */
@@ -12111,82 +12083,6 @@ nav.navbar .sub-menu li a {
   }
 }
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
-.nav-container {
-  order: -1;
-}
-
-.navbar .nav-right-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.navbar .nav-brand {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid rgba(216, 155, 43, 0.3);
-}
-
-.navbar .nav-menu {
-  display: flex !important;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  padding: 10px 20px;
-  margin: 0;
-  background: var(--nav-bg, transparent);
-  border-bottom: 2px solid rgba(216, 155, 43, 0.4);
-}
-
-.navbar .nav-right-group {
-  flex-direction: column !important;
-  width: 100% !important;
-}
-
-.navbar .nav-brand {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  padding: 10px 20px !important;
-  border-bottom: 1px solid rgba(216, 155, 43, 0.3) !important;
-}
-
-.navbar .nav-menu {
-  justify-content: center !important;
-  width: 100% !important;
-  padding: 8px 20px !important;
-  margin: 0 !important;
-  border-bottom: 2px solid rgba(216, 155, 43, 0.4) !important;
-}
-
-.navbar {
-  position: fixed !important;
-  top: 42px !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 1000 !important;
-  width: 100% !important;
-}
-
-.navbar {
-  position: static !important;
-  top: auto !important;
-}
-
-.navbar {
-  overflow: hidden !important;
-  overflow-y: hidden !important;
-  max-height: none !important;
-}
-
 @media (max-width: 768px) {
 .navbar {
   position: fixed !important;
@@ -12197,10 +12093,6 @@ nav.navbar .sub-menu li a {
   z-index: 9999 !important;
   background-color: var(--bg-dark) !important;
 }
-}
-
-.navbar .logo {
-  margin-top: -30px;
 }
 
 .candles-candle-gallery-section .candle-label-bottom {
@@ -14090,6 +13982,7 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
 
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX */
 /* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V3 */
+/* ZAPPY_MOBILE_NAV_ICON_ALIGNMENT_FIX_V4 */
 /* The mobile hamburger / phone buttons are absolutely positioned. Keep the
    navbar itself as a non-collapsing containing block so auto-margin centering
    stays aligned even when generated mobile CSS moves every nav child out of flow. */
@@ -14097,6 +13990,29 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
   .navbar,
   nav.navbar {
     min-height: 70px !important;
+  }
+
+  /* E-commerce mobile navbar icon-group alignment.
+     The icon couples (search after the hamburger; login+cart at the end edge)
+     are absolutely positioned with inset-inline offsets — inset-inline-start:52px
+     to clear the 36px hamburger that sits at left:12px on the .navbar, and
+     inset-inline-end:12px to hug the end edge. Those offsets are authored in the
+     NAVBAR's full-width coordinate space (the hamburger uses the same one). But
+     the offsets are resolved against the nearest positioned ancestor, and the
+     generated CSS makes .nav-container position:relative. When .nav-container is
+     ALSO inset by the navbar's horizontal padding (max-width / padding from the
+     LLM-authored navbar), the groups resolve to that inset box instead of the
+     full-width navbar: the search drifts ~20px away from the hamburger and the
+     cart leaves a fat asymmetric gap before the screen edge. Dropping
+     .nav-container out of the containing-block chain on mobile makes both couples
+     resolve to .navbar (always full-bleed) so they line up tightly with the
+     hamburger and sit symmetrically against both edges regardless of any
+     navbar/container padding. Scoped via :has() to navbars that actually carry
+     the e-commerce icon couples so non-ecommerce navs are untouched. */
+  .navbar:has(.nav-ecommerce-icons) .nav-container,
+  nav.navbar:has(.nav-ecommerce-icons) .nav-container,
+  header:has(.nav-ecommerce-icons) .nav-container {
+    position: static !important;
   }
 
   /* Some generated RTL nav CSS sets both left:50% and right:50% on the
