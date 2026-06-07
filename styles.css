@@ -12725,6 +12725,11 @@ nav.navbar .sub-menu li a {
 }
 /* Batch: Make navbar sticky/fixed so it stays visible while scrolling */
 .navbar { position: fixed !important; top: 0; right: 0; left: 0; z-index: 1000; }
+
+nav.navbar {
+  position: sticky !important;
+  top: 0 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
