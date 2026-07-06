@@ -13180,6 +13180,22 @@ nav.navbar {
     aspect-ratio: 1 / 1;
   }
 }
+
+#ai-section-1783340319777-dcrauwb .gallery-image-wrapper {
+  width: 280px !important;
+  height: 210px !important;
+}
+
+#ai-section-1783340319777-dcrauwb .gallery-image-wrapper img.gallery-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+#ai-section-1783340319777-dcrauwb .gallery-image-wrapper [data-zappy-zoom-wrapper] {
+  width: 280px !important;
+  height: 210px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
