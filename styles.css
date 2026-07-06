@@ -13197,6 +13197,24 @@ nav.navbar {
   width: 100% !important;
   height: auto !important;
 }
+
+#ai-section-1783340319777-dcrauwb .category-images {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+#ai-section-1783340319777-dcrauwb .gallery-image-wrapper {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4/3 !important;
+}
+
+#ai-section-1783340319777-dcrauwb .gallery-image-wrapper img.gallery-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
