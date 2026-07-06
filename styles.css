@@ -13182,8 +13182,9 @@ nav.navbar {
 }
 
 #ai-section-1783340319777-dcrauwb .gallery-image-wrapper {
-  width: 280px !important;
-  height: 210px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-width: 100% !important;
 }
 
 #ai-section-1783340319777-dcrauwb .gallery-image-wrapper img.gallery-image {
@@ -13193,8 +13194,8 @@ nav.navbar {
 }
 
 #ai-section-1783340319777-dcrauwb .gallery-image-wrapper [data-zappy-zoom-wrapper] {
-  width: 280px !important;
-  height: 210px !important;
+  width: 100% !important;
+  height: auto !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
