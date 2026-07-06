@@ -956,346 +956,281 @@
 
 
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .gallery-zion-section {
-  direction: rtl;
-  background-color: #201816;
-  background-image:
-    radial-gradient(ellipse at 15% 50%, rgba(122,31,43,0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%, rgba(216,155,43,0.10) 0%, transparent 50%),
-    linear-gradient(180deg, #2a160f 0%, #201816 60%, #1a1008 100%);
-  color: var(--text-light);
-  padding: 0 0 80px;
+  background: linear-gradient(180deg, #f5e6c6 0%, #edd8ad 100%);
+  color: var(--text-dark);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  padding: 80px 16px;
+  direction: rtl;
   font-family: 'Noto Serif', serif;
 }
 
-/* Top ornamental border */
-.gallery-zion-section .gzs-border-strip {
-  position: relative;
-  width: 100%;
-  height: 18px;
-  margin-bottom: 0;
-  pointer-events: none;
-  z-index: 1;
-  color: var(--accent);
-}
-.gallery-zion-section .gzs-border-strip svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* Container */
-.gallery-zion-section .gzs-container {
+.gallery-zion-section .gallery-zion-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 24px 0;
-  position: relative;
-  z-index: 2;
-}
-
-/* Header */
-.gallery-zion-section .gzs-header {
-  text-align: center;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  gap: 32px;
 }
-.gallery-zion-section .gzs-ornament {
-  color: var(--accent);
-  pointer-events: none;
-  display: block;
+
+.gallery-zion-section .gallery-zion-header {
+  text-align: center;
+  margin-block-end: 16px;
 }
-.gallery-zion-section .gzs-title {
+
+.gallery-zion-section .gallery-zion-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.3;
-  color: var(--accent);
-  letter-spacing: 0.02em;
-  margin: 0;
-  text-align: center;
+  color: var(--text-dark);
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
 }
-.gallery-zion-section .gzs-subtitle {
-  font-family: 'Noto Serif', serif;
-  font-size: 1rem;
+
+.gallery-zion-section .gallery-zion-subtitle {
+  font-size: 18px;
   line-height: 1.7;
-  color: var(--text-light);
-  opacity: 0.72;
+  color: var(--text-muted);
   margin: 0;
-  text-align: center;
+  font-style: italic;
 }
 
-/* Category Nav */
-.gallery-zion-section .gzs-categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 36px;
-  direction: rtl;
-}
-.gallery-zion-section .gzs-cat-btn {
-  font-family: 'Noto Serif', serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--text-light);
-  background: transparent;
-  border: 1px solid var(--border-dark);
-  border-radius: 2px;
-  padding: 7px 16px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  opacity: 0.65;
-  white-space: nowrap;
-}
-.gallery-zion-section .gzs-cat-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  opacity: 1;
-}
-.gallery-zion-section .gzs-cat-btn.gzs-cat-active {
-  background: linear-gradient(180deg, #a72d16 0%, #7a180f 100%);
-  color: #f8e8b8;
-  border-color: #d4b27a;
-  box-shadow: 0 2px 0 #5f2012, 0 4px 10px rgba(58,32,24,0.2);
-  opacity: 1;
-  font-weight: 700;
-}
-
-/* Carousel Wrapper */
-.gallery-zion-section .gzs-carousel-wrapper {
+.gallery-zion-section .gallery-zion-main-viewer {
   position: relative;
+  background: #f2dfb8;
+  border-radius: 0;
+  box-shadow: 0 8px 20px rgba(58,32,24,0.18);
+  border: 1px solid #d4b27a;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
-  gap: 0;
+  justify-content: center;
 }
 
-/* Track outer (clips slides) */
-.gallery-zion-section .gzs-track-outer {
-  flex: 1;
-  overflow: hidden;
-  border: 1px solid var(--border-dark);
-  box-shadow: 0 16px 36px rgba(58,32,24,0.28), 0 0 22px rgba(240,181,45,0.10);
+.gallery-zion-section .gallery-zion-viewer-frame {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
-/* Track (translates to show active slide) */
-.gallery-zion-section .gzs-track {
-  display: flex;
-  flex-direction: row-reverse;
-  transition: transform 0.55s cubic-bezier(0.77,0,0.175,1);
-  will-change: transform;
-  transform: translateX(0%);
+.gallery-zion-section .gallery-zion-viewer-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
-/* Individual Slide */
-.gallery-zion-section .gzs-slide {
-  min-width: 100%;
-  width: 100%;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  background: #1a0e0a;
+.gallery-zion-section .gallery-zion-viewer-slide[data-slide='0'] {
+  opacity: 1;
+  visibility: visible;
 }
 
-/* Image Frame: shows primary + secondary side by side on desktop */
-.gallery-zion-section .gzs-img-frame {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  aspect-ratio: 16/7;
-  overflow: hidden;
-  position: relative;
-}
-.gallery-zion-section .gzs-img-frame img {
+.gallery-zion-section .gallery-zion-viewer-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
-}
-.gallery-zion-section .gzs-img-frame img:hover {
-  transform: scale(1.03);
-}
-.gallery-zion-section .gzs-img-frame img:first-child {
-  border-inline-end: 1px solid rgba(216,155,43,0.25);
 }
 
-/* Caption Bar */
-.gallery-zion-section .gzs-caption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 28px;
-  background: linear-gradient(180deg, rgba(26,14,10,0.96) 0%, rgba(32,24,22,1) 100%);
-  border-top: 1px solid rgba(216,155,43,0.22);
-  direction: rtl;
-}
-.gallery-zion-section .gzs-counter {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.875rem;
-  color: var(--accent);
-  letter-spacing: 0.12em;
-  opacity: 0.8;
-  direction: ltr;
-  display: inline-block;
-}
-.gallery-zion-section .gzs-caption-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.375rem;
-  font-weight: 700;
+.gallery-zion-section .gallery-zion-viewer-info {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(32, 24, 22, 0.75);
+  backdrop-filter: blur(4px);
   color: var(--text-light);
-  letter-spacing: 0.03em;
-  line-height: 1.4;
+  padding: 8px 16px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  z-index: 10;
+  pointer-events: none;
 }
 
-/* Arrows */
-.gallery-zion-section .gzs-arrow {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(180deg, #a72d16 0%, #7a180f 100%);
-  border: 1px solid #d4b27a;
-  box-shadow: 0 2px 0 #5f2012, 0 4px 10px rgba(58,32,24,0.2);
-  color: #f8e8b8;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  border-radius: 2px;
+.gallery-zion-section .gallery-zion-current-index {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-inline-end: 1px solid rgba(247, 241, 231, 0.4);
+  padding-inline-end: 12px;
+}
+
+.gallery-zion-section .gallery-zion-current-caption {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.gallery-zion-section .gallery-zion-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(32, 24, 22, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(212, 178, 122, 0.5);
+  color: var(--text-light);
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
   z-index: 10;
-  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
-  user-select: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
   padding: 0;
-}
-.gallery-zion-section .gzs-arrow:hover {
-  background: linear-gradient(180deg, #c23518 0%, #8f1f12 100%);
-  box-shadow: 0 4px 16px rgba(143,31,18,0.45), 0 0 22px rgba(240,181,45,0.18);
-  transform: scale(1.06);
-}
-.gallery-zion-section .gzs-arrow-prev {
-  margin-inline-end: 0;
-  margin-inline-start: 12px;
-}
-.gallery-zion-section .gzs-arrow-next {
-  margin-inline-start: 0;
-  margin-inline-end: 12px;
+  line-height: 1;
 }
 
-/* Progress Dots */
-.gallery-zion-section .gzs-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 28px;
-  direction: rtl;
+.gallery-zion-section .gallery-zion-nav:hover {
+  background: rgba(122, 31, 43, 0.85);
+  border-color: #d4b27a;
 }
-.gallery-zion-section .gzs-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--border-dark);
-  border: 1px solid rgba(216,155,43,0.3);
+
+.gallery-zion-section .gallery-zion-nav-prev {
+  inset-inline-start: 16px;
+}
+
+.gallery-zion-section .gallery-zion-nav-next {
+  inset-inline-end: 16px;
+}
+
+.gallery-zion-section .gallery-zion-thumbnails {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: auto;
+  padding-block-end: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: #d4b27a #f2dfb8;
+}
+
+.gallery-zion-section .gallery-zion-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-zion-section .gallery-zion-thumbnails::-webkit-scrollbar-track {
+  background: #f2dfb8;
+}
+
+.gallery-zion-section .gallery-zion-thumbnails::-webkit-scrollbar-thumb {
+  background: #d4b27a;
+  border-radius: 0;
+}
+
+.gallery-zion-section .gallery-zion-thumb {
+  flex-shrink: 0;
+  width: 140px;
+  background: #f2dfb8;
+  border: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(58,32,24,0.1);
   cursor: pointer;
   padding: 0;
-  transition: background 0.25s ease, transform 0.2s ease, border-color 0.25s ease;
-}
-.gallery-zion-section .gzs-dot:hover {
-  background: rgba(216,155,43,0.5);
-  border-color: var(--accent);
-}
-.gallery-zion-section .gzs-dot.gzs-dot-active {
-  background: var(--accent);
-  border-color: var(--accent);
-  transform: scale(1.3);
-  box-shadow: 0 0 8px rgba(216,155,43,0.55);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  font-family: inherit;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .gallery-zion-section .gzs-img-frame {
-    grid-template-columns: 1fr;
-    aspect-ratio: 4/3;
-  }
-  .gallery-zion-section .gzs-img-frame img.gzs-img-secondary {
-    display: none;
-  }
-  .gallery-zion-section .gzs-img-frame img:first-child {
-    border-inline-end: none;
-  }
+.gallery-zion-section .gallery-zion-thumb.active {
+  border-color: #8f1f12;
+  box-shadow: 0 4px 10px rgba(58,32,24,0.18);
+}
+
+.gallery-zion-section .gallery-zion-thumb:hover {
+  border-color: #d4b27a;
+}
+
+.gallery-zion-section .gallery-zion-thumb-img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-zion-section .gallery-zion-thumb-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding: 8px 6px;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
   .gallery-zion-section {
-    padding-bottom: 56px;
+    padding: 60px 16px;
   }
-  .gallery-zion-section .gzs-container {
-    padding: 40px 0 0;
+
+  .gallery-zion-section .gallery-zion-container {
+    gap: 24px;
   }
-  .gallery-zion-section .gzs-header {
-    padding: 0 16px;
-    margin-bottom: 24px;
-    gap: 8px;
+
+  .gallery-zion-section .gallery-zion-title {
+    font-size: 28px;
   }
-  .gallery-zion-section .gzs-title {
-    font-size: 1.6rem;
+
+  .gallery-zion-section .gallery-zion-subtitle {
+    font-size: 16px;
   }
-  .gallery-zion-section .gzs-categories {
-    padding: 0 12px;
-    gap: 6px;
-    margin-bottom: 20px;
+
+  .gallery-zion-section .gallery-zion-main-viewer {
+    aspect-ratio: 4 / 3;
   }
-  .gallery-zion-section .gzs-cat-btn {
-    font-size: 0.8rem;
+
+  .gallery-zion-section .gallery-zion-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .gallery-zion-section .gallery-zion-viewer-info {
+    bottom: 8px;
+    right: 8px;
     padding: 6px 12px;
-  }
-  .gallery-zion-section .gzs-carousel-wrapper {
-    gap: 0;
-  }
-  .gallery-zion-section .gzs-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-  }
-  .gallery-zion-section .gzs-arrow-prev {
-    margin-inline-start: 6px;
-  }
-  .gallery-zion-section .gzs-arrow-next {
-    margin-inline-end: 6px;
-  }
-  .gallery-zion-section .gzs-img-frame {
-    aspect-ratio: 3/2;
-  }
-  .gallery-zion-section .gzs-caption {
-    padding: 12px 16px;
-  }
-  .gallery-zion-section .gzs-caption-title {
-    font-size: 1.1rem;
-  }
-  .gallery-zion-section .gzs-dots {
-    margin-top: 18px;
+    font-size: 12px;
     gap: 8px;
   }
-  .gallery-zion-section .gzs-dot {
-    width: 8px;
-    height: 8px;
+
+  .gallery-zion-section .gallery-zion-thumb {
+    width: 110px;
+  }
+
+  .gallery-zion-section .gallery-zion-thumb-img {
+    height: 70px;
+  }
+
+  .gallery-zion-section .gallery-zion-thumb-label {
+    font-size: 11px;
+    padding: 6px 4px;
   }
 }
 
-@media (max-width: 480px) {
-  .gallery-zion-section .gzs-img-frame {
-    aspect-ratio: 1/1;
+@media (min-width: 769px) {
+  .gallery-zion-section {
+    padding: 100px 40px;
   }
-  .gallery-zion-section .gzs-title {
-    font-size: 1.35rem;
+
+  .gallery-zion-section .gallery-zion-thumb {
+    width: 160px;
+  }
+
+  .gallery-zion-section .gallery-zion-thumb-img {
+    height: 100px;
   }
 }
 </style>
@@ -1875,239 +1810,88 @@
 
 
 
-<section class="gallery-zion-section" data-layout-spec="Gallery-zion" dir="rtl" data-zappy-section="true" id="gallery-zion-section">
-
-  <!-- Ornamental top border strip -->
-  <div class="gzs-border-strip" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 18" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="1200" height="2" y="0" fill="rgba(216,155,43,0.35)"></rect>
-      <g fill="rgba(216,155,43,0.22)">
-        <rect x="0" y="5" width="40" height="1"></rect><rect x="50" y="5" width="40" height="1"></rect><rect x="100" y="5" width="40" height="1"></rect><rect x="150" y="5" width="40" height="1"></rect><rect x="200" y="5" width="40" height="1"></rect><rect x="250" y="5" width="40" height="1"></rect><rect x="300" y="5" width="40" height="1"></rect><rect x="350" y="5" width="40" height="1"></rect><rect x="400" y="5" width="40" height="1"></rect><rect x="450" y="5" width="40" height="1"></rect><rect x="500" y="5" width="40" height="1"></rect><rect x="550" y="5" width="40" height="1"></rect><rect x="600" y="5" width="40" height="1"></rect><rect x="650" y="5" width="40" height="1"></rect><rect x="700" y="5" width="40" height="1"></rect><rect x="750" y="5" width="40" height="1"></rect><rect x="800" y="5" width="40" height="1"></rect><rect x="850" y="5" width="40" height="1"></rect><rect x="900" y="5" width="40" height="1"></rect><rect x="950" y="5" width="40" height="1"></rect><rect x="1000" y="5" width="40" height="1"></rect><rect x="1050" y="5" width="40" height="1"></rect><rect x="1100" y="5" width="40" height="1"></rect><rect x="1150" y="5" width="40" height="1"></rect>
-      </g>
-      <rect width="1200" height="2" y="10" fill="rgba(216,155,43,0.18)"></rect>
-    </svg>
-  </div>
-
-  <div class="gzs-container">
-
-    <!-- Section Header -->
-    <header class="gzs-header">
-      <div class="gzs-ornament" aria-hidden="true">
-        <svg data-no-icon-edit="true" aria-hidden="true" width="220" height="14" viewBox="0 0 220 14" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="7" x2="80" y2="7" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
-          <circle cx="90" cy="7" r="2.5" fill="currentColor" opacity="0.45"></circle>
-          <circle cx="110" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></circle>
-          <circle cx="110" cy="7" r="1.5" fill="currentColor" opacity="0.55"></circle>
-          <circle cx="130" cy="7" r="2.5" fill="currentColor" opacity="0.45"></circle>
-          <line x1="140" y1="7" x2="220" y2="7" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
-        </svg>
-      </div>
-      <h2 class="gzs-title">גלריית הציון הקדוש</h2>
-      <p class="gzs-subtitle">ציון רבי דוד ומשה זיע"א — הרי האטלס, מרוקו</p>
-      <div class="gzs-ornament" aria-hidden="true">
-        <svg data-no-icon-edit="true" aria-hidden="true" width="220" height="14" viewBox="0 0 220 14" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="7" x2="80" y2="7" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
-          <circle cx="90" cy="7" r="2.5" fill="currentColor" opacity="0.45"></circle>
-          <circle cx="110" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></circle>
-          <circle cx="110" cy="7" r="1.5" fill="currentColor" opacity="0.55"></circle>
-          <circle cx="130" cy="7" r="2.5" fill="currentColor" opacity="0.45"></circle>
-          <line x1="140" y1="7" x2="220" y2="7" stroke="currentColor" stroke-width="1" opacity="0.35"></line>
-        </svg>
-      </div>
-    </header>
-
-    <!-- Category Filter Buttons -->
-    <nav class="gzs-categories" aria-label="קטגוריות גלריה">
-      <button class="gzs-cat-btn gzs-cat-active" data-slide="0">הציון הקדוש</button>
-      <button class="gzs-cat-btn" data-slide="1">ליל ההילולה</button>
-      <button class="gzs-cat-btn" data-slide="2">נופי האטלס</button>
-      <button class="gzs-cat-btn" data-slide="3">עולי הרגל</button>
-      <button class="gzs-cat-btn" data-slide="4">פנים הציון</button>
-      <button class="gzs-cat-btn" data-slide="5">שירה וריקוד</button>
-      <button class="gzs-cat-btn" data-slide="6">כפר הציון</button>
-      <button class="gzs-cat-btn" data-slide="7">הדלקת נרות</button>
-      <button class="gzs-cat-btn" data-slide="8">שיירת עולי הרגל</button>
-    </nav>
-
-    <!-- Main Carousel -->
-    <div class="gzs-carousel-wrapper">
-
-      <!-- Prev Arrow -->
-      <button class="gzs-arrow gzs-arrow-prev" aria-label="תמונה קודמת">‹</button>
-
-      <!-- Slides Track -->
-      <div class="gzs-track-outer">
-        <div class="gzs-track" id="gzsTrack">
-
-          <!-- Slide 0 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="ציון רבי דוד ומשה — מבט חיצוני על המבנה הקדוש בהרי האטלס" src="/assets/image-1782131844617-3ahnr6.webp" data-placeholder="gallery-zion-1" data-context="Sacred Jewish shrine of Rabbi David u-Moshe in the Atlas Mountains of Morocco, exterior view of the white domed tomb building surrounded by mountains, golden light, pilgrimage site" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="ציון רבי דוד ומשה — מבט חיצוני על המבנה הקדוש בהרי האטלס" class="gzs-img-secondary" src="/assets/image-1782131844617-3ahnr6.webp" data-placeholder="gallery-zion-1" data-context="Sacred Jewish shrine of Rabbi David u-Moshe in the Atlas Mountains of Morocco, exterior view of the white domed tomb building surrounded by mountains, golden light, pilgrimage site" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">01 / 09</span>
-              <span class="gzs-caption-title">הציון הקדוש</span>
-            </div>
-          </div>
-
-          <!-- Slide 1 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="הילולת רבי דוד ומשה — אלפי עולי רגל סביב הציון בלילה עם נרות" src="/assets/image-1779093589849-dubq5h.webp?v=1779093591923" data-placeholder="gallery-zion-2" data-context="Hillula celebration at Rabbi David u-Moshe shrine Morocco, thousands of Jewish pilgrims gathered around the tomb at night with candles and torches, festive atmosphere, Atlas Mountains" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="הילולת רבי דוד ומשה — אלפי עולי רגל סביב הציון בלילה עם נרות" class="gzs-img-secondary" src="/assets/image-1779093589849-dubq5h.webp?v=1779093591923" data-placeholder="gallery-zion-2" data-context="Hillula celebration at Rabbi David u-Moshe shrine Morocco, thousands of Jewish pilgrims gathered around the tomb at night with candles and torches, festive atmosphere, Atlas Mountains" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">02 / 09</span>
-              <span class="gzs-caption-title">ליל ההילולה</span>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="נוף הרי האטלס — הדרך לציון, שלג על פסגות ההרים" src="/assets/image-1783335354794-a24md4.webp?v=1783335354794" data-placeholder="gallery-zion-3" data-context="Breathtaking panoramic view of the Atlas Mountains in Morocco, snow-capped peaks, winding mountain road leading to a Jewish pilgrimage site, dramatic landscape at sunset" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="נוף הרי האטלס — מבט פנורמי על הרי האטלס" class="gzs-img-secondary" src="/assets/image-1783335354794-a24md4.webp?v=1783335354794" data-placeholder="gallery-zion-3b" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">03 / 09</span>
-              <span class="gzs-caption-title">נופי הרי האטלס</span>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="עולי רגל יהודים בתפילה ליד הציון הקדוש" src="/assets/image-1783335387514-okrwrt.webp?v=1783335387514" data-placeholder="gallery-zion-4" data-context="Jewish pilgrims praying devoutly at the shrine of Rabbi David u-Moshe in Morocco, men and women in traditional Moroccan Jewish clothing, candles lit, emotional prayer scene" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="עולי רגל — תפילה נרגשת בציון הקדוש" class="gzs-img-secondary" src="/assets/image-1783335387514-okrwrt.webp?v=1783335387514" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">04 / 09</span>
-              <span class="gzs-caption-title">עולי הרגל בתפילה</span>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="פנים הציון — קברו של רבי דוד ומשה מוקף בנרות ופרחים" src="/assets/image-1783335426594-choss1.webp?v=1783335426594" data-placeholder="gallery-zion-5" data-context="Interior of the holy tomb of Rabbi David u-Moshe in Morocco, ornate burial chamber surrounded by hundreds of lit candles, colorful fabric coverings, Jewish religious artifacts, intimate sacred space" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="פנים הציון — מראה נוסף של קבר הצדיק" class="gzs-img-secondary" src="/assets/image-1783335426594-choss1.webp?v=1783335426594" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">05 / 09</span>
-              <span class="gzs-caption-title">פנים הציון</span>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="שירה וריקוד בהילולה — חגיגות ההילולה המסורתית" src="/assets/image-1783335457417-v6enkw.webp?v=1783335457417" data-placeholder="gallery-zion-6" data-context="Traditional Moroccan Jewish Hillula celebration with singing and dancing, colorful traditional clothing, musicians playing, joyful festive atmosphere at the shrine in Atlas Mountains Morocco" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="שירה וריקוד — שמחת ההילולה המסורתית" class="gzs-img-secondary" src="/assets/image-1783335457417-v6enkw.webp?v=1783335457417" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">06 / 09</span>
-              <span class="gzs-caption-title">שירה וריקוד בהילולה</span>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="כפר אימינ-תנוות — הכפר הברברי שבו שוכן הציון" src="/assets/image-1783335493197-1bzh6o.webp?v=1783335493197" data-placeholder="gallery-zion-7" data-context="Imin-Tanoute Berber village in the Atlas Mountains Morocco, traditional mud-brick buildings on hillside, where the Jewish shrine of Rabbi David u-Moshe is located, rural mountain village scenery" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="כפר אימינ-תנוות — מבט נוסף על הכפר" class="gzs-img-secondary" src="/assets/image-1783335493197-1bzh6o.webp?v=1783335493197" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">07 / 09</span>
-              <span class="gzs-caption-title">כפר הציון</span>
-            </div>
-          </div>
-
-          <!-- Slide 7 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="הדלקת נרות ביום ההילולה — אלפי נרות בוערים לכבוד הצדיק" src="/assets/image-1783335715775-424ijr.webp?v=1783335715775" data-placeholder="gallery-zion-8" data-context="Thousands of candles lit during the Hillula of Rabbi David u-Moshe in Morocco, golden candlelight illuminating the shrine area, devotees lighting candles in honor of the holy Rabbi, spiritual atmosphere" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="הדלקת נרות ביום ההילולה — אלפי נרות בוערים לכבוד הצדיק" class="gzs-img-secondary" src="/assets/image-1783335715775-424ijr.webp?v=1783335715775" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">08 / 09</span>
-              <span class="gzs-caption-title">הדלקת נרות הצדיק</span>
-            </div>
-          </div>
-
-          <!-- Slide 8 -->
-          <div class="gzs-slide">
-            <div class="gzs-img-frame">
-              <img alt="שיירת עולי הרגל בדרך לציון — אנשים עולים להר לכבוד הצדיק" src="/assets/image-1783336368953-22x3cg.webp?v=1783336368953" data-placeholder="gallery-zion-9" data-context="Procession of Jewish pilgrims walking up the mountain path to the shrine of Rabbi David u-Moshe in Atlas Mountains Morocco, colorful crowd carrying flags and Torah scrolls, spiritual pilgrimage journey" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              <img alt="שיירת עולי הרגל בדרך לציון — אנשים עולים להר לכבוד הצדיק" class="gzs-img-secondary" src="/assets/image-1783336368953-22x3cg.webp?v=1783336368953" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <div class="gzs-caption">
-              <span class="gzs-counter">09 / 09</span>
-              <span class="gzs-caption-title">שיירת עולי הרגל</span>
-            </div>
-          </div>
-
+<section class="gallery-zion-section" data-layout-spec="Gallery-zion" data-zappy-section="true" id="gallery-zion-section">
+  <div class="gallery-zion-container">
+    <div class="gallery-zion-header">
+      <h2 class="gallery-zion-title">גלריית הציון הקדוש</h2>
+      <p class="gallery-zion-subtitle">ציון רבי דוד ומשה זיע"א — הרי האטלס, מרוקו</p>
+    </div>
+    <div class="gallery-zion-main-viewer">
+      <div class="gallery-zion-viewer-frame">
+        <div class="gallery-zion-viewer-slide" data-slide="0">
+          <img alt="ציון רבי דוד ומשה — מבט חיצוני על המבנה הקדוש בהרי האטלס" class="gallery-zion-viewer-img" src="/assets/image-1782131844617-3ahnr6.webp" data-placeholder="gallery-zion-1" data-context="Sacred Jewish shrine of Rabbi David u-Moshe in the Atlas Mountains of Morocco, exterior view of the white domed tomb building surrounded by mountains, golden light, pilgrimage site" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="1">
+          <img alt="ציון רבי דוד ומשה — מבט חיצוני על המבנה הקדוש בהרי האטלס" class="gallery-zion-viewer-img" src="/assets/image-1782131844617-3ahnr6.webp" data-placeholder="gallery-zion-1" data-context="Sacred Jewish shrine of Rabbi David u-Moshe in the Atlas Mountains of Morocco, exterior view of the white domed tomb building surrounded by mountains, golden light, pilgrimage site" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="2">
+          <img alt="הילולת רבי דוד ומשה — אלפי עולי רגל סביב הציון בלילה עם נרות" class="gallery-zion-viewer-img" src="/assets/image-1779093589849-dubq5h.webp?v=1779093591923" data-placeholder="gallery-zion-2" data-context="Hillula celebration at Rabbi David u-Moshe shrine Morocco, thousands of Jewish pilgrims gathered around the tomb at night with candles and torches, festive atmosphere, Atlas Mountains" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="3">
+          <img alt="הילולת רבי דוד ומשה — אלפי עולי רגל סביב הציון בלילה עם נרות" class="gallery-zion-viewer-img" src="/assets/image-1779093589849-dubq5h.webp?v=1779093591923" data-placeholder="gallery-zion-2" data-context="Hillula celebration at Rabbi David u-Moshe shrine Morocco, thousands of Jewish pilgrims gathered around the tomb at night with candles and torches, festive atmosphere, Atlas Mountains" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="4">
+          <img alt="נוף הרי האטלס — הדרך לציון, שלג על פסגות ההרים" class="gallery-zion-viewer-img" src="/assets/image-1783335354794-a24md4.webp?v=1783335354794" data-placeholder="gallery-zion-3" data-context="Breathtaking panoramic view of the Atlas Mountains in Morocco, snow-capped peaks, winding mountain road leading to a Jewish pilgrimage site, dramatic landscape at sunset" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="5">
+          <img alt="נוף הרי האטלס — מבט פנורמי על הרי האטלס" class="gallery-zion-viewer-img" src="/assets/image-1783335354794-a24md4.webp?v=1783335354794" data-placeholder="gallery-zion-3b" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="6">
+          <img alt="עולי רגל יהודים בתפילה ליד הציון הקדוש" class="gallery-zion-viewer-img" src="/assets/image-1783335387514-okrwrt.webp?v=1783335387514" data-placeholder="gallery-zion-4" data-context="Jewish pilgrims praying devoutly at the shrine of Rabbi David u-Moshe in Morocco, men and women in traditional Moroccan Jewish clothing, candles lit, emotional prayer scene" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="7">
+          <img alt="עולי רגל — תפילה נרגשת בציון הקדוש" class="gallery-zion-viewer-img" src="/assets/image-1783335387514-okrwrt.webp?v=1783335387514" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="gallery-zion-viewer-slide" data-slide="8">
+          <img alt="פנים הציון — קברו של רבי דוד ומשה מוקף בנרות ופרחים" class="gallery-zion-viewer-img" src="/assets/image-1783335426594-choss1.webp?v=1783335426594" data-placeholder="gallery-zion-5" data-context="Interior of the holy tomb of Rabbi David u-Moshe in Morocco, ornate burial chamber surrounded by hundreds of lit candles, colorful fabric coverings, Jewish religious artifacts, intimate sacred space" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
         </div>
       </div>
-
-      <!-- Next Arrow -->
-      <button class="gzs-arrow gzs-arrow-next" aria-label="תמונה הבאה">›</button>
-
+      <div class="gallery-zion-viewer-info">
+        <span class="gallery-zion-current-index">01 / 09</span>
+        <span class="gallery-zion-current-caption">הציון הקדוש</span>
+      </div>
+      <button class="gallery-zion-nav gallery-zion-nav-prev" aria-label="הקודם">‹</button>
+      <button class="gallery-zion-nav gallery-zion-nav-next" aria-label="הבא">›</button>
     </div>
-
-    <!-- Progress dots -->
-    <div class="gzs-dots" role="tablist" aria-label="ניווט גלריה">
-      <button class="gzs-dot gzs-dot-active" role="tab" aria-label="תמונה 1"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 2"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 3"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 4"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 5"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 6"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 7"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 8"></button>
-      <button class="gzs-dot" role="tab" aria-label="תמונה 9"></button>
+    <div class="gallery-zion-thumbnails">
+      <button class="gallery-zion-thumb active" data-index="0">
+        <img alt="ציון רבי דוד ומשה — מבט חיצוני על המבנה הקדוש בהרי האטלס" class="gallery-zion-thumb-img" src="/assets/image-1782131844617-3ahnr6.webp" data-placeholder="gallery-zion-1" data-context="Sacred Jewish shrine of Rabbi David u-Moshe in the Atlas Mountains of Morocco, exterior view of the white domed tomb building surrounded by mountains, golden light, pilgrimage site" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">הציון הקדוש</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="1">
+        <img alt="הילולת רבי דוד ומשה — אלפי עולי רגל סביב הציון בלילה עם נרות" class="gallery-zion-thumb-img" src="/assets/image-1779093589849-dubq5h.webp?v=1779093591923" data-placeholder="gallery-zion-2" data-context="Hillula celebration at Rabbi David u-Moshe shrine Morocco, thousands of Jewish pilgrims gathered around the tomb at night with candles and torches, festive atmosphere, Atlas Mountains" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">ליל ההילולה</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="2">
+        <img alt="נוף הרי האטלס — הדרך לציון, שלג על פסגות ההרים" class="gallery-zion-thumb-img" src="/assets/image-1783335354794-a24md4.webp?v=1783335354794" data-placeholder="gallery-zion-3" data-context="Breathtaking panoramic view of the Atlas Mountains in Morocco, snow-capped peaks, winding mountain road leading to a Jewish pilgrimage site, dramatic landscape at sunset" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">נופי האטלס</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="3">
+        <img alt="עולי רגל יהודים בתפילה ליד הציון הקדוש" class="gallery-zion-thumb-img" src="/assets/image-1783335387514-okrwrt.webp?v=1783335387514" data-placeholder="gallery-zion-4" data-context="Jewish pilgrims praying devoutly at the shrine of Rabbi David u-Moshe in Morocco, men and women in traditional Moroccan Jewish clothing, candles lit, emotional prayer scene" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">עולי הרגל</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="4">
+        <img alt="פנים הציון — קברו של רבי דוד ומשה מוקף בנרות ופרחים" class="gallery-zion-thumb-img" src="/assets/image-1783335426594-choss1.webp?v=1783335426594" data-placeholder="gallery-zion-5" data-context="Interior of the holy tomb of Rabbi David u-Moshe in Morocco, ornate burial chamber surrounded by hundreds of lit candles, colorful fabric coverings, Jewish religious artifacts, intimate sacred space" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">פנים הציון</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="5">
+        <img alt="שירה וריקוד בהילולה — חגיגות ההילולה המסורתית" class="gallery-zion-thumb-img" src="/assets/image-1783335457417-v6enkw.webp?v=1783335457417" data-placeholder="gallery-zion-6" data-context="Traditional Moroccan Jewish Hillula celebration with singing and dancing, colorful traditional clothing, musicians playing, joyful festive atmosphere at the shrine in Atlas Mountains Morocco" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">שירה וריקוד</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="6">
+        <img alt="כפר אימינ-תנוות — הכפר הברברי שבו שוכן הציון" class="gallery-zion-thumb-img" src="/assets/image-1783335493197-1bzh6o.webp?v=1783335493197" data-placeholder="gallery-zion-7" data-context="Imin-Tanoute Berber village in the Atlas Mountains Morocco, traditional mud-brick buildings on hillside, where the Jewish shrine of Rabbi David u-Moshe is located, rural mountain village scenery" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">כפר הציון</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="7">
+        <img alt="הדלקת נרות ביום ההילולה — אלפי נרות בוערים לכבוד הצדיק" class="gallery-zion-thumb-img" src="/assets/image-1783335715775-424ijr.webp?v=1783335715775" data-placeholder="gallery-zion-8" data-context="Thousands of candles lit during the Hillula of Rabbi David u-Moshe in Morocco, golden candlelight illuminating the shrine area, devotees lighting candles in honor of the holy Rabbi, spiritual atmosphere" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">הדלקת נרות</span>
+      </button>
+      <button class="gallery-zion-thumb" data-index="8">
+        <img alt="שיירת עולי הרגל בדרך לציון — אנשים עולים להר לכבוד הצדיק" class="gallery-zion-thumb-img" src="/assets/image-1783336368953-22x3cg.webp?v=1783336368953" data-placeholder="gallery-zion-9" data-context="Procession of Jewish pilgrims walking up the mountain path to the shrine of Rabbi David u-Moshe in Atlas Mountains Morocco, colorful crowd carrying flags and Torah scrolls, spiritual pilgrimage journey" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <span class="gallery-zion-thumb-label">שיירת עולי הרגל</span>
+      </button>
     </div>
-
   </div>
-
-  <script>
-  (function(){
-    var track = document.getElementById('gzsTrack');
-    if(!track) return;
-    var slides = track.querySelectorAll('.gzs-slide');
-    var dots = document.querySelectorAll('.gallery-zion-section .gzs-dot');
-    var cats = document.querySelectorAll('.gallery-zion-section .gzs-cat-btn');
-    var current = 0;
-    var total = slides.length;
-
-    function goTo(n){
-      if(n < 0) n = total - 1;
-      if(n >= total) n = 0;
-      current = n;
-      track.style.transform = 'translateX(' + (current * 100) + '%)';
-      dots.forEach(function(d,i){ d.classList.toggle('gzs-dot-active', i===current); });
-      cats.forEach(function(c,i){ c.classList.toggle('gzs-cat-active', i===current); });
-    }
-
-    document.querySelector('.gallery-zion-section .gzs-arrow-next').addEventListener('click', function(){ goTo(current - 1); });
-    document.querySelector('.gallery-zion-section .gzs-arrow-prev').addEventListener('click', function(){ goTo(current + 1); });
-
-    dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); }); });
-    cats.forEach(function(c,i){ c.addEventListener('click', function(){ goTo(i); }); });
-
-    var startX = null;
-    track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
-    track.addEventListener('touchend', function(e){
-      if(startX === null) return;
-      var diff = e.changedTouches[0].clientX - startX;
-      if(Math.abs(diff) > 40){
-        if(diff > 0) goTo(current + 1); else goTo(current - 1);
-      }
-      startX = null;
-    }, {passive:true});
-  })();
-  </script>
-
 </section>
 
 
