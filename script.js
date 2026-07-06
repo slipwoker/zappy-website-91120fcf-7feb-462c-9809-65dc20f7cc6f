@@ -616,6 +616,11 @@ document.querySelectorAll('.gallery-categories__item').forEach(item => {
   });
 });
 
+/* Added Component Script */
+// No JavaScript required for this compact gallery section.
+// Images are static with hover effects handled by CSS.
+// Users can replace placeholder images in edit mode via data-zappy-editable-image attributes.
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
