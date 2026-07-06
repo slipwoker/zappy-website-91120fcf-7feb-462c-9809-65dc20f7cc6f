@@ -606,6 +606,17 @@ window.onload = function() {
 })();
 
 
+/* Added Component Script */
+/* Optional: Lightbox or click interaction can be added here */
+document.querySelectorAll('.gallery-categories__item').forEach(item => {
+  item.addEventListener('click', function() {
+    const label = this.querySelector('.gallery-categories__label').textContent;
+    console.log('Gallery category clicked:', label);
+    // Future: open lightbox or navigate to category page
+  });
+});
+
+
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
   try {
