@@ -823,6 +823,251 @@ document.querySelectorAll('.gallery-categories__item').forEach(item => {
 })();
 /* ZAPPY_CUSTOM_JS_END:0dd24f82f499 */
 
+/* ZAPPY_CUSTOM_JS_START:06e5f720585e */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  var section = document.querySelector('#gallery-zion-section');
+  if (!section) return;
+  
+  var slides = section.querySelectorAll('.gallery-zion-viewer-slide');
+  var thumbs = section.querySelectorAll('.gallery-zion-thumb');
+  var prevBtn = section.querySelector('.gallery-zion-nav-prev');
+  var nextBtn = section.querySelector('.gallery-zion-nav-next');
+  var currentIndexEl = section.querySelector('.gallery-zion-current-index');
+  var currentCaptionEl = section.querySelector('.gallery-zion-current-caption');
+  
+  if (!slides.length || !thumbs.length) return;
+  
+  var totalSlides = slides.length;
+  var currentIndex = 0;
+  
+  // Initialize: hide all except first
+  slides.forEach(function(slide, i) {
+    if (i === 0) {
+      slide.style.setProperty('display', 'block', 'important');
+      slide.style.setProperty('opacity', '1', 'important');
+      slide.style.setProperty('visibility', 'visible', 'important');
+      slide.style.setProperty('z-index', '1', 'important');
+    } else {
+      slide.style.setProperty('display', 'none', 'important');
+      slide.style.setProperty('opacity', '0', 'important');
+      slide.style.setProperty('visibility', 'hidden', 'important');
+      slide.style.setProperty('z-index', '0', 'important');
+    }
+  });
+  
+  function showSlide(index) {
+    if (index < 0 || index >= totalSlides) return;
+    
+    slides.forEach(function(slide, i) {
+      if (i === index) {
+        slide.style.setProperty('display', 'block', 'important');
+        slide.style.setProperty('opacity', '1', 'important');
+        slide.style.setProperty('visibility', 'visible', 'important');
+        slide.style.setProperty('z-index', '1', 'important');
+      } else {
+        slide.style.setProperty('display', 'none', 'important');
+        slide.style.setProperty('opacity', '0', 'important');
+        slide.style.setProperty('visibility', 'hidden', 'important');
+        slide.style.setProperty('z-index', '0', 'important');
+      }
+    });
+    
+    thumbs.forEach(function(thumb) {
+      thumb.classList.remove('active');
+    });
+    if (thumbs[index]) {
+      thumbs[index].classList.add('active');
+    }
+    
+    var displayNum = index + 1;
+    if (currentIndexEl) {
+      currentIndexEl.textContent = (displayNum < 10 ? '0' : '') + displayNum + ' / ' + (totalSlides < 10 ? '0' : '') + totalSlides;
+    }
+    
+    if (currentCaptionEl && thumbs[index]) {
+      var label = thumbs[index].querySelector('.gallery-zion-thumb-label');
+      if (label) {
+        currentCaptionEl.textContent = label.textContent.trim();
+      }
+    }
+    
+    currentIndex = index;
+  }
+  
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var idx = parseInt(this.getAttribute('data-index'), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+      }
+    });
+  });
+  
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = totalSlides - 1;
+      showSlide(newIndex);
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var newIndex = currentIndex + 1;
+      if (newIndex >= totalSlides) newIndex = 0;
+      showSlide(newIndex);
+    });
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:06e5f720585e */
+
+/* ZAPPY_CUSTOM_JS_START:b3dc112e47f4 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  var section = document.querySelector('#gallery-zion-section');
+  if (!section) return;
+
+  var slides = section.querySelectorAll('.gallery-zion-viewer-slide');
+  var thumbsContainer = section.querySelector('.gallery-zion-thumbnails');
+  var thumbs = section.querySelectorAll('.gallery-zion-thumb');
+  var prevBtn = section.querySelector('.gallery-zion-nav-prev');
+  var nextBtn = section.querySelector('.gallery-zion-nav-next');
+  var currentIndexEl = section.querySelector('.gallery-zion-current-index');
+  var currentCaptionEl = section.querySelector('.gallery-zion-current-caption');
+
+  if (!slides.length || !thumbs.length) return;
+
+  var totalSlides = slides.length;
+  var currentIndex = 0;
+
+  function showSlide(index) {
+    if (index < 0 || index >= totalSlides) return;
+
+    slides.forEach(function(slide, i) {
+      if (i === index) {
+        slide.style.setProperty('display', 'block', 'important');
+        slide.style.setProperty('opacity', '1', 'important');
+        slide.style.setProperty('visibility', 'visible', 'important');
+        slide.style.setProperty('z-index', '1', 'important');
+      } else {
+        slide.style.setProperty('display', 'none', 'important');
+        slide.style.setProperty('opacity', '0', 'important');
+        slide.style.setProperty('visibility', 'hidden', 'important');
+        slide.style.setProperty('z-index', '0', 'important');
+      }
+    });
+
+    // Update thumbnails - re-query in case DOM changed
+    var currentThumbs = section.querySelectorAll('.gallery-zion-thumb');
+    currentThumbs.forEach(function(thumb) {
+      thumb.classList.remove('active');
+    });
+    if (currentThumbs[index]) {
+      currentThumbs[index].classList.add('active');
+    }
+
+    var displayNum = index + 1;
+    if (currentIndexEl) {
+      currentIndexEl.textContent = (displayNum < 10 ? '0' : '') + displayNum + ' / ' + (totalSlides < 10 ? '0' : '') + totalSlides;
+    }
+
+    var currentThumbs2 = section.querySelectorAll('.gallery-zion-thumb');
+    if (currentCaptionEl && currentThumbs2[index]) {
+      var label = currentThumbs2[index].querySelector('.gallery-zion-thumb-label');
+      if (label) {
+        currentCaptionEl.textContent = label.textContent.trim();
+      }
+    }
+
+    currentIndex = index;
+  }
+
+  // Use event delegation on the thumbnails container
+  if (thumbsContainer) {
+    thumbsContainer.addEventListener('click', function(e) {
+      var thumb = e.target.closest('.gallery-zion-thumb');
+      if (!thumb) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var idx = parseInt(thumb.getAttribute('data-index'), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+      }
+    });
+  }
+
+  // Arrow navigation with direct onclick
+  if (prevBtn) {
+    prevBtn.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = totalSlides - 1;
+      showSlide(newIndex);
+      return false;
+    };
+  }
+
+  if (nextBtn) {
+    nextBtn.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var newIndex = currentIndex + 1;
+      if (newIndex >= totalSlides) newIndex = 0;
+      showSlide(newIndex);
+      return false;
+    };
+  }
+
+  // Keyboard navigation
+  section.setAttribute('tabindex', '0');
+  section.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      var newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = totalSlides - 1;
+      showSlide(newIndex);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      var newIndex = currentIndex + 1;
+      if (newIndex >= totalSlides) newIndex = 0;
+      showSlide(newIndex);
+    }
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:b3dc112e47f4 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
