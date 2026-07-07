@@ -721,6 +721,108 @@ document.querySelectorAll('.gallery-categories__item').forEach(item => {
 })();
 /* ZAPPY_CUSTOM_JS_END:1313ee22cf47 */
 
+/* ZAPPY_CUSTOM_JS_START:0dd24f82f499 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  // Gallery Zion Section - Thumbnail & Arrow Navigation
+  var section = document.querySelector('#gallery-zion-section');
+  if (!section) return;
+
+  var slides = section.querySelectorAll('.gallery-zion-viewer-slide');
+  var thumbs = section.querySelectorAll('.gallery-zion-thumb');
+  var prevBtn = section.querySelector('.gallery-zion-nav-prev');
+  var nextBtn = section.querySelector('.gallery-zion-nav-next');
+  var currentIndexEl = section.querySelector('.gallery-zion-current-index');
+  var currentCaptionEl = section.querySelector('.gallery-zion-current-caption');
+
+  if (!slides.length || !thumbs.length) return;
+
+  var totalSlides = slides.length;
+  var currentIndex = 0;
+
+  function showSlide(index) {
+    if (index < 0 || index >= totalSlides) return;
+
+    // Remove data-slide from all slides
+    slides.forEach(function(slide) {
+      slide.removeAttribute('data-slide');
+    });
+
+    // Set data-slide="0" on the active slide so the CSS rule kicks in
+    slides[index].setAttribute('data-slide', '0');
+
+    // Update thumbnails
+    thumbs.forEach(function(thumb) {
+      thumb.classList.remove('active');
+    });
+    if (thumbs[index]) {
+      thumbs[index].classList.add('active');
+    }
+
+    // Update counter
+    var displayNum = index + 1;
+    if (currentIndexEl) {
+      currentIndexEl.textContent = (displayNum < 10 ? '0' : '') + displayNum + ' / ' + (totalSlides < 10 ? '0' : '') + totalSlides;
+    }
+
+    // Update caption
+    if (currentCaptionEl && thumbs[index]) {
+      var label = thumbs[index].querySelector('.gallery-zion-thumb-label');
+      if (label) {
+        currentCaptionEl.textContent = label.textContent.trim();
+      }
+    }
+
+    currentIndex = index;
+  }
+
+  // Thumbnail clicks
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener('click', function(e) {
+      e.preventDefault();
+      var idx = parseInt(this.getAttribute('data-index'), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+      }
+    });
+  });
+
+  // Prev arrow
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = totalSlides - 1;
+      showSlide(newIndex);
+    });
+  }
+
+  // Next arrow
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var newIndex = currentIndex + 1;
+      if (newIndex >= totalSlides) newIndex = 0;
+      showSlide(newIndex);
+    });
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:0dd24f82f499 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
